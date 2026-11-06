@@ -35,3 +35,12 @@ export function fromCode(code = '') {
   }
   return out;
 }
+
+export const PRESET_NAMES = {
+  barbershop: 'Barbershop', bengkel: 'Bengkel', 'jasa-pewarnaan': 'Jasa pewarnaan pakaian', 'jasa-website': 'Jasa pembuatan website',
+  kuliner: 'Kuliner / warung', kursus: 'Kursus / les', laundry: 'Laundry', salon: 'Salon', 'servis-ac': 'Servis AC', toko: 'Toko',
+};
+export const SECTION_NAMES = {
+  hero: 'Bagian atas', about: 'Tentang', services: 'Layanan', pricing: 'Harga', gallery: 'Galeri', faq: 'FAQ',
+  map: 'Peta lokasi', contact: 'Kontak', cta: 'Ajakan pesan', video: 'Video', testimonials: 'Testimoni', social: 'Sosial media',
+};
