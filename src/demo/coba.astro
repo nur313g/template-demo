@@ -38,6 +38,10 @@ const rows = [1, 2, 3, 4, 5];
       .cb .thumbs img{width:84px;height:64px;object-fit:cover;border-radius:8px;border:1px solid var(--c-border)}
       .cb .thumbs button{position:absolute;top:-6px;right:-6px;width:24px;height:24px;border-radius:50%;border:0;background:#c0392b;color:#fff;cursor:pointer;line-height:1}
       .cb .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+      .cb .guide{background:var(--c-bg-alt,#f4f7f5);border:1px solid var(--c-border);border-radius:14px;padding:16px;margin:0 0 20px}
+      .cb .guide h2{font-size:1.1rem;margin:0 0 8px}
+      .cb .guide ul{margin:0 0 8px;padding-left:20px}
+      .cb .guide li{margin-bottom:6px}
       .cb .btn{width:100%;cursor:pointer;font-size:1rem}
     </style>
   </head>
@@ -45,6 +49,17 @@ const rows = [1, 2, 3, 4, 5];
     <main class="cb">
       <h1>Coba buat website Anda</h1>
       <p>Isi data usaha dan foto, pilih tampilan, lalu lihat langsung hasilnya. Foto Anda hanya diproses di browser ini dan tidak diunggah. Isian teks dipakai sekali untuk membuat preview dan tidak kami simpan. Bagian yang tidak Anda isi memakai teks contoh.</p>
+
+      <section class="guide" aria-labelledby="gt">
+        <h2 id="gt">Siapkan ini dulu (sekitar 5 menit)</h2>
+        <ul>
+          <li><strong>Data usaha:</strong> nama, slogan satu kalimat, nomor WhatsApp aktif, alamat, kota, dan jam buka.</li>
+          <li><strong>Layanan atau produk:</strong> 1 sampai 5 item, boleh beserta harga.</li>
+          <li><strong>Foto:</strong> logo (boleh kosong), 1 foto utama yang melebar, dan 3 sampai 6 foto produk atau hasil kerja.</li>
+          <li><strong>Link Google Maps:</strong> buka Google Maps, cari usaha Anda, tekan Bagikan, lalu Salin link.</li>
+        </ul>
+        <p class="hint">Belum lengkap? Tidak apa-apa. Bagian yang kosong memakai teks contoh, dan di hasil akhir Anda bisa ganti warna, gaya, dan susunan.</p>
+      </section>
 
       <form id="f" method="post" action="/preview" autocomplete="off">
         <fieldset>
@@ -67,6 +82,7 @@ const rows = [1, 2, 3, 4, 5];
             <label>Hari buka<input type="text" name="day" maxlength="40" placeholder="Senin-Sabtu" /></label>
           </div>
           <label>Jam buka<input type="text" name="time" maxlength="30" placeholder="09:00-17:00" /></label>
+          <label>Link Google Maps (opsional)<input type="url" name="maps" maxlength="300" placeholder="https://maps.app.goo.gl/..." /></label>
           <label>Judul utama di bagian atas<input type="text" name="heroTitle" maxlength="90" /></label>
           <label>Kalimat pendukung<input type="text" name="heroSub" maxlength="200" /></label>
           <label>Tentang usaha<textarea name="about" maxlength="500"></textarea></label>

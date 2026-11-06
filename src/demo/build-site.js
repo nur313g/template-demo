@@ -1,6 +1,7 @@
 // Menyusun data website uji coba dari isian form + preset. Fungsi murni (mudah dites).
 import { OPTIONS } from '../lib/designs.js';
 
+const MAPS_OK = /^https:\/\/(maps\.app\.goo\.gl\/|goo\.gl\/maps\/|(www\.)?google\.(com|co\.id)\/maps|maps\.google\.com\/)/;
 const PHOTO_KEYS = /^(logo|hero|g[1-6])$/;
 const ph = (k) => `/placeholder.svg?foto=${k}`; // diganti foto asli di browser (lihat SitePage.astro)
 
@@ -57,8 +58,11 @@ export function buildSite(get, base) {
     } else if (s.type === 'gallery') {
       s.images = gal.map((k, i) => ({ src: ph(k), alt: `Foto ${i + 1} ${name}` }));
       s.enabled = gal.length > 0;
-    } else if (s.type === 'map' && !t('address')) {
-      s.enabled = false;
+    } else if (s.type === 'map') {
+      const maps = t('maps', 300);
+      s.embedUrl = '';
+      if (MAPS_OK.test(maps)) { s.directionsUrl = maps; s.enabled = true; }
+      else { s.directionsUrl = ''; s.enabled = !!t('address'); }
     } else if (s.type === 'testimonials' || s.type === 'social' || s.type === 'video') {
       s.enabled = false;
     }
