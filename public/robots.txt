@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /preview
 
-Sitemap: https://GANTI-DENGAN-ALAMAT-SITUS.pages.dev/sitemap-index.xml
+Sitemap: https://digital313web.pages.dev/sitemap-index.xml
