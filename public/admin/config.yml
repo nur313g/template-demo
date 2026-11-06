@@ -1,13 +1,13 @@
 # GANTI repo di bawah dengan "usernameGitHub/nama-repo-klien"
 backend:
   name: github
-  repo: USERNAME-GITHUB/NAMA-REPO-BARU
+  repo: nur313g/template-demo
   branch: main
 
 locale: id
 media_folder: public/images
 public_folder: /images
-site_url: https://GANTI-DENGAN-ALAMAT-SITUS.pages.dev
+site_url: https://digital313web.pages.dev
 
 collections:
   - name: situs
