@@ -2,21 +2,21 @@
   "theme": "forest",
   "meta": {
     "lang": "id",
-    "title": "Jasa Pembuatan Website UMKM | Cepat, Siap Dapat Pelanggan",
-    "description": "Pembuatan website untuk UMKM dan usaha lokal: mobile friendly, cepat, SEO lokal, mudah dikelola. Isi form, bayar, website jadi.",
+    "title": "Jasa Pembuatan Website UMKM Murah | Coba Gratis Dulu",
+    "description": "Website UMKM cepat di HP dan siap tampil di Google. Coba gratis dengan data dan foto usaha Anda, bayar hanya jika cocok. Mulai Rp150 ribu.",
     "url": "https://digital313web.pages.dev",
     "ogImage": ""
   },
   "business": {
-    "name": "Digital313",
+    "name": "Nama Jasa Website Anda",
     "schemaType": "ProfessionalService",
     "tagline": "Website UMKM yang bantu dapat pelanggan",
     "logo": "",
-    "phone": "085325730777",
-    "whatsapp": "085325730777",
+    "phone": "081234567890",
+    "whatsapp": "081234567890",
     "email": "",
-    "address": "Jl. Kebonsari IV No.18A, Sukun, Malang, Jawa Timur (layanan online ke seluruh Indonesia)",
-    "city": "Malang",
+    "address": "Surabaya, Jawa Timur (layanan online ke seluruh Indonesia)",
+    "city": "Surabaya",
     "region": "Jawa Timur",
     "priceRange": "Rp",
     "geo": {
@@ -27,7 +27,7 @@
     "hours": [
       {
         "day": "Senin-Sabtu",
-        "time": "08:00-16:00"
+        "time": "09:00-17:00"
       }
     ]
   },
@@ -46,12 +46,13 @@
     {
       "type": "hero",
       "enabled": true,
-      "title": "Usaha Anda Layak Punya Website yang Bikin Pelanggan Datang",
-      "subtitle": "Cepat di HP, mudah ditemukan di Google, dan gampang Anda kelola sendiri. Isi form, bayar, kami kerjakan.",
-      "badge": "Mulai dari Rp 150 ribu",
-      "ctaLabel": "Isi Form Order",
-      "secondaryLabel": "Coba Buat Website Gratis",
-      "secondaryHref": "/coba",
+      "badge": "Harga perkenalan mulai Rp 150 ribu",
+      "title": "Website Usaha Anda Siap Dilihat Pelanggan. Coba Dulu Sebelum Bayar",
+      "subtitle": "Isi data dan foto usaha Anda, lalu lihat langsung website Anda sendiri. Bisa ganti tampilan sepuasnya. Cocok? Baru kami kerjakan.",
+      "ctaLabel": "Coba Buat Website Gratis",
+      "ctaHref": "/coba",
+      "secondaryLabel": "Lihat Paket",
+      "secondaryHref": "#pricing",
       "waMessage": "Halo, saya mau konsultasi pembuatan website.",
       "image": "",
       "imageAlt": "Contoh website UMKM di HP"
@@ -60,62 +61,117 @@
       "type": "services",
       "enabled": true,
       "navLabel": "Keunggulan",
-      "title": "Kenapa Website dari Kami?",
+      "title": "Kenapa Pemilik Usaha Memilih Ini",
       "items": [
         {
           "icon": "📱",
-          "title": "Mobile First",
-          "description": "Tampil rapi dan cepat di HP, tempat kebanyakan pelanggan mencari."
+          "title": "Cepat di HP",
+          "description": "Halaman ringan dan rapi di layar kecil, tempat kebanyakan pelanggan mencari."
         },
         {
           "icon": "🔎",
-          "title": "SEO Lokal",
-          "description": "Disiapkan agar muncul saat orang mencari usaha seperti Anda di kota Anda."
+          "title": "Siap dicari di Google",
+          "description": "Struktur dan data lokal disiapkan agar usaha Anda lebih mudah ditemukan di kota Anda."
         },
         {
-          "icon": "🛠️",
-          "title": "Mudah Dikelola",
-          "description": "Ubah teks, harga, dan foto lewat panel admin, tanpa coding."
+          "icon": "👀",
+          "title": "Lihat dulu sebelum bayar",
+          "description": "Coba dengan data dan foto Anda sendiri. Tanpa daftar, tanpa biaya."
+        },
+        {
+          "icon": "🎨",
+          "title": "Banyak pilihan tampilan",
+          "description": "Ganti warna, gaya, dan susunan sampai ketemu yang paling cocok dengan usaha Anda."
+        },
+        {
+          "icon": "💬",
+          "title": "Pelanggan langsung chat",
+          "description": "Tombol WhatsApp dan petunjuk lokasi Google Maps selalu mudah dijangkau."
+        },
+        {
+          "icon": "🤝",
+          "title": "Dibantu sampai online",
+          "description": "Anda cukup kirim data dan foto, sisanya kami urus."
         }
+      ]
+    },
+    {
+      "type": "about",
+      "enabled": true,
+      "id": "cara-kerja",
+      "navLabel": "Cara Kerja",
+      "title": "Cara Kerjanya: 4 Langkah Mudah",
+      "text": "Tidak perlu paham teknis. Anda hanya menyiapkan data dan foto.",
+      "points": [
+        "Coba gratis: isi data usaha dan foto di halaman uji coba, lihat hasilnya langsung.",
+        "Pilih tampilan: ganti warna, gaya, dan susunan sampai cocok.",
+        "Pesan paket: kirim pilihan Anda lewat WhatsApp atau form order.",
+        "Kami kerjakan, Anda cek, lalu website online."
       ]
     },
     {
       "type": "pricing",
       "enabled": true,
       "navLabel": "Paket",
-      "title": "Pilih Paket",
-      "subtitle": "Domain dibayar terpisah (sekitar Rp150-250 ribu/tahun)",
-      "note": "Isi harga dengan paket final Anda.",
+      "title": "Pilih Paket yang Sesuai Usaha Anda",
+      "subtitle": "Harga perkenalan untuk pelanggan awal. Harga akan naik seiring bertambahnya pelanggan.",
+      "note": "Domain sendiri (.com atau .id) dibayar terpisah, sekitar Rp150-250 ribu per tahun. Alamat gratis .pages.dev tersedia di semua paket.",
       "items": [
         {
-          "name": "Starter",
+          "name": "Mulai",
           "price": "Rp 150.000",
+          "unit": "sekali bayar",
           "features": [
-            "1 halaman",
-            "Tombol WhatsApp & peta",
+            "1 halaman lengkap",
+            "Pilih 1 preset dan 1 tema",
+            "Tombol WhatsApp dan tautan Google Maps",
+            "Tampil rapi di HP",
             "1x revisi"
-          ]
+          ],
+          "ctaLabel": "Pilih Paket Mulai"
         },
         {
-          "name": "Basic",
-          "price": "Rp 450.000",
-          "highlight": true,
+          "name": "Bisnis",
+          "price": "Rp 350.000",
+          "unit": "sekali bayar",
           "features": [
-            "Landing lengkap",
-            "Domain, GA4, Search Console",
-            "SEO dasar",
+            "Semua isi paket Mulai",
+            "Galeri foto, daftar harga, dan FAQ",
+            "Video YouTube",
+            "Pilihan gaya dan susunan tampilan",
+            "SEO dasar: judul, deskripsi, data lokal, sitemap",
             "2x revisi"
-          ]
+          ],
+          "ctaLabel": "Pilih Paket Bisnis",
+          "highlight": true,
+          "badge": "Paling Seimbang"
         },
         {
-          "name": "Business",
-          "price": "Rp 1.000.000",
+          "name": "Pro",
+          "price": "Rp 700.000",
+          "unit": "sekali bayar",
           "features": [
-            "4-6 halaman",
-            "Panel admin",
-            "SEO lokal & blog",
-            "Pelatihan 1 jam"
-          ]
+            "Semua isi paket Bisnis",
+            "Edit teks dan foto sendiri, dengan panduan",
+            "Bantuan sambung domain sendiri",
+            "Pasang Google Search Console dan Analytics",
+            "3x revisi"
+          ],
+          "ctaLabel": "Pilih Paket Pro"
+        },
+        {
+          "name": "Premium",
+          "price": "Rp 1.250.000",
+          "unit": "sekali bayar",
+          "features": [
+            "Semua isi paket Pro",
+            "Susunan bagian disesuaikan khusus",
+            "Fitur tambahan sesuai kebutuhan, dibahas dulu",
+            "Halaman tambahan (mis. produk atau tentang kami)",
+            "5x revisi",
+            "Pendampingan 30 hari setelah online"
+          ],
+          "ctaLabel": "Pilih Paket Premium"
         }
       ]
     },
@@ -126,16 +182,32 @@
       "title": "Pertanyaan Umum",
       "items": [
         {
-          "q": "Bagaimana cara ordernya?",
-          "a": "Isi form, kirim data dan foto, terima tagihan, bayar, lalu website dikerjakan dan Anda review."
+          "q": "Apa bedanya coba gratis dengan pesan?",
+          "a": "Coba gratis hanya untuk melihat contoh website dengan data Anda, tanpa biaya dan tanpa daftar. Kalau cocok, Anda memilih paket dan kami mengerjakan versi finalnya."
         },
         {
-          "q": "Berapa lama jadi?",
+          "q": "Apakah data dan foto saya aman di halaman coba?",
+          "a": "Foto hanya diproses di browser Anda dan tidak diunggah. Isian teks dipakai sekali untuk membuat tampilan dan tidak kami simpan."
+        },
+        {
+          "q": "Apa yang harus saya siapkan?",
+          "a": "Nama usaha, nomor WhatsApp, alamat dan jam buka, daftar layanan atau produk beserta harga, foto usaha, dan tautan Google Maps. Belum lengkap pun tidak apa-apa, bagian kosong memakai teks contoh."
+        },
+        {
+          "q": "Berapa lama website jadi?",
           "a": "Umumnya 2-5 hari kerja setelah data lengkap dan pembayaran diterima."
         },
         {
           "q": "Domain atas nama siapa?",
-          "a": "Atas nama Anda sebagai pemilik usaha."
+          "a": "Atas nama Anda, supaya Anda tetap menjadi pemiliknya. Biaya domain dibayar terpisah."
+        },
+        {
+          "q": "Apakah ada biaya bulanan?",
+          "a": "Tidak ada biaya hosting bulanan untuk paket di atas. Satu-satunya biaya tambahan adalah domain sendiri per tahun, kalau Anda menginginkannya."
+        },
+        {
+          "q": "Bagaimana kalau saya ingin revisi?",
+          "a": "Setiap paket sudah termasuk jatah revisi sesuai yang tertera. Revisi tambahan bisa dibahas lewat WhatsApp."
         }
       ]
     },
@@ -143,7 +215,7 @@
       "type": "cta",
       "enabled": true,
       "title": "Siap punya website sendiri?",
-      "text": "Isi form order, kami hubungi lewat WhatsApp.",
+      "text": "Coba dulu gratis dengan data usaha Anda. Cocok? Isi form order, kami hubungi lewat WhatsApp.",
       "buttonLabel": "Isi Form Order",
       "buttonHref": "https://docs.google.com/forms/d/e/1FAIpQLSeBtgFhic4WCT3UKZWDj9pmMfD8N5OaBYkQeM6wlj-3Mj92DQ/viewform?usp=header"
     },
@@ -154,12 +226,5 @@
       "title": "Ada Pertanyaan?"
     }
   ],
-  "demo": true,
-  "style": "clean",
-  "layout": {
-    "hero": "split",
-    "services": "cards",
-    "gallery": "grid",
-    "header": "left"
-  }
+  "demo": true
 }
