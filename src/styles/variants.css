@@ -82,3 +82,13 @@ html[data-gallery="masonry"] .gallery figure{break-inside:avoid;margin:0 0 10px!
 /* ===== 4 paket harga berdampingan ===== */
 @media(min-width:640px){.grid.c4{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:1000px){.grid.c4{grid-template-columns:repeat(4,1fr)}}
+
+/* ===== Panel preview: daftar bagian ===== */
+.dp-sec{display:flex;align-items:center;gap:6px;margin:4px 0;font-size:.9rem}
+.dp-sec span{flex:1}
+.dp-sec input{width:20px;height:20px}
+.dp-sec button{width:34px;height:34px;border:1px solid var(--c-border);border-radius:8px;background:#fff;cursor:pointer}
+.dp-sec button:disabled{opacity:.3;cursor:default}
+.dp-body hr{border:0;border-top:1px solid var(--c-border);margin:12px 0}
+.dp-body h3{font-size:.95rem;margin:10px 0 6px}
+.dp-body .btn-row{margin-top:8px}
