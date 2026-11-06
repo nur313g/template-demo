@@ -3,6 +3,9 @@
 export const prerender = false;
 import SitePage from '../components/SitePage.astro';
 import { buildSite } from './build-site.js';
+import owner from '../data/site.json';
+import { waLink } from '../lib/util.js';
+import { PRESET_NAMES, SECTION_NAMES } from '../lib/designs.js';
 
 const presets = import.meta.glob('../../presets/*.json', { eager: true, import: 'default' });
 
@@ -18,6 +21,17 @@ const base = key !== 'demo-etalase' ? presets[`../../presets/${key}.json`] : nul
 if (!base) return Astro.redirect('/coba');
 
 const site = buildSite((k) => f.get(k), base);
+const secs = (site.__sections || []).map((x) => ({ ...x, label: SECTION_NAMES[x.type] || x.type }));
+delete site.__sections;
+const panel = {
+  current: key,
+  presets: Object.keys(presets).map((p) => p.split('/').pop().replace('.json', '')).filter((k) => k !== 'demo-etalase').map((k) => ({ key: k, label: PRESET_NAMES[k] || k })),
+  sections: secs,
+  owner: {
+    wa: owner.business?.whatsapp ? waLink(owner, '').split('?')[0] : '',
+    packages: ((owner.sections || []).find((x) => x.type === 'pricing')?.items || []).map((i) => `${i.name} (${i.price})`),
+  },
+};
 Astro.response.headers.set('Cache-Control', 'no-store');
 ---
-<SitePage site={site} preview />
+<SitePage site={site} preview panel={panel} />

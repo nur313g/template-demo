@@ -1,0 +1,112 @@
+---
+// Panel di halaman /preview: ganti jenis usaha, tampilan, bagian halaman, lalu pesan lewat WhatsApp.
+import { OPTIONS, LABELS, ORDER } from '../lib/designs.js';
+const { presets = [], current = '', sections = [], owner = { wa: '', packages: [] } } = Astro.props;
+---
+<details class="dp" id="pv">
+  <summary>🎨 Ubah tampilan</summary>
+  <div class="dp-body">
+    <label>Jenis usaha
+      <select id="pv-preset">
+        {presets.map((p) => <option value={p.key} selected={p.key === current}>{p.label}</option>)}
+      </select>
+    </label>
+    {ORDER.map((k) => (
+      <label>{LABELS[k]}
+        <select data-k={k}>
+          {Object.entries(OPTIONS[k]).map(([v, l]) => <option value={v}>{l}</option>)}
+        </select>
+      </label>
+    ))}
+
+    <h3>Bagian halaman</h3>
+    <div id="pv-secs">
+      {sections.map((s) => (
+        <div class="dp-sec" data-t={s.type}>
+          <input type="checkbox" checked={s.on} disabled={s.type === 'hero'} aria-label={`Tampilkan ${s.label}`} />
+          <span>{s.label}</span>
+          {s.type !== 'hero' && <button type="button" data-up aria-label="Naikkan">↑</button>}
+          {s.type !== 'hero' && <button type="button" data-down aria-label="Turunkan">↓</button>}
+        </div>
+      ))}
+    </div>
+    <div class="btn-row"><button type="button" class="btn ghost" id="pv-apply">Terapkan susunan</button></div>
+
+    <hr />
+    {owner.wa && owner.packages.length > 0 && (
+      <label>Paket yang diminati
+        <select id="pv-paket">{owner.packages.map((p) => <option value={p}>{p}</option>)}</select>
+      </label>
+    )}
+    <p class="dp-code">Kode desain: <strong id="pv-code"></strong></p>
+    <div class="btn-row">
+      {owner.wa && <a class="btn wa" id="pv-wa" href={owner.wa} rel="noopener">Pesan website ini</a>}
+      <a class="btn ghost" href="/coba">Ubah data</a>
+    </div>
+  </div>
+</details>
+<script is:inline define:vars={{ ORDER, owner }}>
+  (function () {
+    var attr = { theme: 'data-theme', style: 'data-style', hero: 'data-hero', services: 'data-services', gallery: 'data-gallery', header: 'data-header' };
+    var root = document.documentElement, K = 'coba.form', st = {};
+    try { st = JSON.parse(sessionStorage.getItem(K) || '{}'); } catch (e) {}
+    function save() { try { sessionStorage.setItem(K, JSON.stringify(st)); } catch (e) {} }
+    function code() { return ORDER.map(function (k) { return root.getAttribute(attr[k]); }).join('-'); }
+    function rows() { return Array.prototype.slice.call(document.querySelectorAll('#pv-secs .dp-sec')); }
+
+    function wa() {
+      var a = document.getElementById('pv-wa'); if (!a || !owner.wa) return;
+      var ps = document.getElementById('pv-paket'), pr = document.getElementById('pv-preset');
+      var active = rows().filter(function (r) { return r.querySelector('input').checked; })
+        .map(function (r) { return r.querySelector('span').textContent; }).join(', ');
+      var text = 'Halo, saya sudah mencoba demo dan ingin memesan website.\n' +
+        'Usaha: ' + (st.name || '-') + '\n' +
+        'Jenis: ' + pr.options[pr.selectedIndex].text + '\n' +
+        (ps ? 'Paket: ' + ps.value + '\n' : '') +
+        'Kode desain: ' + code() + '\n' +
+        'Bagian: ' + active;
+      a.href = owner.wa + '?text=' + encodeURIComponent(text);
+    }
+    function sync() {
+      ORDER.forEach(function (k) {
+        var s = document.querySelector('#pv select[data-k="' + k + '"]'); if (s) s.value = root.getAttribute(attr[k]);
+      });
+      document.getElementById('pv-code').textContent = code();
+      wa();
+    }
+    // Kirim ulang data yang sama ke /preview dengan perubahan tertentu (render server, hasilnya sama persis dengan hasil akhir)
+    function post(over) {
+      Object.keys(over).forEach(function (k) { st[k] = over[k]; }); save();
+      var fotos = {}; try { fotos = JSON.parse(sessionStorage.getItem('coba.fotos') || '{}'); } catch (e) {}
+      var f = document.createElement('form'); f.method = 'post'; f.action = '/preview';
+      var all = {}; Object.keys(st).forEach(function (k) { all[k] = st[k]; }); all.fotos = Object.keys(fotos).join(',');
+      Object.keys(all).forEach(function (k) {
+        var i = document.createElement('input'); i.type = 'hidden'; i.name = k; i.value = all[k]; f.appendChild(i);
+      });
+      document.body.appendChild(f); f.submit();
+    }
+
+    document.querySelectorAll('#pv select[data-k]').forEach(function (s) {
+      s.addEventListener('change', function () {
+        root.setAttribute(attr[s.dataset.k], s.value); st[s.dataset.k] = s.value; save(); sync(); // seketika, tanpa muat ulang
+      });
+    });
+    document.getElementById('pv-preset').addEventListener('change', function (e) { post({ preset: e.target.value, order: '', hide: '' }); });
+    document.getElementById('pv-apply').addEventListener('click', function () {
+      var r = rows();
+      post({
+        order: r.map(function (x) { return x.dataset.t; }).join(','),
+        hide: r.filter(function (x) { return !x.querySelector('input').checked; }).map(function (x) { return x.dataset.t; }).join(','),
+      });
+    });
+    document.getElementById('pv-secs').addEventListener('click', function (e) {
+      var row = e.target.closest('.dp-sec'); if (!row) return;
+      if (e.target.hasAttribute('data-up') && row.previousElementSibling && row.previousElementSibling.dataset.t !== 'hero') row.parentNode.insertBefore(row, row.previousElementSibling);
+      if (e.target.hasAttribute('data-down') && row.nextElementSibling) row.parentNode.insertBefore(row.nextElementSibling, row);
+      wa();
+    });
+    document.getElementById('pv-secs').addEventListener('change', wa);
+    var ps = document.getElementById('pv-paket'); if (ps) ps.addEventListener('change', wa);
+    sync();
+  })();
+</script>

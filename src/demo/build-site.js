@@ -68,6 +68,20 @@ export function buildSite(get, base) {
     }
   }
 
+  // Daftar bagian yang tersedia untuk panel (sebelum disembunyikan pengunjung), lalu terapkan pilihan pengunjung
+  const word = (x) => /^[a-z]+$/.test(x);
+  const order = t('order', 200).split(',').filter(word);
+  const hide = new Set(t('hide', 200).split(',').filter((x) => word(x) && x !== 'hero'));
+  if (order.length) {
+    const pos = (x) => { const i = order.indexOf(x.type); return i < 0 ? 1000 : i; };
+    site.sections = (site.sections || [])
+      .map((s, i) => ({ s, i }))
+      .sort((a, b) => (a.s.type === 'hero' ? -1 : 0) + (b.s.type === 'hero' ? 1 : 0) || pos(a.s) - pos(b.s) || a.i - b.i)
+      .map((x) => x.s);
+  }
+  site.__sections = (site.sections || []).filter((s) => s.enabled !== false).map((s) => ({ type: s.type, on: !hide.has(s.type) }));
+  for (const s of site.sections || []) if (hide.has(s.type)) s.enabled = false;
+
   const o = (k) => (OPTIONS[k][t(k, 20)] ? t(k, 20) : undefined);
   site.theme = o('theme') || site.theme;
   site.style = o('style') || 'clean';

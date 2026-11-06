@@ -2,13 +2,10 @@
 // Halaman uji coba: calon klien mengisi data, memilih preset dan tampilan, lalu melihat preview.
 import '../styles/themes.css';
 import '../styles/global.css';
-import { OPTIONS, LABELS, ORDER, DEFAULTS } from '../lib/designs.js';
+import { OPTIONS, LABELS, ORDER, DEFAULTS, PRESET_NAMES } from '../lib/designs.js';
 
 const files = import.meta.glob('../../presets/*.json', { eager: true, import: 'default' });
-const names = {
-  barbershop: 'Barbershop', bengkel: 'Bengkel', 'jasa-pewarnaan': 'Jasa pewarnaan pakaian', 'jasa-website': 'Jasa pembuatan website',
-  kuliner: 'Kuliner / warung', kursus: 'Kursus / les', laundry: 'Laundry', salon: 'Salon', 'servis-ac': 'Servis AC', toko: 'Toko',
-};
+const names = PRESET_NAMES;
 const presets = Object.keys(files)
   .map((p) => p.split('/').pop().replace('.json', ''))
   .filter((k) => k !== 'demo-etalase')
