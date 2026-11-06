@@ -12,8 +12,9 @@ import MapSection from './sections/MapSection.astro';
 import Contact from './sections/Contact.astro';
 import Social from './sections/Social.astro';
 import Cta from './sections/Cta.astro';
+import PreviewPanel from '../demo/PreviewPanel.astro';
 
-const { site, preview = false } = Astro.props;
+const { site, preview = false, panel = null } = Astro.props;
 
 // Registri blok: tambah jenis section baru cukup daftarkan di sini.
 const registry = {
@@ -24,7 +25,8 @@ const registry = {
 const sections = (site.sections || []).filter((s) => s.enabled !== false && registry[s.type]);
 ---
 <Base site={site} sections={sections} noindex={preview}>
-  {preview && <a class="pv" href="/coba">← Ubah data uji coba</a>}
+  {preview && !panel && <a class="pv" href="/coba">← Ubah data uji coba</a>}
+  {preview && panel && <PreviewPanel {...panel} />}
   {sections.map((s, i) => {
     const C = registry[s.type];
     return <C data={s} site={site} alt={i % 2 === 1} />;
