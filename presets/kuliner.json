@@ -1,0 +1,202 @@
+{
+  "theme": "amber",
+  "meta": {
+    "lang": "id",
+    "title": "Rumah Makan di Malang | Masakan Rumahan, Pesan Antar",
+    "description": "Rumah makan di Malang: masakan rumahan, menu harian, pesan antar, dan pesanan nasi kotak. Pesan lewat WhatsApp.",
+    "url": "https://contoh-contoh-warung-makan.pages.dev",
+    "ogImage": ""
+  },
+  "business": {
+    "name": "Contoh Warung Makan",
+    "schemaType": "Restaurant",
+    "tagline": "Masakan rumahan, rasa terjaga",
+    "logo": "",
+    "logoHasName": false,
+    "phone": "081234567890",
+    "whatsapp": "081234567890",
+    "email": "",
+    "address": "Jl. Contoh No. 1",
+    "city": "Malang",
+    "region": "Jawa Timur",
+    "priceRange": "Rp",
+    "geo": {
+      "lat": "",
+      "lng": ""
+    },
+    "waMessage": "Halo, saya mau pesan makanan.",
+    "hours": [
+      {
+        "day": "Setiap hari",
+        "time": "07:00-21:00"
+      }
+    ]
+  },
+  "analytics": {
+    "ga4Id": "",
+    "searchConsoleVerification": ""
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "youtube": ""
+  },
+  "footerNote": "",
+  "sections": [
+    {
+      "type": "hero",
+      "enabled": true,
+      "badge": "Pesan via WhatsApp",
+      "title": "Rumah Makan di Malang: Masakan Rumahan, Pesan Mudah",
+      "subtitle": "Menu harian, nasi kotak, dan pesan antar. Pesan lewat WhatsApp, kami siapkan.",
+      "ctaLabel": "Pesan Sekarang",
+      "secondaryLabel": "Lihat Menu",
+      "secondaryHref": "#pricing",
+      "image": "",
+      "imageAlt": "",
+      "waMessage": "Halo, saya mau pesan makanan."
+    },
+    {
+      "type": "about",
+      "enabled": true,
+      "navLabel": "Tentang",
+      "title": "Cerita Kami",
+      "text": "Ceritakan singkat asal usul usaha, bahan, dan ciri khas masakan Anda.\nGanti teks ini dengan cerita asli usaha.",
+      "points": [
+        "Bahan segar setiap hari",
+        "Porsi dan rasa konsisten",
+        "Bisa pesan dalam jumlah besar"
+      ],
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "type": "pricing",
+      "enabled": true,
+      "navLabel": "Menu",
+      "title": "Menu Favorit",
+      "subtitle": "Pilihan menu yang paling sering dipesan",
+      "note": "Tarif contoh. Ganti dengan tarif asli.",
+      "items": [
+        {
+          "name": "Paket Nasi Ayam",
+          "price": "Rp 20.000",
+          "features": [
+            "Nasi",
+            "Ayam",
+            "Sayur dan sambal"
+          ],
+          "ctaLabel": "Pesan",
+          "unit": "porsi"
+        },
+        {
+          "name": "Paket Spesial",
+          "price": "Rp 28.000",
+          "features": [
+            "Lauk pilihan",
+            "Minuman"
+          ],
+          "ctaLabel": "Pesan",
+          "unit": "porsi",
+          "highlight": true
+        },
+        {
+          "name": "Nasi Kotak",
+          "price": "Rp 25.000",
+          "features": [
+            "Minimal pesanan sesuai ketentuan",
+            "Pesan sehari sebelumnya"
+          ],
+          "ctaLabel": "Pesan",
+          "unit": "box"
+        }
+      ]
+    },
+    {
+      "type": "services",
+      "enabled": true,
+      "navLabel": "Layanan",
+      "title": "Cara Menikmati",
+      "subtitle": "Pilih yang paling nyaman",
+      "items": [
+        {
+          "icon": "🍽️",
+          "title": "Makan di Tempat",
+          "description": "Datang dan nikmati langsung."
+        },
+        {
+          "icon": "🛵",
+          "title": "Pesan Antar",
+          "description": "Pesan lewat WhatsApp, kami antar ke area terdekat."
+        },
+        {
+          "icon": "🍱",
+          "title": "Pesanan Besar",
+          "description": "Nasi kotak untuk acara, kantor, dan arisan."
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "enabled": false,
+      "navLabel": "Galeri",
+      "title": "Menu Kami",
+      "subtitle": "",
+      "images": []
+    },
+    {
+      "type": "testimonials",
+      "enabled": false,
+      "title": "Kata Pelanggan",
+      "items": [
+        {
+          "name": "Nama Pelanggan",
+          "role": "",
+          "text": "Isi dengan testimoni asli dari pelanggan.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "enabled": true,
+      "navLabel": "FAQ",
+      "title": "Pertanyaan Umum",
+      "items": [
+        {
+          "q": "Bagaimana cara memesan?",
+          "a": "Kirim pesan lewat WhatsApp berisi menu, jumlah, dan alamat."
+        },
+        {
+          "q": "Apakah ada pesan antar?",
+          "a": "Tanyakan jangkauan dan ongkos antar lewat WhatsApp."
+        },
+        {
+          "q": "Untuk pesanan besar?",
+          "a": "Pesan minimal sehari sebelumnya. Hubungi kami untuk jumlah dan jadwal."
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "enabled": true,
+      "navLabel": "Lokasi",
+      "title": "Lokasi Kami",
+      "embedUrl": ""
+    },
+    {
+      "type": "contact",
+      "enabled": true,
+      "navLabel": "Kontak",
+      "title": "Hubungi Kami"
+    },
+    {
+      "type": "cta",
+      "enabled": true,
+      "title": "Lapar?",
+      "text": "Pesan sekarang lewat WhatsApp.",
+      "buttonLabel": "Pesan Sekarang"
+    }
+  ]
+}

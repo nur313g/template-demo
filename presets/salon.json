@@ -1,0 +1,198 @@
+{
+  "theme": "rose",
+  "meta": {
+    "lang": "id",
+    "title": "Salon Kecantikan di Malang | Perawatan Rambut & Wajah",
+    "description": "Salon kecantikan di Malang: potong rambut, creambath, facial, manicure pedicure. Reservasi mudah lewat WhatsApp.",
+    "url": "https://contoh-contoh-salon.pages.dev",
+    "ogImage": ""
+  },
+  "business": {
+    "name": "Contoh Salon",
+    "schemaType": "BeautySalon",
+    "tagline": "Tampil percaya diri setiap hari",
+    "logo": "",
+    "logoHasName": false,
+    "phone": "081234567890",
+    "whatsapp": "081234567890",
+    "email": "",
+    "address": "Jl. Contoh No. 1",
+    "city": "Malang",
+    "region": "Jawa Timur",
+    "priceRange": "Rp",
+    "geo": {
+      "lat": "",
+      "lng": ""
+    },
+    "waMessage": "Halo, saya mau reservasi di salon.",
+    "hours": [
+      {
+        "day": "Senin-Sabtu",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Minggu",
+        "time": "Tutup"
+      }
+    ]
+  },
+  "analytics": {
+    "ga4Id": "",
+    "searchConsoleVerification": ""
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "youtube": ""
+  },
+  "footerNote": "",
+  "sections": [
+    {
+      "type": "hero",
+      "enabled": true,
+      "badge": "Reservasi via WhatsApp",
+      "title": "Salon Kecantikan di Malang: Tampil Percaya Diri Setiap Hari",
+      "subtitle": "Perawatan rambut, wajah, dan kuku oleh tim berpengalaman. Reservasi mudah lewat WhatsApp.",
+      "ctaLabel": "Reservasi Sekarang",
+      "secondaryLabel": "Lihat Harga",
+      "secondaryHref": "#pricing",
+      "image": "",
+      "imageAlt": "",
+      "waMessage": "Halo, saya mau reservasi di salon."
+    },
+    {
+      "type": "services",
+      "enabled": true,
+      "navLabel": "Layanan",
+      "title": "Layanan Kami",
+      "subtitle": "Perawatan untuk rambut, wajah, dan kuku",
+      "items": [
+        {
+          "icon": "💇",
+          "title": "Potong & Styling",
+          "description": "Potong rambut dan penataan sesuai bentuk wajah."
+        },
+        {
+          "icon": "🧴",
+          "title": "Creambath & Hair Spa",
+          "description": "Perawatan untuk rambut kering atau kusam."
+        },
+        {
+          "icon": "✨",
+          "title": "Facial",
+          "description": "Pembersihan dan perawatan wajah."
+        },
+        {
+          "icon": "💅",
+          "title": "Manicure & Pedicure",
+          "description": "Perawatan kuku tangan dan kaki."
+        },
+        {
+          "icon": "💄",
+          "title": "Makeup",
+          "description": "Rias untuk acara dan foto."
+        }
+      ]
+    },
+    {
+      "type": "pricing",
+      "enabled": true,
+      "navLabel": "Harga",
+      "title": "Daftar Harga",
+      "subtitle": "Harga jelas sebelum perawatan dimulai",
+      "note": "Tarif contoh. Ganti dengan tarif asli.",
+      "items": [
+        {
+          "name": "Potong & Blow",
+          "price": "Rp 60.000",
+          "features": [
+            "Konsultasi gaya",
+            "Keramas dan blow"
+          ],
+          "ctaLabel": "Reservasi"
+        },
+        {
+          "name": "Creambath",
+          "price": "Rp 90.000",
+          "features": [
+            "Pijat kepala",
+            "Perawatan rambut"
+          ],
+          "ctaLabel": "Reservasi",
+          "highlight": true
+        },
+        {
+          "name": "Facial",
+          "price": "Rp 120.000",
+          "features": [
+            "Pembersihan wajah",
+            "Masker"
+          ],
+          "ctaLabel": "Reservasi"
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "enabled": false,
+      "navLabel": "Galeri",
+      "title": "Hasil Perawatan",
+      "subtitle": "",
+      "images": []
+    },
+    {
+      "type": "testimonials",
+      "enabled": false,
+      "title": "Kata Pelanggan",
+      "items": [
+        {
+          "name": "Nama Pelanggan",
+          "role": "",
+          "text": "Isi dengan testimoni asli dari pelanggan.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "enabled": true,
+      "navLabel": "FAQ",
+      "title": "Pertanyaan Umum",
+      "items": [
+        {
+          "q": "Apakah harus reservasi dulu?",
+          "a": "Disarankan reservasi lewat WhatsApp agar tidak menunggu lama."
+        },
+        {
+          "q": "Jam buka salon?",
+          "a": "Lihat jam buka di bagian kontak. Hubungi kami untuk jadwal khusus."
+        },
+        {
+          "q": "Bisa membawa referensi gaya?",
+          "a": "Bisa. Kirim foto referensi lewat WhatsApp sebelum datang."
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "enabled": true,
+      "navLabel": "Lokasi",
+      "title": "Lokasi Kami",
+      "embedUrl": ""
+    },
+    {
+      "type": "contact",
+      "enabled": true,
+      "navLabel": "Kontak",
+      "title": "Hubungi Kami"
+    },
+    {
+      "type": "cta",
+      "enabled": true,
+      "title": "Siap tampil lebih segar?",
+      "text": "Reservasi sekarang lewat WhatsApp.",
+      "buttonLabel": "Reservasi Sekarang"
+    }
+  ]
+}

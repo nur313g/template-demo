@@ -1,0 +1,191 @@
+{
+  "theme": "teal",
+  "meta": {
+    "lang": "id",
+    "title": "Toko di Malang | Produk Lengkap, Order via WhatsApp",
+    "description": "Toko UMKM di Malang: produk pilihan, harga jelas, order mudah lewat WhatsApp. Kirim ke seluruh Indonesia.",
+    "url": "https://contoh-contoh-toko-umkm.pages.dev",
+    "ogImage": ""
+  },
+  "business": {
+    "name": "Contoh Toko UMKM",
+    "schemaType": "Store",
+    "tagline": "Produk pilihan, order mudah",
+    "logo": "",
+    "logoHasName": false,
+    "phone": "081234567890",
+    "whatsapp": "081234567890",
+    "email": "",
+    "address": "Jl. Contoh No. 1",
+    "city": "Malang",
+    "region": "Jawa Timur",
+    "priceRange": "Rp",
+    "geo": {
+      "lat": "",
+      "lng": ""
+    },
+    "waMessage": "Halo, saya mau order produk.",
+    "hours": [
+      {
+        "day": "Senin-Sabtu",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Minggu",
+        "time": "Tutup"
+      }
+    ]
+  },
+  "analytics": {
+    "ga4Id": "",
+    "searchConsoleVerification": ""
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "youtube": ""
+  },
+  "footerNote": "",
+  "sections": [
+    {
+      "type": "hero",
+      "enabled": true,
+      "badge": "Order via WhatsApp",
+      "title": "Toko di Malang: Produk Pilihan, Order Mudah Lewat WhatsApp",
+      "subtitle": "Lihat produk unggulan, tanya stok, dan pesan langsung lewat WhatsApp.",
+      "ctaLabel": "Tanya Produk",
+      "secondaryLabel": "Lihat Produk",
+      "secondaryHref": "#pricing",
+      "image": "",
+      "imageAlt": "",
+      "waMessage": "Halo, saya mau tanya produk."
+    },
+    {
+      "type": "services",
+      "enabled": true,
+      "navLabel": "Kategori",
+      "title": "Kategori Produk",
+      "subtitle": "Temukan yang Anda butuhkan",
+      "items": [
+        {
+          "icon": "🛍️",
+          "title": "Kategori 1",
+          "description": "Ganti dengan kategori produk Anda."
+        },
+        {
+          "icon": "📦",
+          "title": "Kategori 2",
+          "description": "Ganti dengan kategori produk Anda."
+        },
+        {
+          "icon": "🎁",
+          "title": "Kategori 3",
+          "description": "Ganti dengan kategori produk Anda."
+        }
+      ]
+    },
+    {
+      "type": "pricing",
+      "enabled": true,
+      "navLabel": "Produk",
+      "title": "Produk Unggulan",
+      "subtitle": "Harga jelas, stok bisa ditanyakan",
+      "note": "Tarif contoh. Ganti dengan tarif asli.",
+      "items": [
+        {
+          "name": "Produk A",
+          "price": "Rp 50.000",
+          "features": [
+            "Deskripsi singkat",
+            "Stok tersedia"
+          ],
+          "ctaLabel": "Pesan",
+          "unit": "pcs"
+        },
+        {
+          "name": "Produk B",
+          "price": "Rp 85.000",
+          "features": [
+            "Deskripsi singkat",
+            "Paling dicari"
+          ],
+          "ctaLabel": "Pesan",
+          "unit": "pcs",
+          "highlight": true
+        },
+        {
+          "name": "Produk C",
+          "price": "Rp 120.000",
+          "features": [
+            "Deskripsi singkat",
+            "Bisa kirim luar kota"
+          ],
+          "ctaLabel": "Pesan",
+          "unit": "pcs"
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "enabled": false,
+      "navLabel": "Galeri",
+      "title": "Foto Produk",
+      "subtitle": "",
+      "images": []
+    },
+    {
+      "type": "testimonials",
+      "enabled": false,
+      "title": "Kata Pelanggan",
+      "items": [
+        {
+          "name": "Nama Pelanggan",
+          "role": "",
+          "text": "Isi dengan testimoni asli dari pelanggan.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "enabled": true,
+      "navLabel": "FAQ",
+      "title": "Pertanyaan Umum",
+      "items": [
+        {
+          "q": "Bagaimana cara order?",
+          "a": "Kirim nama produk dan jumlah lewat WhatsApp, kami konfirmasi stok dan total biaya."
+        },
+        {
+          "q": "Apakah bisa kirim luar kota?",
+          "a": "Tanyakan ekspedisi dan ongkos kirim lewat WhatsApp."
+        },
+        {
+          "q": "Metode pembayaran?",
+          "a": "Tanyakan metode pembayaran yang tersedia lewat WhatsApp."
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "enabled": true,
+      "navLabel": "Lokasi",
+      "title": "Lokasi Kami",
+      "embedUrl": ""
+    },
+    {
+      "type": "contact",
+      "enabled": true,
+      "navLabel": "Kontak",
+      "title": "Hubungi Kami"
+    },
+    {
+      "type": "cta",
+      "enabled": true,
+      "title": "Cari produk tertentu?",
+      "text": "Tanya stok dan harga sekarang.",
+      "buttonLabel": "Chat WhatsApp"
+    }
+  ]
+}

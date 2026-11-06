@@ -1,0 +1,28 @@
+---
+import { waLink } from '../../lib/util.js';
+const { data, site, alt } = Astro.props;
+const items = data.items || [];
+---
+<section class={`s${alt ? ' alt' : ''}`} id={data.id || 'pricing'}>
+  <div class="wrap">
+    <div class="s-head">
+      <h2>{data.title}</h2>
+      {data.subtitle && <p>{data.subtitle}</p>}
+    </div>
+    <div class="grid c3">
+      {items.map((it) => (
+        <article class={`card${it.highlight ? ' hl' : ''}`}>
+          {it.highlight && <span class="tag">{it.badge || 'Terlaris'}</span>}
+          <h3>{it.name}</h3>
+          <p class="price">{it.price} {it.unit && <small>/ {it.unit}</small>}</p>
+          {it.description && <p>{it.description}</p>}
+          {it.features && it.features.length > 0 && (
+            <ul class="ticks">{it.features.map((f) => <li>{f.text || f}</li>)}</ul>
+          )}
+          <a class="btn" href={waLink(site, `Halo, saya tertarik dengan: ${it.name}`)} rel="noopener">{it.ctaLabel || 'Pesan Sekarang'}</a>
+        </article>
+      ))}
+    </div>
+    {data.note && <p class="center" style="margin-top:18px;color:var(--c-muted)">{data.note}</p>}
+  </div>
+</section>

@@ -1,0 +1,59 @@
+---
+// Panel pilih tampilan untuk calon pembeli. Tampil hanya jika site.json punya "demo": true.
+import { OPTIONS, LABELS, ORDER } from '../lib/designs.js';
+import { waLink } from '../lib/util.js';
+const { site } = Astro.props;
+const waBase = waLink(site, '').split('?')[0];
+const opts = Object.fromEntries(ORDER.map((k) => [k, Object.keys(OPTIONS[k])]));
+---
+<details class="dp">
+  <summary>🎨 Ganti tampilan</summary>
+  <div class="dp-body">
+    {ORDER.map((k) => (
+      <label>{LABELS[k]}
+        <select data-k={k}>
+          {Object.entries(OPTIONS[k]).map(([v, l]) => <option value={v}>{l}</option>)}
+        </select>
+      </label>
+    ))}
+    <p class="dp-code">Kode desain: <strong id="dp-code"></strong></p>
+    <div class="btn-row">
+      <button type="button" class="btn ghost" id="dp-rand">Acak</button>
+      <a class="btn wa" id="dp-wa" href={waBase} rel="noopener">Pilih desain ini</a>
+    </div>
+  </div>
+</details>
+<script is:inline define:vars={{ ORDER, opts, waBase, LABELS, OPTIONS }}>
+  (function () {
+    var attr = { theme: 'data-theme', style: 'data-style', hero: 'data-hero', services: 'data-services', gallery: 'data-gallery', header: 'data-header' };
+    var root = document.documentElement, st = {};
+    ORDER.forEach(function (k) { st[k] = root.getAttribute(attr[k]); });
+    try {
+      var d = new URLSearchParams(location.search).get('d');
+      if (d) {
+        var p = d.toLowerCase().split('-');
+        if (p.length === ORDER.length && ORDER.every(function (k, i) { return opts[k].indexOf(p[i]) > -1; }))
+          ORDER.forEach(function (k, i) { st[k] = p[i]; });
+      }
+    } catch (e) {}
+    function apply() {
+      var code = ORDER.map(function (k) { return st[k]; }).join('-');
+      ORDER.forEach(function (k) {
+        root.setAttribute(attr[k], st[k]);
+        var s = document.querySelector('.dp select[data-k="' + k + '"]'); if (s) s.value = st[k];
+      });
+      document.getElementById('dp-code').textContent = code;
+      var lines = ORDER.map(function (k) { return LABELS[k] + ': ' + OPTIONS[k][st[k]]; }).join(', ');
+      document.getElementById('dp-wa').href = waBase + '?text=' + encodeURIComponent('Halo, saya pilih desain: ' + lines + '. Kode: ' + code);
+      try { history.replaceState(null, '', '?d=' + code); } catch (e) {}
+    }
+    document.querySelectorAll('.dp select').forEach(function (s) {
+      s.addEventListener('change', function () { st[s.dataset.k] = s.value; apply(); });
+    });
+    document.getElementById('dp-rand').addEventListener('click', function () {
+      ORDER.forEach(function (k) { var a = opts[k]; st[k] = a[Math.floor(Math.random() * a.length)]; });
+      apply();
+    });
+    apply();
+  })();
+</script>

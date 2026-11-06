@@ -1,0 +1,15 @@
+---
+const { data, site, alt } = Astro.props;
+const social = site.social || {};
+const links = Object.entries(social).filter(([, v]) => v);
+---
+{links.length > 0 && (
+  <section class={`s${alt ? ' alt' : ''}`} id={data.id || 'social'}>
+    <div class="wrap center">
+      <h2>{data.title || 'Ikuti Kami'}</h2>
+      <div class="btn-row" style="justify-content:center">
+        {links.map(([k, v]) => <a class="btn ghost" href={v} rel="noopener noreferrer" target="_blank">{k}</a>)}
+      </div>
+    </div>
+  </section>
+)}

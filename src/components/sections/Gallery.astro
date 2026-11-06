@@ -1,0 +1,21 @@
+---
+import { img } from '../../lib/util.js';
+const { data, alt } = Astro.props;
+const images = data.images || [];
+---
+<section class={`s${alt ? ' alt' : ''}`} id={data.id || 'gallery'}>
+  <div class="wrap">
+    <div class="s-head">
+      <h2>{data.title}</h2>
+      {data.subtitle && <p>{data.subtitle}</p>}
+    </div>
+    <div class="gallery">
+      {images.map((g) => (
+        <figure style="margin:0">
+          <img src={img(g.src)} alt={g.alt || data.title} loading="lazy" width="1200" height="600" />
+          {g.caption && <figcaption class="center" style="font-size:.85rem;color:var(--c-muted)">{g.caption}</figcaption>}
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,30 @@
+---
+import { waLink, telLink } from '../../lib/util.js';
+const { data, site, alt } = Astro.props;
+const b = site.business;
+---
+<section class={`s${alt ? ' alt' : ''}`} id={data.id || 'contact'}>
+  <div class="wrap" style="max-width:760px">
+    <div class="s-head">
+      <h2>{data.title}</h2>
+      {data.subtitle && <p>{data.subtitle}</p>}
+    </div>
+    <div class="card">
+      {b.address && <p><strong>Alamat:</strong> {b.address}{b.city ? `, ${b.city}` : ''}</p>}
+      {b.phone && <p><strong>Telepon:</strong> <a href={telLink(b.phone)}>{b.phone}</a></p>}
+      {b.email && <p><strong>Email:</strong> <a href={`mailto:${b.email}`}>{b.email}</a></p>}
+      {b.hours && b.hours.length > 0 && (
+        <>
+          <p style="margin-bottom:4px"><strong>Jam buka:</strong></p>
+          <ul style="margin:0 0 16px;padding-left:18px">
+            {b.hours.map((h) => <li>{h.day}: {h.time}</li>)}
+          </ul>
+        </>
+      )}
+      <div class="btn-row">
+        <a class="btn wa" href={waLink(site)} rel="noopener">Chat WhatsApp</a>
+        {b.phone && <a class="btn ghost" href={telLink(b.phone)}>Telepon</a>}
+      </div>
+    </div>
+  </div>
+</section>

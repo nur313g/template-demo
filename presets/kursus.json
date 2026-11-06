@@ -1,0 +1,205 @@
+{
+  "theme": "violet",
+  "meta": {
+    "lang": "id",
+    "title": "Kursus & Les Privat di Malang | Belajar Terarah",
+    "description": "Kursus dan les privat di Malang: kelas kecil, jadwal fleksibel, pengajar berpengalaman. Daftar lewat WhatsApp.",
+    "url": "https://contoh-contoh-kursus-les.pages.dev",
+    "ogImage": ""
+  },
+  "business": {
+    "name": "Contoh Kursus & Les",
+    "schemaType": "EducationalOrganization",
+    "tagline": "Belajar terarah dan menyenangkan",
+    "logo": "",
+    "logoHasName": false,
+    "phone": "081234567890",
+    "whatsapp": "081234567890",
+    "email": "",
+    "address": "Jl. Contoh No. 1",
+    "city": "Malang",
+    "region": "Jawa Timur",
+    "priceRange": "Rp",
+    "geo": {
+      "lat": "",
+      "lng": ""
+    },
+    "waMessage": "Halo, saya mau tanya program kursus.",
+    "hours": [
+      {
+        "day": "Senin-Sabtu",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Minggu",
+        "time": "Tutup"
+      }
+    ]
+  },
+  "analytics": {
+    "ga4Id": "",
+    "searchConsoleVerification": ""
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "youtube": ""
+  },
+  "footerNote": "",
+  "sections": [
+    {
+      "type": "hero",
+      "enabled": true,
+      "badge": "Pendaftaran Dibuka",
+      "title": "Kursus & Les Privat di Malang: Belajar Terarah dan Menyenangkan",
+      "subtitle": "Kelas kecil, jadwal fleksibel, materi sesuai kebutuhan. Konsultasi program lewat WhatsApp.",
+      "ctaLabel": "Konsultasi Program",
+      "secondaryLabel": "Lihat Paket",
+      "secondaryHref": "#pricing",
+      "image": "",
+      "imageAlt": "",
+      "waMessage": "Halo, saya mau tanya program kursus."
+    },
+    {
+      "type": "services",
+      "enabled": true,
+      "navLabel": "Program",
+      "title": "Program Belajar",
+      "subtitle": "Pilih sesuai tujuan belajar",
+      "items": [
+        {
+          "icon": "📚",
+          "title": "Les Privat",
+          "description": "Belajar satu lawan satu sesuai kebutuhan."
+        },
+        {
+          "icon": "👥",
+          "title": "Kelas Kelompok",
+          "description": "Kelas kecil agar tetap fokus."
+        },
+        {
+          "icon": "📝",
+          "title": "Persiapan Ujian",
+          "description": "Latihan soal dan pendampingan menjelang ujian."
+        }
+      ]
+    },
+    {
+      "type": "about",
+      "enabled": true,
+      "navLabel": "Tentang",
+      "title": "Cara Kami Mengajar",
+      "text": "Jelaskan metode belajar, latar belakang pengajar, dan jenjang yang dilayani.\nGanti teks ini dengan data asli lembaga Anda.",
+      "points": [
+        "Materi disesuaikan kemampuan siswa",
+        "Jadwal bisa diatur",
+        "Laporan perkembangan berkala"
+      ],
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "type": "pricing",
+      "enabled": true,
+      "navLabel": "Paket",
+      "title": "Paket Belajar",
+      "subtitle": "Biaya jelas sebelum mendaftar",
+      "note": "Tarif contoh. Ganti dengan tarif asli.",
+      "items": [
+        {
+          "name": "Reguler",
+          "price": "Rp 250.000",
+          "features": [
+            "4 pertemuan",
+            "Kelas kelompok"
+          ],
+          "ctaLabel": "Daftar",
+          "unit": "bulan"
+        },
+        {
+          "name": "Intensif",
+          "price": "Rp 400.000",
+          "features": [
+            "8 pertemuan",
+            "Kelas kecil"
+          ],
+          "ctaLabel": "Daftar",
+          "unit": "bulan",
+          "highlight": true
+        },
+        {
+          "name": "Privat",
+          "price": "Rp 600.000",
+          "features": [
+            "4 pertemuan",
+            "Satu lawan satu"
+          ],
+          "ctaLabel": "Daftar",
+          "unit": "bulan"
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "enabled": false,
+      "navLabel": "Galeri",
+      "title": "Kegiatan Belajar",
+      "subtitle": "",
+      "images": []
+    },
+    {
+      "type": "testimonials",
+      "enabled": false,
+      "title": "Kata Orang Tua dan Siswa",
+      "items": [
+        {
+          "name": "Nama Pelanggan",
+          "role": "",
+          "text": "Isi dengan testimoni asli dari pelanggan.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "enabled": true,
+      "navLabel": "FAQ",
+      "title": "Pertanyaan Umum",
+      "items": [
+        {
+          "q": "Apakah ada kelas percobaan?",
+          "a": "Tanyakan ketersediaan kelas percobaan lewat WhatsApp."
+        },
+        {
+          "q": "Jenjang apa saja yang dilayani?",
+          "a": "Sebutkan jenjang dan mata pelajaran yang dibutuhkan lewat WhatsApp."
+        },
+        {
+          "q": "Bagaimana cara mendaftar?",
+          "a": "Kirim pesan lewat WhatsApp, kami bantu pilih program dan jadwal."
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "enabled": true,
+      "navLabel": "Lokasi",
+      "title": "Lokasi Kami",
+      "embedUrl": ""
+    },
+    {
+      "type": "contact",
+      "enabled": true,
+      "navLabel": "Kontak",
+      "title": "Hubungi Kami"
+    },
+    {
+      "type": "cta",
+      "enabled": true,
+      "title": "Siap mulai belajar?",
+      "text": "Konsultasi program lewat WhatsApp.",
+      "buttonLabel": "Daftar Sekarang"
+    }
+  ]
+}

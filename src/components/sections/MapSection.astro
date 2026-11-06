@@ -1,0 +1,20 @@
+---
+const { data, site, alt } = Astro.props;
+const b = site.business;
+// Tempel isi atribut src dari Google Maps > Bagikan > Sematkan peta
+const embed = data.embedUrl;
+const q = encodeURIComponent(`${b.name} ${b.address} ${b.city || ''}`);
+const directions = data.directionsUrl || `https://www.google.com/maps/search/?api=1&query=${q}`;
+---
+<section class={`s${alt ? ' alt' : ''}`} id={data.id || 'map'}>
+  <div class="wrap">
+    <div class="s-head">
+      <h2>{data.title}</h2>
+      <p>{b.address}{b.city ? `, ${b.city}` : ''}</p>
+    </div>
+    <div class="map">
+      {embed && <iframe src={embed} title={`Peta lokasi ${b.name}`} loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>}
+    </div>
+    <p class="center" style="margin-top:16px"><a class="btn" href={directions} rel="noopener" target="_blank">Buka di Google Maps</a></p>
+  </div>
+</section>

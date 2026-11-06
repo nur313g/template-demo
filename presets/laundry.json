@@ -1,0 +1,181 @@
+{
+  "theme": "ocean",
+  "meta": {
+    "lang": "id",
+    "title": "Laundry Kiloan di Surabaya | Bersih, Wangi, Antar Jemput",
+    "description": "Laundry kiloan dan satuan di Surabaya. Cuci setrika rapi, wangi, cepat, antar jemput gratis area terdekat. Pesan lewat WhatsApp.",
+    "url": "https://contoh-laundry.pages.dev",
+    "ogImage": "hero.jpg"
+  },
+  "business": {
+    "name": "Contoh Laundry",
+    "schemaType": "DryCleaningOrLaundry",
+    "tagline": "Bersih, wangi, rapi",
+    "logo": "logo.png",
+    "phone": "081234567890",
+    "whatsapp": "081234567890",
+    "email": "",
+    "address": "Jl. Contoh No. 10",
+    "city": "Surabaya",
+    "region": "Jawa Timur",
+    "priceRange": "Rp",
+    "geo": {
+      "lat": "",
+      "lng": ""
+    },
+    "waMessage": "Halo, saya mau tanya layanan laundry.",
+    "hours": [
+      {
+        "day": "Senin-Sabtu",
+        "time": "08:00-20:00"
+      },
+      {
+        "day": "Minggu",
+        "time": "09:00-15:00"
+      }
+    ]
+  },
+  "analytics": {
+    "ga4Id": "",
+    "searchConsoleVerification": ""
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "youtube": ""
+  },
+  "footerNote": "",
+  "sections": [
+    {
+      "type": "hero",
+      "enabled": true,
+      "title": "Laundry Kiloan Bersih, Wangi, dan Tepat Waktu",
+      "subtitle": "Cuci setrika rapi, antar jemput gratis untuk area terdekat. Cukup chat, kami jemput.",
+      "badge": "Antar Jemput Gratis",
+      "ctaLabel": "Pesan via WhatsApp",
+      "secondaryLabel": "Lihat Tarif",
+      "secondaryHref": "#pricing",
+      "image": "hero.jpg",
+      "imageAlt": "Cucian bersih dan rapi"
+    },
+    {
+      "type": "services",
+      "enabled": true,
+      "navLabel": "Layanan",
+      "title": "Layanan Kami",
+      "subtitle": "Pilih sesuai kebutuhan Anda",
+      "items": [
+        {
+          "icon": "🧺",
+          "title": "Cuci Setrika Kiloan",
+          "description": "Pakaian harian dicuci, dikeringkan, disetrika, dan dilipat rapi."
+        },
+        {
+          "icon": "🧼",
+          "title": "Cuci Lipat",
+          "description": "Hemat untuk yang mau setrika sendiri."
+        },
+        {
+          "icon": "👔",
+          "title": "Satuan (Jas, Gaun, Selimut)",
+          "description": "Perawatan khusus untuk pakaian dan barang tertentu."
+        }
+      ]
+    },
+    {
+      "type": "pricing",
+      "enabled": true,
+      "navLabel": "Tarif",
+      "title": "Tarif Transparan",
+      "subtitle": "Tanpa biaya tersembunyi",
+      "note": "Tarif contoh. Ganti dengan tarif asli.",
+      "items": [
+        {
+          "name": "Cuci Lipat",
+          "price": "Rp 5.000",
+          "unit": "kg",
+          "features": [
+            "Estimasi 2 hari",
+            "Wangi pilihan"
+          ]
+        },
+        {
+          "name": "Cuci Setrika",
+          "price": "Rp 7.000",
+          "unit": "kg",
+          "highlight": true,
+          "features": [
+            "Estimasi 2 hari",
+            "Setrika rapi",
+            "Antar jemput gratis"
+          ]
+        },
+        {
+          "name": "Express",
+          "price": "Rp 12.000",
+          "unit": "kg",
+          "features": [
+            "Selesai 6 jam",
+            "Setrika rapi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "enabled": true,
+      "navLabel": "Hasil",
+      "title": "Hasil Kerja Kami",
+      "images": []
+    },
+    {
+      "type": "testimonials",
+      "enabled": true,
+      "title": "Kata Pelanggan",
+      "items": [
+        {
+          "name": "Contoh Pelanggan",
+          "text": "Cucian wangi dan rapi, antarnya tepat waktu.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "enabled": true,
+      "navLabel": "FAQ",
+      "title": "Pertanyaan Umum",
+      "items": [
+        {
+          "q": "Berapa lama cucian selesai?",
+          "a": "Reguler 2 hari, express 6 jam."
+        },
+        {
+          "q": "Apakah ada antar jemput?",
+          "a": "Ada, gratis untuk area terdekat. Hubungi kami untuk cek jangkauan."
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "enabled": true,
+      "navLabel": "Lokasi",
+      "title": "Lokasi Kami",
+      "embedUrl": ""
+    },
+    {
+      "type": "contact",
+      "enabled": true,
+      "navLabel": "Kontak",
+      "title": "Hubungi Kami"
+    },
+    {
+      "type": "cta",
+      "enabled": true,
+      "title": "Siap cucian bersih tanpa repot?",
+      "text": "Chat sekarang, kami jemput hari ini.",
+      "buttonLabel": "Chat WhatsApp"
+    }
+  ]
+}

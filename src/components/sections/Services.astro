@@ -1,0 +1,22 @@
+---
+const { data, alt } = Astro.props;
+const items = data.items || [];
+---
+<section class={`s${alt ? ' alt' : ''}`} id={data.id || 'services'}>
+  <div class="wrap">
+    <div class="s-head">
+      <h2>{data.title}</h2>
+      {data.subtitle && <p>{data.subtitle}</p>}
+    </div>
+    <div class="grid c3 sv">
+      {items.map((it) => (
+        <article class="card">
+          {it.icon && <div style="font-size:2rem" aria-hidden="true">{it.icon}</div>}
+          <h3>{it.title}</h3>
+          <p>{it.description}</p>
+          {it.price && <p class="price">{it.price}</p>}
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

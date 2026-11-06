@@ -1,0 +1,185 @@
+{
+  "theme": "crimson",
+  "meta": {
+    "lang": "id",
+    "title": "Bengkel Motor di Malang | Servis Rutin & Perbaikan",
+    "description": "Bengkel motor di Malang: servis rutin, ganti oli, rem, kelistrikan, dan tune up. Estimasi biaya jelas sebelum pengerjaan.",
+    "url": "https://contoh-contoh-bengkel-motor.pages.dev",
+    "ogImage": ""
+  },
+  "business": {
+    "name": "Contoh Bengkel Motor",
+    "schemaType": "AutoRepair",
+    "tagline": "Servis jelas, biaya transparan",
+    "logo": "",
+    "logoHasName": false,
+    "phone": "081234567890",
+    "whatsapp": "081234567890",
+    "email": "",
+    "address": "Jl. Contoh No. 1",
+    "city": "Malang",
+    "region": "Jawa Timur",
+    "priceRange": "Rp",
+    "geo": {
+      "lat": "",
+      "lng": ""
+    },
+    "waMessage": "Halo, saya mau tanya servis motor.",
+    "hours": [
+      {
+        "day": "Senin-Sabtu",
+        "time": "08:00-17:00"
+      },
+      {
+        "day": "Minggu",
+        "time": "Tutup"
+      }
+    ]
+  },
+  "analytics": {
+    "ga4Id": "",
+    "searchConsoleVerification": ""
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "youtube": ""
+  },
+  "footerNote": "",
+  "sections": [
+    {
+      "type": "hero",
+      "enabled": true,
+      "badge": "Estimasi Sebelum Servis",
+      "title": "Bengkel Motor di Malang: Servis Rutin hingga Perbaikan, Biaya Jelas",
+      "subtitle": "Motor bermasalah? Kirim keluhan lewat WhatsApp, kami bantu cek dan beri estimasi sebelum dikerjakan.",
+      "ctaLabel": "Tanya Servis",
+      "secondaryLabel": "Lihat Harga",
+      "secondaryHref": "#pricing",
+      "image": "",
+      "imageAlt": "",
+      "waMessage": "Halo, motor saya ada keluhan. Mohon bantuannya."
+    },
+    {
+      "type": "services",
+      "enabled": true,
+      "navLabel": "Layanan",
+      "title": "Layanan Bengkel",
+      "subtitle": "Perawatan dan perbaikan motor harian",
+      "items": [
+        {
+          "icon": "🛠️",
+          "title": "Servis Rutin",
+          "description": "Pengecekan menyeluruh dan penyetelan."
+        },
+        {
+          "icon": "🛢️",
+          "title": "Ganti Oli",
+          "description": "Penggantian oli mesin sesuai kebutuhan motor."
+        },
+        {
+          "icon": "🛑",
+          "title": "Rem & Kopling",
+          "description": "Perbaikan dan penggantian komponen pengereman."
+        },
+        {
+          "icon": "⚡",
+          "title": "Kelistrikan",
+          "description": "Aki, lampu, dan kelistrikan motor."
+        },
+        {
+          "icon": "🔧",
+          "title": "Tune Up",
+          "description": "Penyetelan agar mesin kembali halus."
+        }
+      ]
+    },
+    {
+      "type": "pricing",
+      "enabled": true,
+      "navLabel": "Harga",
+      "title": "Perkiraan Biaya",
+      "subtitle": "Biaya akhir menyesuaikan kondisi motor",
+      "note": "Tarif contoh. Ganti dengan tarif asli. Harga suku cadang terpisah.",
+      "items": [
+        {
+          "name": "Servis Ringan",
+          "price": "Rp 50.000",
+          "features": [
+            "Pengecekan dasar",
+            "Pembersihan filter"
+          ],
+          "ctaLabel": "Tanya Servis"
+        },
+        {
+          "name": "Servis Lengkap",
+          "price": "Rp 120.000",
+          "features": [
+            "Tune up",
+            "Cek rem dan kelistrikan"
+          ],
+          "ctaLabel": "Tanya Servis",
+          "highlight": true
+        },
+        {
+          "name": "Ganti Oli",
+          "price": "Rp 45.000",
+          "features": [
+            "Oli sesuai pilihan",
+            "Jasa pasang"
+          ],
+          "ctaLabel": "Tanya Servis"
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "enabled": false,
+      "navLabel": "Galeri",
+      "title": "Bengkel Kami",
+      "subtitle": "",
+      "images": []
+    },
+    {
+      "type": "faq",
+      "enabled": true,
+      "navLabel": "FAQ",
+      "title": "Pertanyaan Umum",
+      "items": [
+        {
+          "q": "Apakah ada estimasi biaya?",
+          "a": "Ya, estimasi diberikan setelah pengecekan dan sebelum pekerjaan dimulai."
+        },
+        {
+          "q": "Apakah perlu antre atau booking?",
+          "a": "Booking lewat WhatsApp disarankan agar motor bisa langsung ditangani."
+        },
+        {
+          "q": "Merek motor apa saja yang dilayani?",
+          "a": "Tanyakan jenis dan tahun motor Anda lewat WhatsApp."
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "enabled": true,
+      "navLabel": "Lokasi",
+      "title": "Lokasi Kami",
+      "embedUrl": ""
+    },
+    {
+      "type": "contact",
+      "enabled": true,
+      "navLabel": "Kontak",
+      "title": "Hubungi Kami"
+    },
+    {
+      "type": "cta",
+      "enabled": true,
+      "title": "Motor bermasalah?",
+      "text": "Chat sekarang, ceritakan keluhannya.",
+      "buttonLabel": "Chat WhatsApp"
+    }
+  ]
+}

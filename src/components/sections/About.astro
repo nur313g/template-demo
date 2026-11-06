@@ -1,0 +1,17 @@
+---
+import { img } from '../../lib/util.js';
+const { data, alt } = Astro.props;
+const paras = String(data.text || '').split(/\n+/).filter(Boolean);
+---
+<section class={`s${alt ? ' alt' : ''}`} id={data.id || 'about'}>
+  <div class="wrap" style="display:grid;gap:24px;align-items:center">
+    {data.image && <img src={img(data.image)} alt={data.imageAlt || data.title} loading="lazy" width="600" height="450" style="border-radius:var(--radius)" />}
+    <div>
+      <h2>{data.title}</h2>
+      {paras.map((p) => <p>{p}</p>)}
+      {data.points && data.points.length > 0 && (
+        <ul class="ticks">{data.points.map((p) => <li>{p.text || p}</li>)}</ul>
+      )}
+    </div>
+  </div>
+</section>

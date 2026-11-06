@@ -1,0 +1,23 @@
+---
+// Halaman SERVER (tidak di-prerender): menerima isian dari /coba lalu merender website sungguhan.
+export const prerender = false;
+import SitePage from '../components/SitePage.astro';
+import { buildSite } from './build-site.js';
+
+const presets = import.meta.glob('../../presets/*.json', { eager: true, import: 'default' });
+
+if (Astro.request.method !== 'POST') return Astro.redirect('/coba');
+if (Number(Astro.request.headers.get('content-length') || 0) > 60000) return new Response('Data terlalu besar', { status: 413 });
+
+let f;
+try { f = await Astro.request.formData(); } catch { return Astro.redirect('/coba'); }
+if (String(f.get('url_web') || '')) return new Response('Permintaan ditolak', { status: 400 }); // jebakan bot
+
+const key = String(f.get('preset') || '').slice(0, 40);
+const base = key !== 'demo-etalase' ? presets[`../../presets/${key}.json`] : null;
+if (!base) return Astro.redirect('/coba');
+
+const site = buildSite((k) => f.get(k), base);
+Astro.response.headers.set('Cache-Control', 'no-store');
+---
+<SitePage site={site} preview />

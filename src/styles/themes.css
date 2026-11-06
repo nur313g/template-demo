@@ -1,0 +1,118 @@
+/* Tema = kumpulan variabel. Tambah tema baru cukup salin satu blok.
+   Tersedia 10 tema: ocean, sunset, forest, rose, violet, teal, slate, amber, crimson, navy.
+   Semua tema terang (latar putih) agar kartu dan header tetap terbaca. */
+:root, [data-theme="ocean"] {
+  --c-primary: #0b6fb8;
+  --c-primary-dark: #08568d;
+  --c-accent: #f5a623;
+  --c-bg: #ffffff;
+  --c-soft: #eef6fc;
+  --c-text: #14232f;
+  --c-muted: #5b6b78;
+  --c-border: #d9e4ec;
+  --font-head: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --radius: 14px;
+}
+[data-theme="sunset"] {
+  --c-primary: #d9480f;
+  --c-primary-dark: #a63608;
+  --c-accent: #7c3aed;
+  --c-bg: #fffdfb;
+  --c-soft: #fff3ea;
+  --c-text: #2b1a12;
+  --c-muted: #7a6459;
+  --c-border: #f0dccf;
+  --font-head: Georgia, 'Times New Roman', serif;
+  --radius: 8px;
+}
+[data-theme="forest"] {
+  --c-primary: #2b8a3e;
+  --c-primary-dark: #1f6a2e;
+  --c-accent: #e8590c;
+  --c-bg: #fbfdfb;
+  --c-soft: #edf7ee;
+  --c-text: #142016;
+  --c-muted: #55665a;
+  --c-border: #d4e5d7;
+  --radius: 20px;
+}
+[data-theme="rose"] {
+  --c-primary: #be185d;
+  --c-primary-dark: #9d174d;
+  --c-accent: #d97706;
+  --c-bg: #ffffff;
+  --c-soft: #fdf2f8;
+  --c-text: #2a1520;
+  --c-muted: #7a5568;
+  --c-border: #f5d0e2;
+  --font-head: Georgia, 'Times New Roman', serif;
+  --radius: 12px;
+}
+[data-theme="violet"] {
+  --c-primary: #6d28d9;
+  --c-primary-dark: #5b21b6;
+  --c-accent: #d97706;
+  --c-bg: #ffffff;
+  --c-soft: #f5f3ff;
+  --c-text: #1e1b2e;
+  --c-muted: #605c7a;
+  --c-border: #ddd6fe;
+  --radius: 16px;
+}
+[data-theme="teal"] {
+  --c-primary: #0f766e;
+  --c-primary-dark: #115e59;
+  --c-accent: #ea580c;
+  --c-bg: #ffffff;
+  --c-soft: #e8f6f4;
+  --c-text: #10231f;
+  --c-muted: #51706b;
+  --c-border: #c6e6e2;
+  --radius: 14px;
+}
+[data-theme="slate"] {
+  --c-primary: #334155;
+  --c-primary-dark: #1e293b;
+  --c-accent: #0284c7;
+  --c-bg: #ffffff;
+  --c-soft: #f1f5f9;
+  --c-text: #0f172a;
+  --c-muted: #64748b;
+  --c-border: #dbe2ea;
+  --radius: 6px;
+}
+[data-theme="amber"] {
+  --c-primary: #b45309;
+  --c-primary-dark: #92400e;
+  --c-accent: #1d4ed8;
+  --c-bg: #ffffff;
+  --c-soft: #fffbeb;
+  --c-text: #2a2008;
+  --c-muted: #7a6a3a;
+  --c-border: #f3e3b8;
+  --font-head: Georgia, 'Times New Roman', serif;
+  --radius: 10px;
+}
+[data-theme="crimson"] {
+  --c-primary: #b91c1c;
+  --c-primary-dark: #991b1b;
+  --c-accent: #111827;
+  --c-bg: #ffffff;
+  --c-soft: #fef2f2;
+  --c-text: #231313;
+  --c-muted: #7a5a5a;
+  --c-border: #f7d4d4;
+  --radius: 10px;
+}
+[data-theme="navy"] {
+  --c-primary: #1e3a8a;
+  --c-primary-dark: #172554;
+  --c-accent: #d97706;
+  --c-bg: #ffffff;
+  --c-soft: #eff6ff;
+  --c-text: #0f1a33;
+  --c-muted: #55648a;
+  --c-border: #d3def5;
+  --radius: 12px;
+}

@@ -1,0 +1,157 @@
+{
+  "theme": "forest",
+  "meta": {
+    "lang": "id",
+    "title": "Jasa Pembuatan Website UMKM | Cepat, Siap Dapat Pelanggan",
+    "description": "Pembuatan website untuk UMKM dan usaha lokal: mobile friendly, cepat, SEO lokal, mudah dikelola. Isi form, bayar, website jadi.",
+    "url": "https://contoh-jasa-website.pages.dev",
+    "ogImage": "hero.jpg"
+  },
+  "business": {
+    "name": "Nama Jasa Website Anda",
+    "schemaType": "ProfessionalService",
+    "tagline": "Website UMKM yang bantu dapat pelanggan",
+    "logo": "logo.png",
+    "phone": "081234567890",
+    "whatsapp": "081234567890",
+    "email": "",
+    "address": "Surabaya, Jawa Timur (layanan online ke seluruh Indonesia)",
+    "city": "Surabaya",
+    "region": "Jawa Timur",
+    "priceRange": "Rp",
+    "geo": {
+      "lat": "",
+      "lng": ""
+    },
+    "waMessage": "Halo, saya mau tanya pembuatan website untuk usaha saya.",
+    "hours": [
+      {
+        "day": "Senin-Sabtu",
+        "time": "09:00-17:00"
+      }
+    ]
+  },
+  "analytics": {
+    "ga4Id": "",
+    "searchConsoleVerification": ""
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "youtube": ""
+  },
+  "footerNote": "",
+  "sections": [
+    {
+      "type": "hero",
+      "enabled": true,
+      "title": "Usaha Anda Layak Punya Website yang Bikin Pelanggan Datang",
+      "subtitle": "Cepat di HP, mudah ditemukan di Google, dan gampang Anda kelola sendiri. Isi form, bayar, kami kerjakan.",
+      "badge": "Mulai dari Rp 350 ribu",
+      "ctaLabel": "Isi Form Order",
+      "secondaryLabel": "Lihat Paket",
+      "secondaryHref": "#pricing",
+      "waMessage": "Halo, saya mau konsultasi pembuatan website.",
+      "image": "hero.jpg",
+      "imageAlt": "Contoh website UMKM di HP"
+    },
+    {
+      "type": "services",
+      "enabled": true,
+      "navLabel": "Keunggulan",
+      "title": "Kenapa Website dari Kami?",
+      "items": [
+        {
+          "icon": "📱",
+          "title": "Mobile First",
+          "description": "Tampil rapi dan cepat di HP, tempat kebanyakan pelanggan mencari."
+        },
+        {
+          "icon": "🔎",
+          "title": "SEO Lokal",
+          "description": "Disiapkan agar muncul saat orang mencari usaha seperti Anda di kota Anda."
+        },
+        {
+          "icon": "🛠️",
+          "title": "Mudah Dikelola",
+          "description": "Ubah teks, harga, dan foto lewat panel admin, tanpa coding."
+        }
+      ]
+    },
+    {
+      "type": "pricing",
+      "enabled": true,
+      "navLabel": "Paket",
+      "title": "Pilih Paket",
+      "subtitle": "Domain dibayar terpisah (sekitar Rp150-250 ribu/tahun)",
+      "note": "Isi harga dengan paket final Anda.",
+      "items": [
+        {
+          "name": "Starter",
+          "price": "Rp 450.000",
+          "features": [
+            "1 halaman",
+            "Tombol WhatsApp & peta",
+            "1x revisi"
+          ]
+        },
+        {
+          "name": "Basic",
+          "price": "Rp 850.000",
+          "highlight": true,
+          "features": [
+            "Landing lengkap",
+            "Domain, GA4, Search Console",
+            "SEO dasar",
+            "2x revisi"
+          ]
+        },
+        {
+          "name": "Business",
+          "price": "Rp 1.400.000",
+          "features": [
+            "4-6 halaman",
+            "Panel admin",
+            "SEO lokal & blog",
+            "Pelatihan 1 jam"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "enabled": true,
+      "navLabel": "FAQ",
+      "title": "Pertanyaan Umum",
+      "items": [
+        {
+          "q": "Bagaimana cara ordernya?",
+          "a": "Isi form, kirim data dan foto, terima tagihan, bayar, lalu website dikerjakan dan Anda review."
+        },
+        {
+          "q": "Berapa lama jadi?",
+          "a": "Umumnya 2-5 hari kerja setelah data lengkap dan pembayaran diterima."
+        },
+        {
+          "q": "Domain atas nama siapa?",
+          "a": "Atas nama Anda sebagai pemilik usaha."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "enabled": true,
+      "title": "Siap punya website sendiri?",
+      "text": "Isi form order, kami hubungi lewat WhatsApp.",
+      "buttonLabel": "Isi Form Order",
+      "buttonHref": "https://docs.google.com/forms/d/e/1FAIpQLSeBtgFhic4WCT3UKZWDj9pmMfD8N5OaBYkQeM6wlj-3Mj92DQ/viewform?usp=header"
+    },
+    {
+      "type": "contact",
+      "enabled": true,
+      "navLabel": "Kontak",
+      "title": "Ada Pertanyaan?"
+    }
+  ]
+}

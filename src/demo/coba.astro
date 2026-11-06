@@ -1,0 +1,180 @@
+---
+// Halaman uji coba: calon klien mengisi data, memilih preset dan tampilan, lalu melihat preview.
+import '../styles/themes.css';
+import '../styles/global.css';
+import { OPTIONS, LABELS, ORDER, DEFAULTS } from '../lib/designs.js';
+
+const files = import.meta.glob('../../presets/*.json', { eager: true, import: 'default' });
+const names = {
+  barbershop: 'Barbershop', bengkel: 'Bengkel', 'jasa-pewarnaan': 'Jasa pewarnaan pakaian', 'jasa-website': 'Jasa pembuatan website',
+  kuliner: 'Kuliner / warung', kursus: 'Kursus / les', laundry: 'Laundry', salon: 'Salon', 'servis-ac': 'Servis AC', toko: 'Toko',
+};
+const presets = Object.keys(files)
+  .map((p) => p.split('/').pop().replace('.json', ''))
+  .filter((k) => k !== 'demo-etalase')
+  .map((k) => ({ key: k, label: names[k] || k }));
+const rows = [1, 2, 3, 4, 5];
+---
+<!doctype html>
+<html lang="id" data-theme="ocean">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Coba Buat Website Anda | Uji Coba Gratis</title>
+    <meta name="description" content="Isi data usaha dan foto Anda, pilih tampilan, lalu lihat langsung website Anda." />
+    <style>
+      .cb{max-width:720px;margin:0 auto;padding:24px 16px 80px}
+      .cb h1{margin:0 0 8px}
+      .cb fieldset{border:1px solid var(--c-border);border-radius:14px;padding:16px;margin:0 0 18px;background:#fff}
+      .cb legend{font-weight:700;padding:0 6px}
+      .cb label{display:block;margin:0 0 12px;font-size:.95rem}
+      .cb input[type=text],.cb input[type=tel],.cb select,.cb textarea{display:block;width:100%;min-height:44px;margin-top:4px;padding:8px 10px;border:1px solid var(--c-border);border-radius:8px;font:inherit;background:#fff;color:var(--c-text);box-sizing:border-box}
+      .cb textarea{min-height:84px}
+      .cb .row{display:grid;gap:8px;grid-template-columns:1fr}
+      @media(min-width:640px){.cb .row{grid-template-columns:2fr 1fr 2fr}.cb .two{display:grid;gap:12px;grid-template-columns:1fr 1fr}}
+      .cb .hint{color:var(--c-muted);font-size:.85rem;margin:-6px 0 12px}
+      .cb .thumbs{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+      .cb .thumbs figure{margin:0;position:relative}
+      .cb .thumbs img{width:84px;height:64px;object-fit:cover;border-radius:8px;border:1px solid var(--c-border)}
+      .cb .thumbs button{position:absolute;top:-6px;right:-6px;width:24px;height:24px;border-radius:50%;border:0;background:#c0392b;color:#fff;cursor:pointer;line-height:1}
+      .cb .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+      .cb .btn{width:100%;cursor:pointer;font-size:1rem}
+    </style>
+  </head>
+  <body>
+    <main class="cb">
+      <h1>Coba buat website Anda</h1>
+      <p>Isi data usaha dan foto, pilih tampilan, lalu lihat langsung hasilnya. Foto Anda hanya diproses di browser ini dan tidak diunggah. Isian teks dipakai sekali untuk membuat preview dan tidak kami simpan. Bagian yang tidak Anda isi memakai teks contoh.</p>
+
+      <form id="f" method="post" action="/preview" autocomplete="off">
+        <fieldset>
+          <legend>1. Jenis usaha</legend>
+          <label>Pilih contoh yang paling mirip
+            <select name="preset" required>
+              {presets.map((p) => <option value={p.key}>{p.label}</option>)}
+            </select>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. Data usaha</legend>
+          <label>Nama usaha *<input type="text" name="name" maxlength="60" required /></label>
+          <label>Slogan singkat<input type="text" name="tagline" maxlength="100" /></label>
+          <label>Nomor WhatsApp *<input type="tel" name="phone" inputmode="tel" maxlength="20" placeholder="0812xxxxxxx" required /></label>
+          <label>Alamat<input type="text" name="address" maxlength="120" /></label>
+          <div class="two">
+            <label>Kota<input type="text" name="city" maxlength="50" /></label>
+            <label>Hari buka<input type="text" name="day" maxlength="40" placeholder="Senin-Sabtu" /></label>
+          </div>
+          <label>Jam buka<input type="text" name="time" maxlength="30" placeholder="09:00-17:00" /></label>
+          <label>Judul utama di bagian atas<input type="text" name="heroTitle" maxlength="90" /></label>
+          <label>Kalimat pendukung<input type="text" name="heroSub" maxlength="200" /></label>
+          <label>Tentang usaha<textarea name="about" maxlength="500"></textarea></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. Layanan atau produk (maksimal 5)</legend>
+          <p class="hint">Isi harga bila ingin ditampilkan di daftar harga.</p>
+          {rows.map((i) => (
+            <div class="row">
+              <label>Nama<input type="text" name={`s${i}_name`} maxlength="50" /></label>
+              <label>Harga<input type="text" name={`s${i}_price`} maxlength="30" placeholder="Rp 50.000" /></label>
+              <label>Keterangan<input type="text" name={`s${i}_desc`} maxlength="140" /></label>
+            </div>
+          ))}
+        </fieldset>
+
+        <fieldset>
+          <legend>4. Foto</legend>
+          <label>Logo (opsional)<input type="file" accept="image/*" data-k="logo" /></label>
+          <label>Foto utama (lebih bagus yang melebar)<input type="file" accept="image/*" data-k="hero" /></label>
+          <label>Galeri (maksimal 6 foto)<input type="file" accept="image/*" multiple data-k="gallery" /></label>
+          <div class="thumbs" id="thumbs"></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>5. Tampilan</legend>
+          {ORDER.map((k) => (
+            <label>{LABELS[k]}
+              <select name={k}>
+                {Object.entries(OPTIONS[k]).map(([v, l]) => <option value={v} selected={v === DEFAULTS[k]}>{l}</option>)}
+              </select>
+            </label>
+          ))}
+        </fieldset>
+
+        <div class="hp" aria-hidden="true"><label>Jangan diisi<input type="text" name="url_web" tabindex="-1" autocomplete="off" /></label></div>
+        <input type="hidden" name="fotos" id="fotos" value="" />
+        <button class="btn" type="submit">Lihat website saya</button>
+      </form>
+    </main>
+
+    <script is:inline>
+      (function () {
+        var form = document.getElementById('f'), fotos = {}, thumbs = document.getElementById('thumbs');
+        try { fotos = JSON.parse(sessionStorage.getItem('coba.fotos') || '{}'); } catch (e) {}
+
+        // Simpan dan pulihkan isian teks agar bisa kembali dari preview tanpa mengetik ulang
+        function saveForm() {
+          var d = {};
+          Array.prototype.forEach.call(form.elements, function (el) {
+            if (el.name && el.type !== 'file' && el.name !== 'fotos' && el.name !== 'url_web') d[el.name] = el.value;
+          });
+          try { sessionStorage.setItem('coba.form', JSON.stringify(d)); } catch (e) {}
+        }
+        try {
+          var d = JSON.parse(sessionStorage.getItem('coba.form') || '{}');
+          Object.keys(d).forEach(function (n) { var el = form.elements[n]; if (el && el.type !== 'file') el.value = d[n]; });
+        } catch (e) {}
+        form.addEventListener('input', saveForm);
+        form.addEventListener('change', saveForm);
+
+        function persist() { try { sessionStorage.setItem('coba.fotos', JSON.stringify(fotos)); return true; } catch (e) { alert('Foto terlalu banyak untuk browser ini. Kurangi jumlah foto.'); return false; } }
+        function render() {
+          thumbs.innerHTML = '';
+          Object.keys(fotos).sort().forEach(function (k) {
+            var fig = document.createElement('figure'), im = document.createElement('img'), bt = document.createElement('button');
+            im.src = fotos[k]; im.alt = k; bt.type = 'button'; bt.textContent = '×'; bt.setAttribute('aria-label', 'Hapus foto');
+            bt.onclick = function () { delete fotos[k]; persist(); render(); };
+            fig.appendChild(im); fig.appendChild(bt); thumbs.appendChild(fig);
+          });
+          document.getElementById('fotos').value = Object.keys(fotos).join(',');
+        }
+        // Perkecil foto di browser (lebar maks) dan ubah ke data URL
+        function shrink(file, maxW) {
+          return new Promise(function (res, rej) {
+            var url = URL.createObjectURL(file), im = new Image();
+            im.onload = function () {
+              var r = Math.min(1, maxW / im.width), c = document.createElement('canvas');
+              c.width = Math.round(im.width * r); c.height = Math.round(im.height * r);
+              c.getContext('2d').drawImage(im, 0, 0, c.width, c.height);
+              URL.revokeObjectURL(url);
+              var out = c.toDataURL('image/webp', 0.75);
+              if (out.indexOf('data:image/webp') !== 0) out = c.toDataURL('image/jpeg', 0.75);
+              res(out);
+            };
+            im.onerror = function () { URL.revokeObjectURL(url); rej(); };
+            im.src = url;
+          });
+        }
+        document.querySelectorAll('input[type=file]').forEach(function (inp) {
+          inp.addEventListener('change', async function () {
+            var k = inp.dataset.k, files = Array.prototype.slice.call(inp.files || []);
+            try {
+              if (k === 'gallery') {
+                files = files.slice(0, 6);
+                for (var n = 1; n <= 6; n++) delete fotos['g' + n];
+                for (var i = 0; i < files.length; i++) fotos['g' + (i + 1)] = await shrink(files[i], 1200);
+              } else if (files[0]) {
+                fotos[k] = await shrink(files[0], k === 'logo' ? 256 : 1200);
+              }
+            } catch (e) { alert('Foto tidak bisa dibaca. Coba foto lain.'); }
+            persist(); render(); inp.value = '';
+          });
+        });
+        form.addEventListener('submit', function () { saveForm(); persist(); render(); });
+        render();
+      })();
+    </script>
+  </body>
+</html>

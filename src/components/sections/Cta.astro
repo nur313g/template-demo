@@ -1,0 +1,12 @@
+---
+import { waLink } from '../../lib/util.js';
+const { data, site } = Astro.props;
+const href = data.buttonHref || waLink(site, data.waMessage);
+---
+<section class="s" id={data.id || 'cta'} style="background:var(--c-primary);color:#fff">
+  <div class="wrap center" style="max-width:720px">
+    <h2 style="color:#fff">{data.title}</h2>
+    {data.text && <p>{data.text}</p>}
+    <a class="btn" style="background:#fff;color:var(--c-primary);border-color:#fff" href={href} rel="noopener">{data.buttonLabel || 'Hubungi Kami'}</a>
+  </div>
+</section>

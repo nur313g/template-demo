@@ -1,0 +1,30 @@
+---
+import { youtubeId } from '../../lib/util.js';
+const { data, alt } = Astro.props;
+const id = youtubeId(data.youtube);
+---
+<section class={`s${alt ? ' alt' : ''}`} id={data.id || 'video'}>
+  <div class="wrap" style="max-width:820px">
+    <div class="s-head">
+      <h2>{data.title}</h2>
+      {data.subtitle && <p>{data.subtitle}</p>}
+    </div>
+    {id && (
+      <div class="ratio" data-yt={id}>
+        <img src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`} alt={data.title} loading="lazy" />
+        <button type="button" aria-label="Putar video"><span class="play">▶</span></button>
+      </div>
+    )}
+  </div>
+</section>
+
+<script>
+  // Facade: iframe YouTube baru dimuat saat diklik, supaya halaman tetap ringan.
+  document.querySelectorAll('.ratio[data-yt]').forEach((box) => {
+    const btn = box.querySelector('button');
+    btn?.addEventListener('click', () => {
+      const id = box.getAttribute('data-yt');
+      box.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1" title="Video" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+    });
+  });
+</script>

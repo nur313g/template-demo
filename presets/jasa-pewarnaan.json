@@ -1,0 +1,45 @@
+{
+  "theme": "sunset",
+  "meta": {
+    "lang": "id",
+    "title": "Jasa Pewarnaan Ulang Pakaian | Warna Pudar Jadi Baru Lagi",
+    "description": "Jasa pewarnaan ulang pakaian: celup warna baru, kembalikan warna pudar, rapi dan awet. Kirim foto via WhatsApp untuk estimasi.",
+    "url": "https://contoh-pewarnaan.pages.dev",
+    "ogImage": "hero.jpg"
+  },
+  "business": {
+    "name": "Contoh Pewarnaan",
+    "schemaType": "LocalBusiness",
+    "tagline": "Warna pudar jadi baru lagi",
+    "logo": "logo.png",
+    "phone": "081234567890",
+    "whatsapp": "081234567890",
+    "email": "",
+    "address": "Jl. Contoh No. 5",
+    "city": "Surabaya",
+    "region": "Jawa Timur",
+    "priceRange": "Rp",
+    "geo": { "lat": "", "lng": "" },
+    "waMessage": "Halo, saya mau tanya pewarnaan ulang pakaian. Saya kirim fotonya ya.",
+    "hours": [{ "day": "Senin-Sabtu", "time": "09:00-17:00" }]
+  },
+  "analytics": { "ga4Id": "", "searchConsoleVerification": "" },
+  "social": { "instagram": "", "facebook": "", "tiktok": "", "youtube": "" },
+  "footerNote": "",
+  "sections": [
+    { "type": "hero", "enabled": true, "title": "Baju Kesayangan Pudar? Warnai Ulang, Jadi Seperti Baru", "subtitle": "Kirim foto lewat WhatsApp, kami beri estimasi hasil dan biaya.", "badge": "Estimasi Gratis", "ctaLabel": "Kirim Foto via WhatsApp", "secondaryLabel": "Lihat Hasil", "secondaryHref": "#gallery", "image": "hero.jpg", "imageAlt": "Pakaian setelah diwarnai ulang" },
+    { "type": "about", "enabled": true, "navLabel": "Tentang", "title": "Kenapa Warnai Ulang?", "text": "Pakaian favorit yang warnanya pudar atau bernoda tak perlu dibuang.\nKami bantu kembalikan atau ganti warnanya dengan hasil merata dan awet.", "points": ["Hasil merata dan tidak mudah luntur", "Cocok untuk kaos, kemeja, jaket, dan seragam", "Konsultasi dan estimasi lewat foto"] },
+    { "type": "gallery", "enabled": true, "navLabel": "Hasil", "title": "Sebelum & Sesudah", "images": [] },
+    { "type": "pricing", "enabled": true, "navLabel": "Tarif", "title": "Perkiraan Biaya", "note": "Tarif contoh. Harga final menyesuaikan bahan dan warna.", "items": [
+      { "name": "Kaos / Atasan", "price": "Rp 35.000", "unit": "pcs", "features": ["Warna solid", "Estimasi 3 hari"] },
+      { "name": "Kemeja / Jaket", "price": "Rp 55.000", "unit": "pcs", "highlight": true, "features": ["Warna solid", "Estimasi 3-4 hari"] },
+      { "name": "Partai / Seragam", "price": "Hubungi kami", "features": ["Harga khusus partai", "Konsultasi gratis"] }
+    ] },
+    { "type": "faq", "enabled": true, "navLabel": "FAQ", "title": "Pertanyaan Umum", "items": [
+      { "q": "Bahan apa yang bisa diwarnai?", "a": "Katun, rayon, dan beberapa campuran. Kirim foto label bahan untuk dicek." },
+      { "q": "Apakah warna bisa luntur?", "a": "Kami gunakan proses fiksasi agar warna awet. Tetap cuci terpisah di pencucian awal." }
+    ] },
+    { "type": "contact", "enabled": true, "navLabel": "Kontak", "title": "Kirim Foto Pakaian Anda" },
+    { "type": "cta", "enabled": true, "title": "Coba tanyakan dulu, gratis", "text": "Kirim foto, kami balas dengan estimasi.", "buttonLabel": "Chat WhatsApp" }
+  ]
+}

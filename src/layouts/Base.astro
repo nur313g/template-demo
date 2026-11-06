@@ -1,0 +1,108 @@
+---
+import '../styles/themes.css';
+import '../styles/global.css';
+import '../styles/variants.css';
+import DesignPicker from '../components/DesignPicker.astro';
+import { resolve } from '../lib/designs.js';
+import { waLink, img } from '../lib/util.js';
+
+const { site, sections = [], noindex = false } = Astro.props;
+const b = site.business;
+const dz = resolve(site);
+const m = site.meta;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const ogImage = img(m.ogImage || b.logo);
+const social = site.social || {};
+const sameAs = Object.values(social).filter(Boolean);
+
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': b.schemaType || 'LocalBusiness',
+  name: b.name,
+  description: m.description,
+  url: Astro.site?.href,
+  image: ogImage ? new URL(ogImage, Astro.site).href : undefined,
+  telephone: b.phone,
+  priceRange: b.priceRange || undefined,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: b.address,
+    addressLocality: b.city,
+    addressRegion: b.region,
+    addressCountry: 'ID',
+  },
+  geo: b.geo && b.geo.lat ? { '@type': 'GeoCoordinates', latitude: b.geo.lat, longitude: b.geo.lng } : undefined,
+  openingHours: (b.hours || []).map((h) => `${h.day} ${h.time}`),
+  sameAs: sameAs.length ? sameAs : undefined,
+};
+
+const navItems = sections.filter((s) => s.navLabel).map((s) => ({ label: s.navLabel, href: '#' + (s.id || s.type) }));
+const ga = site.analytics?.ga4Id;
+---
+<!doctype html>
+<html lang={m.lang || 'id'} data-theme={dz.theme} data-style={dz.style} data-hero={dz.hero} data-services={dz.services} data-gallery={dz.gallery} data-header={dz.header}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{m.title}</title>
+    <meta name="description" content={m.description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="canonical" href={canonical} />
+    <meta name="theme-color" content="#ffffff" />
+    {b.logo && <link rel="icon" href={img(b.logo)} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={m.title} />
+    <meta property="og:description" content={m.description} />
+    <meta property="og:url" content={canonical} />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    {site.analytics?.searchConsoleVerification && (
+      <meta name="google-site-verification" content={site.analytics.searchConsoleVerification} />
+    )}
+    <script type="application/ld+json" set:html={JSON.stringify(ld).replace(/</g, '\\u003c')} />
+    {ga && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${ga}`}></script>
+        <script is:inline define:vars={{ ga }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date()); gtag('config', ga);
+        </script>
+      </>
+    )}
+  </head>
+  <body>
+    <header class="hdr">
+      <div class="wrap">
+        <a class="brand" href="/">
+          {b.logo && <img src={img(b.logo)} alt={`Logo ${b.name}`} width="36" height="36" />}
+            {!b.logoHasName && <span>{b.name}</span>}
+        </a>
+        <nav class="nav" aria-label="Menu utama">
+          {navItems.map((n) => <a href={n.href}>{n.label}</a>)}
+        </nav>
+        <a class="btn wa" href={waLink(site)} rel="noopener">WhatsApp</a>
+      </div>
+    </header>
+
+    <main><slot /></main>
+
+    <footer class="ftr">
+      <div class="wrap">
+        <strong>{b.name}</strong>
+        <p>{b.address}{b.city ? `, ${b.city}` : ''}</p>
+        {social && Object.keys(social).length > 0 && (
+          <div class="soc">
+            {Object.entries(social).filter(([, v]) => v).map(([k, v]) => (
+              <a href={v} rel="noopener noreferrer" target="_blank">{k}</a>
+            ))}
+          </div>
+        )}
+        <p>© {new Date().getFullYear()} {b.name}. {site.footerNote || ''}</p>
+      </div>
+    </footer>
+
+    <a class="btn wa fab" href={waLink(site)} rel="noopener" aria-label="Chat WhatsApp">💬 Chat WhatsApp</a>
+      {site.demo && <DesignPicker site={site} />}
+  </body>
+</html>

@@ -1,0 +1,25 @@
+---
+const { data, alt } = Astro.props;
+const items = data.items || [];
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: items.map((i) => ({
+    '@type': 'Question',
+    name: i.q,
+    acceptedAnswer: { '@type': 'Answer', text: i.a },
+  })),
+};
+---
+<section class={`s${alt ? ' alt' : ''}`} id={data.id || 'faq'}>
+  <div class="wrap" style="max-width:760px">
+    <div class="s-head"><h2>{data.title}</h2></div>
+    {items.map((i) => (
+      <details>
+        <summary>{i.q}</summary>
+        <p style="margin:10px 0 0">{i.a}</p>
+      </details>
+    ))}
+  </div>
+  {items.length > 0 && <script type="application/ld+json" set:html={JSON.stringify(ld).replace(/</g, '\\u003c')} />}
+</section>

@@ -1,0 +1,18 @@
+---
+import { waLink, img } from '../../lib/util.js';
+const { data, site } = Astro.props;
+---
+<section class="hero" id={data.id || 'hero'}>
+  <div class="wrap">
+    <div>
+      {data.badge && <span class="tag">{data.badge}</span>}
+      <h1>{data.title}</h1>
+      <p class="lead">{data.subtitle}</p>
+      <div class="btn-row">
+        <a class="btn wa" href={waLink(site, data.waMessage)} rel="noopener">{data.ctaLabel || 'Chat WhatsApp'}</a>
+        {data.secondaryLabel && <a class="btn ghost" href={data.secondaryHref || '#layanan'}>{data.secondaryLabel}</a>}
+      </div>
+    </div>
+    {data.image && <img src={img(data.image)} alt={data.imageAlt || data.title} width="1200" height="600" fetchpriority="high" />}
+  </div>
+</section>

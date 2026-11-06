@@ -1,0 +1,186 @@
+{
+  "theme": "navy",
+  "meta": {
+    "lang": "id",
+    "title": "Servis AC di Malang | Cuci, Isi Freon, Perbaikan",
+    "description": "Servis AC di Malang: cuci AC, isi freon, bongkar pasang, dan perbaikan. Teknisi datang ke rumah. Pesan lewat WhatsApp.",
+    "url": "https://contoh-contoh-servis-ac.pages.dev",
+    "ogImage": ""
+  },
+  "business": {
+    "name": "Contoh Servis AC",
+    "schemaType": "HVACBusiness",
+    "tagline": "Teknisi datang ke rumah",
+    "logo": "",
+    "logoHasName": false,
+    "phone": "081234567890",
+    "whatsapp": "081234567890",
+    "email": "",
+    "address": "Jl. Contoh No. 1",
+    "city": "Malang",
+    "region": "Jawa Timur",
+    "priceRange": "Rp",
+    "geo": {
+      "lat": "",
+      "lng": ""
+    },
+    "waMessage": "Halo, saya mau servis AC.",
+    "hours": [
+      {
+        "day": "Senin-Sabtu",
+        "time": "08:00-18:00"
+      }
+    ]
+  },
+  "analytics": {
+    "ga4Id": "",
+    "searchConsoleVerification": ""
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "youtube": ""
+  },
+  "footerNote": "",
+  "sections": [
+    {
+      "type": "hero",
+      "enabled": true,
+      "badge": "Teknisi ke Rumah",
+      "title": "Servis AC di Malang: Cuci, Isi Freon, dan Perbaikan Langsung ke Rumah",
+      "subtitle": "AC kurang dingin atau bocor? Pesan teknisi lewat WhatsApp, kami datang sesuai jadwal.",
+      "ctaLabel": "Pesan Teknisi",
+      "secondaryLabel": "Lihat Harga",
+      "secondaryHref": "#pricing",
+      "image": "",
+      "imageAlt": "",
+      "waMessage": "Halo, saya mau servis AC."
+    },
+    {
+      "type": "services",
+      "enabled": true,
+      "navLabel": "Layanan",
+      "title": "Layanan Kami",
+      "subtitle": "Perawatan dan perbaikan AC rumah dan kantor",
+      "items": [
+        {
+          "icon": "🧼",
+          "title": "Cuci AC",
+          "description": "Pembersihan unit dalam dan luar."
+        },
+        {
+          "icon": "❄️",
+          "title": "Isi Freon",
+          "description": "Pengecekan tekanan dan pengisian freon."
+        },
+        {
+          "icon": "🔧",
+          "title": "Perbaikan",
+          "description": "Mengatasi AC kurang dingin, bocor, atau berisik."
+        },
+        {
+          "icon": "🏠",
+          "title": "Bongkar Pasang",
+          "description": "Pemasangan dan pemindahan unit AC."
+        }
+      ]
+    },
+    {
+      "type": "pricing",
+      "enabled": true,
+      "navLabel": "Harga",
+      "title": "Perkiraan Biaya",
+      "subtitle": "Biaya akhir menyesuaikan kondisi AC",
+      "note": "Tarif contoh. Ganti dengan tarif asli.",
+      "items": [
+        {
+          "name": "Cuci AC",
+          "price": "Rp 75.000",
+          "features": [
+            "Cuci unit dalam",
+            "Cek fungsi"
+          ],
+          "ctaLabel": "Pesan Teknisi",
+          "unit": "unit"
+        },
+        {
+          "name": "Isi Freon",
+          "price": "Rp 150.000",
+          "features": [
+            "Cek tekanan",
+            "Isi sesuai kebutuhan"
+          ],
+          "ctaLabel": "Pesan Teknisi",
+          "unit": "unit",
+          "highlight": true
+        },
+        {
+          "name": "Bongkar Pasang",
+          "price": "Rp 250.000",
+          "features": [
+            "Jasa teknisi",
+            "Material terpisah"
+          ],
+          "ctaLabel": "Pesan Teknisi",
+          "unit": "unit"
+        }
+      ]
+    },
+    {
+      "type": "about",
+      "enabled": true,
+      "navLabel": "Area",
+      "title": "Area Layanan",
+      "text": "Sebutkan kecamatan atau wilayah yang dilayani.\nGanti teks ini dengan area layanan asli.",
+      "points": [
+        "Teknisi datang ke lokasi",
+        "Jadwal disepakati lewat WhatsApp",
+        "Estimasi biaya sebelum pengerjaan"
+      ],
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "type": "gallery",
+      "enabled": false,
+      "navLabel": "Galeri",
+      "title": "Dokumentasi Pekerjaan",
+      "subtitle": "",
+      "images": []
+    },
+    {
+      "type": "faq",
+      "enabled": true,
+      "navLabel": "FAQ",
+      "title": "Pertanyaan Umum",
+      "items": [
+        {
+          "q": "Apakah teknisi datang ke rumah?",
+          "a": "Ya, di area layanan kami. Sebutkan lokasi Anda lewat WhatsApp."
+        },
+        {
+          "q": "Berapa lama cuci AC?",
+          "a": "Biasanya sekitar satu jam per unit, tergantung kondisi."
+        },
+        {
+          "q": "Apakah ada garansi?",
+          "a": "Tanyakan ketentuan garansi pekerjaan lewat WhatsApp."
+        }
+      ]
+    },
+    {
+      "type": "contact",
+      "enabled": true,
+      "navLabel": "Kontak",
+      "title": "Hubungi Kami"
+    },
+    {
+      "type": "cta",
+      "enabled": true,
+      "title": "AC kurang dingin?",
+      "text": "Pesan teknisi sekarang lewat WhatsApp.",
+      "buttonLabel": "Pesan Teknisi"
+    }
+  ]
+}

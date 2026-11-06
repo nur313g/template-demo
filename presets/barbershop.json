@@ -1,0 +1,186 @@
+{
+  "theme": "slate",
+  "meta": {
+    "lang": "id",
+    "title": "Barbershop di Malang | Potong Rambut Pria Rapi",
+    "description": "Barbershop di Malang: potong rambut pria, cukur, dan perawatan jenggot. Antrean mudah lewat WhatsApp.",
+    "url": "https://contoh-contoh-barbershop.pages.dev",
+    "ogImage": ""
+  },
+  "business": {
+    "name": "Contoh Barbershop",
+    "schemaType": "HealthAndBeautyBusiness",
+    "tagline": "Rapi, bersih, sesuai karakter",
+    "logo": "",
+    "logoHasName": false,
+    "phone": "081234567890",
+    "whatsapp": "081234567890",
+    "email": "",
+    "address": "Jl. Contoh No. 1",
+    "city": "Malang",
+    "region": "Jawa Timur",
+    "priceRange": "Rp",
+    "geo": {
+      "lat": "",
+      "lng": ""
+    },
+    "waMessage": "Halo, saya mau booking potong rambut.",
+    "hours": [
+      {
+        "day": "Setiap hari",
+        "time": "10:00-21:00"
+      }
+    ]
+  },
+  "analytics": {
+    "ga4Id": "",
+    "searchConsoleVerification": ""
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "youtube": ""
+  },
+  "footerNote": "",
+  "sections": [
+    {
+      "type": "hero",
+      "enabled": true,
+      "badge": "Booking via WhatsApp",
+      "title": "Barbershop di Malang: Potongan Rapi, Gaya Sesuai Karakter",
+      "subtitle": "Potong rambut pria, cukur, dan rapikan jenggot. Booking lewat WhatsApp, tanpa antre lama.",
+      "ctaLabel": "Booking Sekarang",
+      "secondaryLabel": "Lihat Harga",
+      "secondaryHref": "#pricing",
+      "image": "",
+      "imageAlt": "",
+      "waMessage": "Halo, saya mau booking potong rambut."
+    },
+    {
+      "type": "services",
+      "enabled": true,
+      "navLabel": "Layanan",
+      "title": "Layanan Kami",
+      "subtitle": "Dari potong rambut sampai perawatan jenggot",
+      "items": [
+        {
+          "icon": "✂️",
+          "title": "Haircut",
+          "description": "Potong rambut sesuai bentuk kepala dan gaya Anda."
+        },
+        {
+          "icon": "🪒",
+          "title": "Shaving",
+          "description": "Cukur kumis dan jenggot dengan rapi."
+        },
+        {
+          "icon": "🧔",
+          "title": "Beard Trim",
+          "description": "Rapikan dan bentuk jenggot."
+        },
+        {
+          "icon": "🎨",
+          "title": "Hair Coloring",
+          "description": "Pewarnaan rambut sesuai permintaan."
+        }
+      ]
+    },
+    {
+      "type": "pricing",
+      "enabled": true,
+      "navLabel": "Harga",
+      "title": "Daftar Harga",
+      "subtitle": "Pilih sesuai kebutuhan",
+      "note": "Tarif contoh. Ganti dengan tarif asli.",
+      "items": [
+        {
+          "name": "Haircut",
+          "price": "Rp 35.000",
+          "features": [
+            "Konsultasi gaya",
+            "Keramas singkat"
+          ],
+          "ctaLabel": "Booking"
+        },
+        {
+          "name": "Haircut + Shave",
+          "price": "Rp 55.000",
+          "features": [
+            "Potong rambut",
+            "Cukur rapi"
+          ],
+          "ctaLabel": "Booking",
+          "highlight": true
+        },
+        {
+          "name": "Paket Komplit",
+          "price": "Rp 80.000",
+          "features": [
+            "Haircut",
+            "Beard trim",
+            "Pijat kepala"
+          ],
+          "ctaLabel": "Booking"
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "enabled": false,
+      "navLabel": "Galeri",
+      "title": "Hasil Potongan",
+      "subtitle": "",
+      "images": []
+    },
+    {
+      "type": "testimonials",
+      "enabled": false,
+      "title": "Kata Pelanggan",
+      "items": [
+        {
+          "name": "Nama Pelanggan",
+          "role": "",
+          "text": "Isi dengan testimoni asli dari pelanggan.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "enabled": true,
+      "navLabel": "FAQ",
+      "title": "Pertanyaan Umum",
+      "items": [
+        {
+          "q": "Apakah perlu booking?",
+          "a": "Boleh langsung datang, tetapi booking lewat WhatsApp mengurangi waktu tunggu."
+        },
+        {
+          "q": "Bisa membawa referensi model?",
+          "a": "Bisa. Tunjukkan foto referensi ke barber."
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "enabled": true,
+      "navLabel": "Lokasi",
+      "title": "Lokasi Kami",
+      "embedUrl": ""
+    },
+    {
+      "type": "contact",
+      "enabled": true,
+      "navLabel": "Kontak",
+      "title": "Hubungi Kami"
+    },
+    {
+      "type": "cta",
+      "enabled": true,
+      "title": "Siap tampil rapi?",
+      "text": "Booking sekarang lewat WhatsApp.",
+      "buttonLabel": "Booking Sekarang"
+    }
+  ]
+}
