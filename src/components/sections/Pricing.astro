@@ -9,7 +9,7 @@ const items = data.items || [];
       <h2>{data.title}</h2>
       {data.subtitle && <p>{data.subtitle}</p>}
     </div>
-    <div class="grid c3">
+    <div class={`grid ${items.length === 4 ? 'c4' : 'c3'}`}>
       {items.map((it) => (
         <article class={`card${it.highlight ? ' hl' : ''}`}>
           {it.highlight && <span class="tag">{it.badge || 'Terlaris'}</span>}

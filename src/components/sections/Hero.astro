@@ -9,7 +9,7 @@ const { data, site } = Astro.props;
       <h1>{data.title}</h1>
       <p class="lead">{data.subtitle}</p>
       <div class="btn-row">
-        <a class="btn wa" href={waLink(site, data.waMessage)} rel="noopener">{data.ctaLabel || 'Chat WhatsApp'}</a>
+        <a class={`btn${data.ctaHref ? '' : ' wa'}`} href={data.ctaHref || waLink(site, data.waMessage)} rel="noopener">{data.ctaLabel || 'Chat WhatsApp'}</a>
         {data.secondaryLabel && <a class="btn ghost" href={data.secondaryHref || '#layanan'}>{data.secondaryLabel}</a>}
       </div>
     </div>
