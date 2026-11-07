@@ -7,7 +7,7 @@ Dokumen ini adalah "buku panduan" template. Berikan file ini ke AI bersama data 
 - Seluruh isi website ada di satu file: `src/data/site.json`.
 - Halaman dirender dari daftar `sections`, urutannya mengikuti urutan di daftar.
 - Tampil/sembunyi: `"enabled": true/false`. Pindah urutan: pindahkan objeknya.
-- Tema: `"theme"` salah satu dari 10 tema: `ocean` (biru), `sunset` (oranye), `forest` (hijau), `rose` (merah muda), `violet` (ungu), `teal` (hijau tosca), `slate` (abu gelap), `amber` (cokelat emas), `crimson` (merah), `navy` (biru tua). Tambah tema baru di `src/styles/themes.css`.
+- Tema: `"theme"` salah satu dari 20 tema (lihat tabel di bagian 2b).
 - Logo yang sudah memuat teks nama usaha: set `"logoHasName": true` di `business` agar teks nama tidak muncul dobel di header.
 - Foto disimpan di `public/images/`. Di JSON cukup tulis nama file, mis. `"hero.jpg"`.
 
@@ -39,14 +39,14 @@ Selain `theme` (warna), ada pilihan lain di `site.json`. Semuanya hanya mengubah
 
 | Field | Pilihan |
 |---|---|
-| `theme` | ocean, sunset, forest, rose, violet, teal, slate, amber, crimson, navy |
+| `theme` | ocean, sunset, forest, rose, violet, teal, slate, amber, crimson, navy, indigo, olive, mocha, terracotta, berry, plum, charcoal, steel, pine, lagoon |
 | `style` | clean (bawaan), bold, soft, elegant, compact |
 | `layout.hero` | split (bawaan), center, full (butuh foto landscape) |
 | `layout.services` | cards (bawaan), list, icons |
 | `layout.gallery` | grid (bawaan), masonry |
 | `layout.header` | left (bawaan), center |
 
-Total 10 x 5 x 3 x 3 x 2 x 2 = 1.800 kombinasi. Field yang kosong memakai nilai bawaan.
+Total 20 x 5 x 3 x 3 x 2 x 2 = 3.600 kombinasi, dengan 26 preset jenis usaha (5 terakhir berbentuk katalog toko online dengan pesanan lewat WhatsApp, tanpa keranjang): barbershop, bengkel, jasa-pewarnaan, jasa-website, kuliner, kursus, laundry, salon, servis-ac, toko, katering, toko-kue, kos-kosan, rental-mobil, fotografi, percetakan, pet-grooming, fitness, renovasi, florist, toko-fashion, toko-kecantikan, toko-makanan, toko-gadget, toko-rumah, laundry-lengkap (alternatif laundry). Field yang kosong memakai nilai bawaan.
 
 Kode desain: `warna-gaya-hero-layanan-galeri-menu`, mis. `forest-bold-center-list-masonry-center`.
 
@@ -59,7 +59,7 @@ npm run klien -- toko kode=teal-compact-split-cards-masonry-left
 
 Halaman demo untuk calon pembeli: `npm run klien -- demo-etalase` (atau set `"demo": true` di `site.json`). Muncul tombol "Ganti tampilan" untuk mencoba semua pilihan secara langsung, lalu tombol "Pilih desain ini" mengirim pilihan ke WhatsApp Anda beserta kodenya. Alamat dengan pilihan tertentu bisa dibagikan: `https://domain/?d=forest-bold-center-list-masonry-center`.
 
-Menambah pilihan baru: tambah nama di `src/lib/designs.js` (OPTIONS), tulis CSS-nya di `src/styles/variants.css` (atau blok tema di `themes.css`), dan tambah nama di `public/admin/config.yml`.
+Menambah preset baru: salin file di `presets/`, ubah isinya, lalu daftarkan namanya di `PRESET_NAMES` di `src/lib/designs.js`. Menambah pilihan tampilan baru: tambah nama di `src/lib/designs.js` (OPTIONS), tulis CSS-nya di `src/styles/variants.css` (atau blok tema di `themes.css`), dan tambah nama di `public/admin/config.yml`.
 
 ## 2c. Halaman uji coba untuk calon klien (/coba)
 
@@ -71,6 +71,18 @@ Calon klien mengisi data usaha, foto, preset, dan tampilan di `/coba`, lalu `/pr
 - Logika pengisian ada di `src/demo/build-site.js`. Mau menambah isian: tambah input di `src/demo/coba.astro` dan petakan di `build-site.js`.
 - Deploy: proyek Cloudflare Pages terpisah untuk demo. Build command `npm run build`, output `dist`. Cek batas paket gratis Cloudflare di halaman harga resminya.
 - Tes lokal: `npm install`, `npm run klien -- demo-etalase`, `npm run dev`, buka `/coba`.
+
+## 2d. Produk dan keranjang WhatsApp (section `products`)
+
+Kartu produk (foto, nama, harga, deskripsi) dengan tombol "+ Keranjang". Pengunjung menambah produk, mengatur jumlah, mengisi nama dan alamat, lalu satu tombol mengirim daftar belanja ke WhatsApp penjual. Tanpa pembayaran online dan tanpa pengelolaan stok. Harga yang tidak berupa angka (mis. "Tanya harga") tampil tanpa tombol keranjang. Matikan keranjang dengan `"cart": false`. Dipakai oleh 5 preset toko-*. Di `/coba`, baris layanan atau produk menjadi kartu produk, dan foto galeri ke-1, ke-2, dan seterusnya menjadi foto produk ke-1, ke-2, dan seterusnya.
+
+## 2e. Kelompok dan preset alternatif
+
+Daftar jenis usaha di `/coba` dikelompokkan lewat `PRESET_GROUPS` di `src/lib/designs.js`. Satu jenis usaha bisa punya preset alternatif (isi dan susunan berbeda, mis. `laundry-lengkap` untuk `laundry`). Cara menambah alternatif:
+1. Buat file `presets/<nama-alternatif>.json` (salin preset induk lalu ubah isinya, dengan tulisan sendiri).
+2. Daftarkan di `designs.js`: nama di `PRESET_NAMES`, induknya di `ALT_OF`, dan label pendek di `ALT_LABELS`.
+
+Alternatif muncul di bawah induknya (dengan tanda ↳) dan sebagai pilihan "Gaya alternatif" di panel preview.
 
 ## 3. Daftar section dan field
 
