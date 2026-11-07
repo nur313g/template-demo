@@ -1,0 +1,206 @@
+{
+  "theme": "indigo",
+  "meta": {
+    "lang": "id",
+    "title": "Rental Mobil Harian dan Wisata | Lepas Kunci dan Dengan Sopir",
+    "description": "Rental mobil harian, wisata, dan antar-jemput. Armada terawat, tarif jelas, pesan lewat WhatsApp.",
+    "url": "https://contoh-rental-mobil.pages.dev",
+    "ogImage": ""
+  },
+  "business": {
+    "name": "Contoh Rental Mobil",
+    "schemaType": "AutoRental",
+    "tagline": "Mobil terawat, harga jelas",
+    "logo": "",
+    "logoHasName": false,
+    "phone": "081234567890",
+    "whatsapp": "081234567890",
+    "email": "",
+    "address": "Jl. Contoh No. 1",
+    "city": "Surabaya",
+    "region": "Jawa Timur",
+    "priceRange": "Rp",
+    "geo": {
+      "lat": "",
+      "lng": ""
+    },
+    "waMessage": "Halo, saya mau tanya sewa mobil.",
+    "hours": [
+      {
+        "day": "Setiap hari",
+        "time": "06:00-21:00"
+      }
+    ]
+  },
+  "analytics": {
+    "ga4Id": "",
+    "searchConsoleVerification": ""
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "youtube": ""
+  },
+  "footerNote": "",
+  "sections": [
+    {
+      "type": "hero",
+      "enabled": true,
+      "badge": "Lepas Kunci atau Dengan Sopir",
+      "title": "Rental Mobil untuk Harian, Wisata, dan Keperluan Kantor",
+      "subtitle": "Pilih mobil sesuai jumlah penumpang. Tanya jadwal dan harga lewat WhatsApp.",
+      "ctaLabel": "Tanya Sewa",
+      "secondaryLabel": "Lihat Harga",
+      "secondaryHref": "#pricing",
+      "image": "",
+      "imageAlt": "",
+      "waMessage": "Halo, saya mau tanya sewa mobil."
+    },
+    {
+      "type": "services",
+      "enabled": true,
+      "navLabel": "Layanan",
+      "title": "Layanan Sewa",
+      "subtitle": "Pilih sesuai kebutuhan perjalanan",
+      "items": [
+        {
+          "icon": "🚗",
+          "title": "Lepas Kunci",
+          "description": "Anda menyetir sendiri, sesuai syarat sewa."
+        },
+        {
+          "icon": "🧑‍✈️",
+          "title": "Dengan Sopir",
+          "description": "Sopir berpengalaman untuk perjalanan dalam dan luar kota."
+        },
+        {
+          "icon": "🗺️",
+          "title": "Paket Wisata",
+          "description": "Mobil dan sopir untuk liburan keluarga atau rombongan."
+        },
+        {
+          "icon": "✈️",
+          "title": "Antar-Jemput",
+          "description": "Penjemputan di bandara, stasiun, atau terminal."
+        },
+        {
+          "icon": "💼",
+          "title": "Sewa Bulanan",
+          "description": "Untuk perusahaan dan kebutuhan jangka panjang."
+        },
+        {
+          "icon": "🧰",
+          "title": "Armada Dicek",
+          "description": "Mobil diperiksa sebelum disewakan."
+        }
+      ]
+    },
+    {
+      "type": "pricing",
+      "enabled": true,
+      "navLabel": "Harga",
+      "title": "Contoh Tarif",
+      "subtitle": "Tarif jelas sebelum berangkat",
+      "note": "Tarif contoh. Ganti dengan tarif asli.",
+      "items": [
+        {
+          "name": "City Car",
+          "price": "Rp 300.000",
+          "features": [
+            "Isi 4 penumpang",
+            "Lepas kunci atau dengan sopir"
+          ],
+          "ctaLabel": "Tanya",
+          "unit": "per hari"
+        },
+        {
+          "name": "MPV 7 Penumpang",
+          "price": "Rp 450.000",
+          "features": [
+            "Cocok untuk keluarga",
+            "Lepas kunci atau dengan sopir"
+          ],
+          "ctaLabel": "Tanya",
+          "highlight": true,
+          "unit": "per hari"
+        },
+        {
+          "name": "Paket Wisata",
+          "price": "Rp 800.000",
+          "features": [
+            "Mobil dan sopir",
+            "Durasi sesuai paket"
+          ],
+          "ctaLabel": "Tanya",
+          "unit": "per hari"
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "enabled": false,
+      "navLabel": "Galeri",
+      "title": "Armada Kami",
+      "subtitle": "",
+      "images": []
+    },
+    {
+      "type": "testimonials",
+      "enabled": false,
+      "title": "Kata Pelanggan",
+      "items": [
+        {
+          "name": "Nama Pelanggan",
+          "role": "",
+          "text": "Isi dengan testimoni asli dari pelanggan.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "enabled": true,
+      "navLabel": "FAQ",
+      "title": "Pertanyaan Umum",
+      "items": [
+        {
+          "q": "Apa syarat sewa?",
+          "a": "Umumnya KTP dan SIM yang berlaku. Syarat lengkap dijelaskan lewat WhatsApp."
+        },
+        {
+          "q": "Apakah harga sudah termasuk BBM?",
+          "a": "Rincian BBM, sopir, dan tol dijelaskan sebelum Anda memutuskan."
+        },
+        {
+          "q": "Bisa dipakai ke luar kota?",
+          "a": "Bisa, dengan ketentuan tertentu. Sebutkan tujuan Anda saat bertanya."
+        },
+        {
+          "q": "Berapa jam hitungan sewa harian?",
+          "a": "Ketentuan jam sewa dijelaskan saat pemesanan."
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "enabled": true,
+      "navLabel": "Lokasi",
+      "title": "Lokasi Kami",
+      "embedUrl": ""
+    },
+    {
+      "type": "contact",
+      "enabled": true,
+      "navLabel": "Kontak",
+      "title": "Hubungi Kami"
+    },
+    {
+      "type": "cta",
+      "enabled": true,
+      "title": "Butuh mobil untuk perjalanan Anda?",
+      "text": "Kirim tanggal dan tujuan, kami bantu pilihkan mobilnya.",
+      "buttonLabel": "Tanya Sewa"
+    }
+  ]
+}

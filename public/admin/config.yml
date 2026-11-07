@@ -21,7 +21,7 @@ collections:
           - label: Tema Warna
             name: theme
             widget: select
-            options: [ocean, sunset, forest, rose, violet, teal, slate, amber, crimson, navy]
+            options: [ocean, sunset, forest, rose, violet, teal, slate, amber, crimson, navy, indigo, olive, mocha, terracotta, berry, plum, charcoal, steel, pine, lagoon]
             default: ocean
           - label: Gaya (font, bentuk tombol, kerapatan)
             name: style
@@ -158,6 +158,26 @@ collections:
                       - { label: Deskripsi singkat, name: description, widget: string, required: false }
                       - { label: Sorot sebagai terlaris, name: highlight, widget: boolean, default: false }
                       - { label: Fitur, name: features, widget: list, required: false, field: { label: Fitur, name: text, widget: string } }
+              - label: Produk dan Keranjang
+                name: products
+                widget: object
+                fields:
+                  - { label: Tampilkan, name: enabled, widget: boolean, default: true }
+                  - { label: Label menu, name: navLabel, widget: string, required: false }
+                  - { label: Judul, name: title, widget: string }
+                  - { label: Sub judul, name: subtitle, widget: string, required: false }
+                  - { label: Aktifkan keranjang WhatsApp, name: cart, widget: boolean, default: true }
+                  - { label: Catatan bawah, name: note, widget: string, required: false }
+                  - label: Daftar produk
+                    name: items
+                    widget: list
+                    fields:
+                      - { label: Nama produk, name: name, widget: string }
+                      - { label: Harga (tulis lengkap, mis. Rp 79.000), name: price, widget: string }
+                      - { label: Harga coret (opsional), name: oldPrice, widget: string, required: false }
+                      - { label: Label (mis. Baru), name: badge, widget: string, required: false }
+                      - { label: Deskripsi singkat, name: description, widget: string, required: false }
+                      - { label: Foto produk, name: image, widget: image, required: false }
               - label: Galeri Foto
                 name: gallery
                 widget: object

@@ -1,5 +1,5 @@
 /* Tema = kumpulan variabel. Tambah tema baru cukup salin satu blok.
-   Tersedia 10 tema: ocean, sunset, forest, rose, violet, teal, slate, amber, crimson, navy.
+   Tersedia 20 tema: ocean, sunset, forest, rose, violet, teal, slate, amber, crimson, navy, indigo, olive, mocha, terracotta, berry, plum, charcoal, steel, pine, lagoon.
    Semua tema terang (latar putih) agar kartu dan header tetap terbaca. */
 :root, [data-theme="ocean"] {
   --c-primary: #0b6fb8;
@@ -115,4 +115,116 @@
   --c-muted: #55648a;
   --c-border: #d3def5;
   --radius: 12px;
+}
+[data-theme="indigo"] {
+  --c-primary: #4338ca;
+  --c-primary-dark: #312e81;
+  --c-accent: #f59e0b;
+  --c-bg: #ffffff;
+  --c-soft: #eef0fe;
+  --c-text: #1b1b3a;
+  --c-muted: #5b5b7a;
+  --c-border: #dcdcf5;
+  --radius: 12px;
+}
+[data-theme="olive"] {
+  --c-primary: #5f6b1d;
+  --c-primary-dark: #475014;
+  --c-accent: #d97706;
+  --c-bg: #ffffff;
+  --c-soft: #f4f6e6;
+  --c-text: #23280f;
+  --c-muted: #666b4d;
+  --c-border: #e0e5c8;
+  --radius: 10px;
+}
+[data-theme="mocha"] {
+  --c-primary: #7b4a2d;
+  --c-primary-dark: #5c3720;
+  --c-accent: #c8963e;
+  --c-bg: #ffffff;
+  --c-soft: #f7efe8;
+  --c-text: #2a1b12;
+  --c-muted: #7a6558;
+  --c-border: #e8d9cc;
+  --font-head: Georgia, 'Times New Roman', serif;
+  --radius: 6px;
+}
+[data-theme="terracotta"] {
+  --c-primary: #a94a30;
+  --c-primary-dark: #873824;
+  --c-accent: #2f6f6a;
+  --c-bg: #ffffff;
+  --c-soft: #fbefe9;
+  --c-text: #2d1912;
+  --c-muted: #7b645b;
+  --c-border: #efd8cd;
+  --radius: 12px;
+}
+[data-theme="berry"] {
+  --c-primary: #a21c5a;
+  --c-primary-dark: #7d1445;
+  --c-accent: #f0a02b;
+  --c-bg: #ffffff;
+  --c-soft: #fdeef5;
+  --c-text: #2d1020;
+  --c-muted: #7a5b69;
+  --c-border: #f0d3e0;
+  --radius: 16px;
+}
+[data-theme="plum"] {
+  --c-primary: #6b2d5c;
+  --c-primary-dark: #4e1f43;
+  --c-accent: #d4a24c;
+  --c-bg: #ffffff;
+  --c-soft: #f6edf4;
+  --c-text: #251321;
+  --c-muted: #70566a;
+  --c-border: #e6d3e1;
+  --font-head: Georgia, 'Times New Roman', serif;
+  --radius: 8px;
+}
+[data-theme="charcoal"] {
+  --c-primary: #262626;
+  --c-primary-dark: #0f0f0f;
+  --c-accent: #e0a100;
+  --c-bg: #ffffff;
+  --c-soft: #f4f4f4;
+  --c-text: #171717;
+  --c-muted: #5f5f5f;
+  --c-border: #dddddd;
+  --radius: 4px;
+}
+[data-theme="steel"] {
+  --c-primary: #3f5d7a;
+  --c-primary-dark: #2e455c;
+  --c-accent: #e07a3f;
+  --c-bg: #ffffff;
+  --c-soft: #edf2f7;
+  --c-text: #162330;
+  --c-muted: #566677;
+  --c-border: #d6dee7;
+  --radius: 10px;
+}
+[data-theme="pine"] {
+  --c-primary: #14532d;
+  --c-primary-dark: #0d3a1f;
+  --c-accent: #d9a21b;
+  --c-bg: #ffffff;
+  --c-soft: #eaf4ee;
+  --c-text: #0f2217;
+  --c-muted: #4f6659;
+  --c-border: #cfe3d6;
+  --radius: 10px;
+}
+[data-theme="lagoon"] {
+  --c-primary: #0e7490;
+  --c-primary-dark: #0a566c;
+  --c-accent: #f97316;
+  --c-bg: #ffffff;
+  --c-soft: #e8f6fa;
+  --c-text: #0c2530;
+  --c-muted: #4e6b76;
+  --c-border: #cfe6ed;
+  --radius: 14px;
 }

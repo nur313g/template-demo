@@ -1,0 +1,210 @@
+{
+  "theme": "lagoon",
+  "meta": {
+    "lang": "id",
+    "title": "Percetakan Kartu Nama, Spanduk, Stiker dan Sablon",
+    "description": "Percetakan kartu nama, spanduk, stiker, nota, dan sablon kaos. Kirim file lewat WhatsApp untuk cek harga.",
+    "url": "https://contoh-percetakan.pages.dev",
+    "ogImage": ""
+  },
+  "business": {
+    "name": "Contoh Percetakan",
+    "schemaType": "ProfessionalService",
+    "tagline": "Cetak cepat, hasil rapi",
+    "logo": "",
+    "logoHasName": false,
+    "phone": "081234567890",
+    "whatsapp": "081234567890",
+    "email": "",
+    "address": "Jl. Contoh No. 1",
+    "city": "Surabaya",
+    "region": "Jawa Timur",
+    "priceRange": "Rp",
+    "geo": {
+      "lat": "",
+      "lng": ""
+    },
+    "waMessage": "Halo, saya mau tanya cetak.",
+    "hours": [
+      {
+        "day": "Senin-Sabtu",
+        "time": "08:00-17:00"
+      },
+      {
+        "day": "Minggu",
+        "time": "Tutup"
+      }
+    ]
+  },
+  "analytics": {
+    "ga4Id": "",
+    "searchConsoleVerification": ""
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "youtube": ""
+  },
+  "footerNote": "",
+  "sections": [
+    {
+      "type": "hero",
+      "enabled": true,
+      "badge": "Kirim File Lewat WhatsApp",
+      "title": "Percetakan Kartu Nama, Spanduk, Stiker, dan Sablon",
+      "subtitle": "Kirim file desain, kami hitung harga dan waktu pengerjaannya. Bisa dibantu desain sederhana.",
+      "ctaLabel": "Tanya Harga",
+      "secondaryLabel": "Lihat Harga",
+      "secondaryHref": "#pricing",
+      "image": "",
+      "imageAlt": "",
+      "waMessage": "Halo, saya mau tanya cetak."
+    },
+    {
+      "type": "services",
+      "enabled": true,
+      "navLabel": "Layanan",
+      "title": "Layanan Cetak",
+      "subtitle": "Untuk usaha, acara, dan keperluan pribadi",
+      "items": [
+        {
+          "icon": "🖨️",
+          "title": "Cetak Digital",
+          "description": "Dokumen, brosur, dan flyer."
+        },
+        {
+          "icon": "🧾",
+          "title": "Nota & Kop Surat",
+          "description": "Cetak nota dan kop surat usaha."
+        },
+        {
+          "icon": "📇",
+          "title": "Kartu Nama",
+          "description": "Pilihan kertas dan finishing."
+        },
+        {
+          "icon": "🪧",
+          "title": "Spanduk & Banner",
+          "description": "Untuk promosi dan acara."
+        },
+        {
+          "icon": "👕",
+          "title": "Sablon Kaos",
+          "description": "Sablon satuan atau jumlah banyak."
+        },
+        {
+          "icon": "🏷️",
+          "title": "Stiker & Label",
+          "description": "Stiker produk dan label kemasan."
+        }
+      ]
+    },
+    {
+      "type": "pricing",
+      "enabled": true,
+      "navLabel": "Harga",
+      "title": "Contoh Harga",
+      "subtitle": "Harga bergantung bahan dan jumlah",
+      "note": "Harga contoh. Ganti dengan harga asli.",
+      "items": [
+        {
+          "name": "Kartu Nama",
+          "price": "Rp 45.000",
+          "features": [
+            "1 box",
+            "Pilihan kertas"
+          ],
+          "ctaLabel": "Tanya",
+          "unit": "mulai dari"
+        },
+        {
+          "name": "Spanduk",
+          "price": "Rp 25.000",
+          "features": [
+            "Bahan standar",
+            "Ukuran bebas"
+          ],
+          "ctaLabel": "Tanya",
+          "highlight": true,
+          "unit": "per meter"
+        },
+        {
+          "name": "Stiker",
+          "price": "Rp 35.000",
+          "features": [
+            "Potong sesuai bentuk",
+            "Beberapa bahan"
+          ],
+          "ctaLabel": "Tanya",
+          "unit": "mulai dari"
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "enabled": false,
+      "navLabel": "Galeri",
+      "title": "Hasil Cetak Kami",
+      "subtitle": "",
+      "images": []
+    },
+    {
+      "type": "testimonials",
+      "enabled": false,
+      "title": "Kata Pelanggan",
+      "items": [
+        {
+          "name": "Nama Pelanggan",
+          "role": "",
+          "text": "Isi dengan testimoni asli dari pelanggan.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "enabled": true,
+      "navLabel": "FAQ",
+      "title": "Pertanyaan Umum",
+      "items": [
+        {
+          "q": "File apa yang bisa dicetak?",
+          "a": "Umumnya PDF, JPG, atau PNG. Tanyakan ukuran dan resolusi yang disarankan."
+        },
+        {
+          "q": "Berapa lama pengerjaannya?",
+          "a": "Tergantung jenis dan jumlah cetakan. Kami sampaikan estimasi sebelum Anda setuju."
+        },
+        {
+          "q": "Bisa dibantu desain?",
+          "a": "Bisa untuk desain sederhana. Biaya dijelaskan lebih dulu."
+        },
+        {
+          "q": "Apakah ada minimal order?",
+          "a": "Tergantung produk. Tanyakan lewat WhatsApp."
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "enabled": true,
+      "navLabel": "Lokasi",
+      "title": "Lokasi Kami",
+      "embedUrl": ""
+    },
+    {
+      "type": "contact",
+      "enabled": true,
+      "navLabel": "Kontak",
+      "title": "Hubungi Kami"
+    },
+    {
+      "type": "cta",
+      "enabled": true,
+      "title": "Butuh cetak cepat?",
+      "text": "Kirim file dan jumlahnya, kami hitung harganya.",
+      "buttonLabel": "Tanya Harga"
+    }
+  ]
+}

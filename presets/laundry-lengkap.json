@@ -1,0 +1,251 @@
+{
+  "theme": "lagoon",
+  "meta": {
+    "lang": "id",
+    "title": "Laundry Kiloan dan Satuan | Paket Reguler, Eksklusif, Sepatu, Bed Cover",
+    "description": "Laundry kiloan dan satuan dengan paket reguler dan eksklusif. Pakaian bayi, sepatu, dan bed cover ditangani khusus. Tanya paket lewat WhatsApp.",
+    "url": "https://contoh-laundry-lengkap.pages.dev",
+    "ogImage": ""
+  },
+  "business": {
+    "name": "Contoh Laundry Premium",
+    "schemaType": "DryCleaningOrLaundry",
+    "tagline": "Cucian dipisah, ditangani sesuai bahannya",
+    "logo": "",
+    "phone": "081234567890",
+    "whatsapp": "081234567890",
+    "email": "",
+    "address": "Jl. Contoh No. 10",
+    "city": "Surabaya",
+    "region": "Jawa Timur",
+    "priceRange": "Rp",
+    "geo": {
+      "lat": "",
+      "lng": ""
+    },
+    "waMessage": "Halo, saya mau tanya paket laundry.",
+    "hours": [
+      {
+        "day": "Senin-Sabtu",
+        "time": "08:00-20:00"
+      },
+      {
+        "day": "Minggu",
+        "time": "09:00-15:00"
+      }
+    ]
+  },
+  "analytics": {
+    "ga4Id": "",
+    "searchConsoleVerification": ""
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "youtube": ""
+  },
+  "footerNote": "",
+  "sections": [
+    {
+      "type": "hero",
+      "enabled": true,
+      "title": "Laundry Lengkap untuk Pakaian Harian, Bayi, Sepatu, dan Bed Cover",
+      "subtitle": "Pilih paket reguler atau eksklusif sesuai kebutuhan. Status cucian dikabari lewat WhatsApp.",
+      "badge": "Kabar Cucian Lewat WhatsApp",
+      "ctaLabel": "Tanya Paket",
+      "secondaryLabel": "Lihat Paket",
+      "secondaryHref": "#pricing",
+      "image": "",
+      "imageAlt": "Cucian bersih dan rapi",
+      "waMessage": "Halo, saya mau tanya paket laundry."
+    },
+    {
+      "type": "services",
+      "enabled": true,
+      "navLabel": "Keunggulan",
+      "title": "Kenapa Memilih Kami",
+      "subtitle": "Layanan lengkap dalam satu tempat",
+      "items": [
+        {
+          "icon": "🧺",
+          "title": "Paket Sesuai Kebutuhan",
+          "description": "Reguler untuk pakaian harian, eksklusif untuk cucian yang dipisah."
+        },
+        {
+          "icon": "🧼",
+          "title": "Penanganan Sesuai Bahan",
+          "description": "Deterjen dan proses disesuaikan dengan jenis kain."
+        },
+        {
+          "icon": "👶",
+          "title": "Pakaian Bayi Dipisah",
+          "description": "Dicuci terpisah dari cucian pelanggan lain."
+        },
+        {
+          "icon": "👟",
+          "title": "Layanan Khusus",
+          "description": "Sepatu, bed cover, karpet, dan boneka."
+        },
+        {
+          "icon": "📲",
+          "title": "Kabar Lewat WhatsApp",
+          "description": "Status cucian diberitahukan saat diterima dan saat siap diambil."
+        },
+        {
+          "icon": "💳",
+          "title": "Pembayaran Mudah",
+          "description": "Tunai, transfer, atau dompet digital, sesuai yang tersedia."
+        }
+      ]
+    },
+    {
+      "type": "pricing",
+      "enabled": true,
+      "navLabel": "Paket",
+      "title": "Paket Layanan",
+      "subtitle": "Pilih paket yang cocok dengan cucian Anda",
+      "note": "Tarif contoh. Ganti dengan tarif asli.",
+      "items": [
+        {
+          "name": "Reguler",
+          "price": "Rp 7.000",
+          "unit": "per kg",
+          "features": [
+            "Cuci, kering, setrika, lipat",
+            "Minimal 3 kg",
+            "Estimasi 3 hari"
+          ],
+          "ctaLabel": "Pilih Reguler"
+        },
+        {
+          "name": "Eksklusif",
+          "price": "Rp 12.000",
+          "unit": "per kg",
+          "highlight": true,
+          "badge": "Paling Seimbang",
+          "features": [
+            "Dicuci terpisah",
+            "Pembilasan lebih teliti",
+            "Estimasi 2 hari"
+          ],
+          "ctaLabel": "Pilih Eksklusif"
+        },
+        {
+          "name": "Layanan Satuan",
+          "price": "Rp 35.000",
+          "unit": "mulai dari",
+          "features": [
+            "Sepatu, bed cover, karpet, boneka",
+            "Harga sesuai ukuran dan bahan",
+            "Estimasi saat cucian diterima"
+          ],
+          "ctaLabel": "Tanya Harga"
+        },
+        {
+          "name": "Paket Bulanan",
+          "price": "Rp 300.000",
+          "unit": "50 kg",
+          "features": [
+            "Lebih hemat dari tarif harian",
+            "Diambil bertahap",
+            "Berlaku sesuai ketentuan"
+          ],
+          "ctaLabel": "Tanya Paket"
+        }
+      ]
+    },
+    {
+      "type": "about",
+      "enabled": true,
+      "id": "cara-kerja",
+      "navLabel": "Cara Kerja",
+      "title": "Dari Antar Sampai Diterima, 4 Langkah",
+      "text": "Tidak perlu menunggu di tempat.",
+      "points": [
+        "Antar cucian ke outlet, atau minta dijemput di area tertentu.",
+        "Cucian ditimbang dan dicatat, Anda mendapat bukti terima.",
+        "Cucian diproses sesuai paket, lalu Anda dikabari saat siap.",
+        "Ambil di outlet atau minta diantar, lalu lakukan pembayaran."
+      ]
+    },
+    {
+      "type": "gallery",
+      "enabled": false,
+      "navLabel": "Hasil",
+      "title": "Hasil dan Proses Kami",
+      "images": []
+    },
+    {
+      "type": "testimonials",
+      "enabled": false,
+      "title": "Kata Pelanggan",
+      "items": [
+        {
+          "name": "Contoh Pelanggan",
+          "text": "Cucian wangi dan rapi, antarnya tepat waktu.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "enabled": true,
+      "navLabel": "FAQ",
+      "title": "Pertanyaan Umum",
+      "items": [
+        {
+          "q": "Berapa lama prosesnya?",
+          "a": "Tergantung paket. Estimasi tiap paket tertera di bagian paket dan dikonfirmasi saat Anda menyerahkan cucian."
+        },
+        {
+          "q": "Bagaimana cara membayar?",
+          "a": "Metode pembayaran yang tersedia disampaikan saat Anda menyerahkan cucian."
+        },
+        {
+          "q": "Apakah ada layanan jemput dan antar?",
+          "a": "Tersedia di area tertentu. Tanyakan lewat WhatsApp."
+        },
+        {
+          "q": "Bagaimana jika hasilnya kurang memuaskan?",
+          "a": "Sampaikan segera setelah cucian diterima. Ketentuan cuci ulang dijelaskan saat Anda memesan."
+        },
+        {
+          "q": "Apakah pakaian bayi bisa dicuci terpisah?",
+          "a": "Bisa. Sebutkan saat menyerahkan cucian."
+        },
+        {
+          "q": "Bagaimana dengan noda membandel atau bahan khusus?",
+          "a": "Beri tahu kami sebelum diproses. Kami sampaikan kemungkinan hasilnya lebih dulu."
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "enabled": true,
+      "navLabel": "Lokasi",
+      "title": "Lokasi Kami",
+      "embedUrl": ""
+    },
+    {
+      "type": "contact",
+      "enabled": true,
+      "navLabel": "Kontak",
+      "title": "Hubungi Kami"
+    },
+    {
+      "type": "cta",
+      "enabled": true,
+      "title": "Bingung memilih paket?",
+      "text": "Kirim jumlah cucian atau jenis barangnya, kami bantu pilihkan paket.",
+      "buttonLabel": "Chat WhatsApp"
+    }
+  ],
+  "style": "soft",
+  "layout": {
+    "hero": "split",
+    "services": "icons",
+    "gallery": "masonry",
+    "header": "left"
+  }
+}

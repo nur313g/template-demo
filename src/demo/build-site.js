@@ -37,6 +37,7 @@ export function buildSite(get, base) {
     .filter((r) => r.title);
   const priced = rows.filter((r) => r.price);
 
+  const hasProducts = (site.sections || []).some((x) => x.type === 'products');
   for (const s of site.sections || []) {
     if (s.type === 'hero') {
       s.title = t('heroTitle', 90) || b.tagline || s.title;
@@ -46,18 +47,25 @@ export function buildSite(get, base) {
     } else if (s.type === 'about') {
       if (t('about', 500)) { s.text = t('about', 500); s.points = []; }
       s.image = gal[0] ? ph(gal[0]) : '';
+    } else if (s.type === 'services' && rows.length && site.rowsTarget === 'products') {
+      s.enabled = false; // preset toko: baris isian menjadi kartu produk, bukan kategori
     } else if (s.type === 'services' && rows.length) {
       const icons = (s.items || []).map((x) => x.icon);
       s.items = rows.map((r, i) => ({ icon: icons.length ? icons[i % icons.length] : '✔', title: r.title, description: r.desc }));
     } else if (s.type === 'pricing' && rows.length) {
-      if (priced.length) {
+      const list = priced;
+      if (list.length) {
         const cta = s.items?.[0]?.ctaLabel || 'Pesan';
-        s.items = priced.map((r) => ({ name: r.title, price: r.price, features: r.desc ? [r.desc] : [], ctaLabel: cta }));
+        s.items = list.map((r) => ({ name: r.title, price: r.price, features: r.desc ? [r.desc] : [], ctaLabel: cta }));
         s.note = '';
       } else s.enabled = false;
+    } else if (s.type === 'products') {
+      // foto galeri ke-1, ke-2, dst dipakai sebagai foto produk ke-1, ke-2, dst
+      if (rows.length) s.items = rows.map((r, i) => ({ name: r.title, price: r.price || 'Tanya harga', description: r.desc, image: gal[i] ? ph(gal[i]) : '' }));
+      else s.items = (s.items || []).map((x) => ({ ...x, image: '' }));
     } else if (s.type === 'gallery') {
       s.images = gal.map((k, i) => ({ src: ph(k), alt: `Foto ${i + 1} ${name}` }));
-      s.enabled = gal.length > 0;
+      s.enabled = gal.length > 0 && !hasProducts;
     } else if (s.type === 'map') {
       const maps = t('maps', 300);
       s.embedUrl = '';
@@ -80,7 +88,7 @@ export function buildSite(get, base) {
       .map((x) => x.s);
   }
   site.__sections = (site.sections || []).filter((s) => s.enabled !== false).map((s) => ({ type: s.type, on: !hide.has(s.type) }));
-  for (const s of site.sections || []) if (hide.has(s.type)) s.enabled = false;
+  for (const s of site.sections || []) if (hide.has(s.type)) s.hidden = true; // tetap dirender agar bisa ditampilkan lagi seketika
 
   const o = (k) => (OPTIONS[k][t(k, 20)] ? t(k, 20) : undefined);
   site.theme = o('theme') || site.theme;

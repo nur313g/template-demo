@@ -1,0 +1,203 @@
+{
+  "theme": "plum",
+  "meta": {
+    "lang": "id",
+    "title": "Toko Bunga | Buket, Papan Bunga, dan Rangkaian Segar",
+    "description": "Toko bunga untuk buket, papan bunga, dan rangkaian bunga segar. Pesan dan kirim alamat penerima lewat WhatsApp.",
+    "url": "https://contoh-florist.pages.dev",
+    "ogImage": ""
+  },
+  "business": {
+    "name": "Contoh Toko Bunga",
+    "schemaType": "Florist",
+    "tagline": "Bunga segar untuk setiap ucapan",
+    "logo": "",
+    "logoHasName": false,
+    "phone": "081234567890",
+    "whatsapp": "081234567890",
+    "email": "",
+    "address": "Jl. Contoh No. 1",
+    "city": "Surabaya",
+    "region": "Jawa Timur",
+    "priceRange": "Rp",
+    "geo": {
+      "lat": "",
+      "lng": ""
+    },
+    "waMessage": "Halo, saya mau pesan bunga.",
+    "hours": [
+      {
+        "day": "Setiap hari",
+        "time": "07:00-19:00"
+      }
+    ]
+  },
+  "analytics": {
+    "ga4Id": "",
+    "searchConsoleVerification": ""
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "youtube": ""
+  },
+  "footerNote": "",
+  "sections": [
+    {
+      "type": "hero",
+      "enabled": true,
+      "badge": "Pesan Lewat WhatsApp",
+      "title": "Buket, Papan Bunga, dan Rangkaian Bunga Segar",
+      "subtitle": "Untuk ulang tahun, wisuda, pernikahan, dan ucapan lainnya. Kirim alamat penerima, kami antar.",
+      "ctaLabel": "Pesan Bunga",
+      "secondaryLabel": "Lihat Harga",
+      "secondaryHref": "#pricing",
+      "image": "",
+      "imageAlt": "",
+      "waMessage": "Halo, saya mau pesan bunga."
+    },
+    {
+      "type": "services",
+      "enabled": true,
+      "navLabel": "Layanan",
+      "title": "Pilihan Bunga",
+      "subtitle": "Dirangkai sesuai acara dan anggaran Anda",
+      "items": [
+        {
+          "icon": "💐",
+          "title": "Buket",
+          "description": "Buket tangan untuk hadiah dan ucapan."
+        },
+        {
+          "icon": "🪧",
+          "title": "Papan Bunga",
+          "description": "Papan ucapan untuk pernikahan, pembukaan usaha, atau duka cita."
+        },
+        {
+          "icon": "🌹",
+          "title": "Bunga Meja",
+          "description": "Rangkaian untuk meja dan ruangan."
+        },
+        {
+          "icon": "🎁",
+          "title": "Hampers Bunga",
+          "description": "Bunga dan bingkisan dalam satu paket."
+        },
+        {
+          "icon": "💒",
+          "title": "Dekorasi Acara",
+          "description": "Dekorasi bunga untuk acara kecil."
+        },
+        {
+          "icon": "🚚",
+          "title": "Antar ke Penerima",
+          "description": "Pengantaran ke alamat penerima."
+        }
+      ]
+    },
+    {
+      "type": "pricing",
+      "enabled": true,
+      "navLabel": "Harga",
+      "title": "Contoh Harga",
+      "subtitle": "Pilih ukuran sesuai kebutuhan",
+      "note": "Harga contoh. Ganti dengan harga asli.",
+      "items": [
+        {
+          "name": "Buket Kecil",
+          "price": "Rp 100.000",
+          "features": [
+            "Bunga pilihan",
+            "Kartu ucapan"
+          ],
+          "ctaLabel": "Pesan"
+        },
+        {
+          "name": "Buket Sedang",
+          "price": "Rp 200.000",
+          "features": [
+            "Lebih banyak bunga",
+            "Kartu ucapan"
+          ],
+          "ctaLabel": "Pesan",
+          "highlight": true
+        },
+        {
+          "name": "Papan Bunga",
+          "price": "Rp 450.000",
+          "features": [
+            "Tulisan sesuai permintaan",
+            "Antar ke lokasi"
+          ],
+          "ctaLabel": "Pesan"
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "enabled": false,
+      "navLabel": "Galeri",
+      "title": "Rangkaian Kami",
+      "subtitle": "",
+      "images": []
+    },
+    {
+      "type": "testimonials",
+      "enabled": false,
+      "title": "Kata Pelanggan",
+      "items": [
+        {
+          "name": "Nama Pelanggan",
+          "role": "",
+          "text": "Isi dengan testimoni asli dari pelanggan.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "enabled": true,
+      "navLabel": "FAQ",
+      "title": "Pertanyaan Umum",
+      "items": [
+        {
+          "q": "Berapa lama sebelum acara harus memesan?",
+          "a": "Untuk buket, beberapa jam sebelumnya bisa, tergantung ketersediaan. Papan bunga disarankan lebih awal."
+        },
+        {
+          "q": "Bagaimana cara mengirim ke penerima?",
+          "a": "Kirim alamat, nama penerima, dan isi kartu ucapan lewat WhatsApp."
+        },
+        {
+          "q": "Bisa pilih jenis bunga?",
+          "a": "Bisa, sesuai stok. Kami usahakan menyesuaikan warna dan anggaran Anda."
+        },
+        {
+          "q": "Apakah ada biaya antar?",
+          "a": "Tergantung jarak. Biaya dijelaskan sebelum Anda memesan."
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "enabled": true,
+      "navLabel": "Lokasi",
+      "title": "Lokasi Kami",
+      "embedUrl": ""
+    },
+    {
+      "type": "contact",
+      "enabled": true,
+      "navLabel": "Kontak",
+      "title": "Hubungi Kami"
+    },
+    {
+      "type": "cta",
+      "enabled": true,
+      "title": "Ingin mengirim bunga?",
+      "text": "Kirim alamat penerima dan isi ucapan, kami bantu rangkaikan.",
+      "buttonLabel": "Pesan Bunga"
+    }
+  ]
+}

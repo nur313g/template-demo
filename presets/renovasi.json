@@ -1,0 +1,207 @@
+{
+  "theme": "mocha",
+  "meta": {
+    "lang": "id",
+    "title": "Jasa Renovasi Rumah | Cat, Keramik, Atap, Kamar Mandi",
+    "description": "Jasa renovasi rumah dan perbaikan bangunan. Survei lokasi dan konsultasi biaya lewat WhatsApp.",
+    "url": "https://contoh-renovasi.pages.dev",
+    "ogImage": ""
+  },
+  "business": {
+    "name": "Contoh Jasa Renovasi",
+    "schemaType": "HomeAndConstructionBusiness",
+    "tagline": "Renovasi rapi, anggaran jelas",
+    "logo": "",
+    "logoHasName": false,
+    "phone": "081234567890",
+    "whatsapp": "081234567890",
+    "email": "",
+    "address": "Jl. Contoh No. 1",
+    "city": "Surabaya",
+    "region": "Jawa Timur",
+    "priceRange": "Rp",
+    "geo": {
+      "lat": "",
+      "lng": ""
+    },
+    "waMessage": "Halo, saya mau konsultasi renovasi.",
+    "hours": [
+      {
+        "day": "Senin-Sabtu",
+        "time": "08:00-17:00"
+      },
+      {
+        "day": "Minggu",
+        "time": "Tutup"
+      }
+    ]
+  },
+  "analytics": {
+    "ga4Id": "",
+    "searchConsoleVerification": ""
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "youtube": ""
+  },
+  "footerNote": "",
+  "sections": [
+    {
+      "type": "hero",
+      "enabled": true,
+      "badge": "Survei dan Estimasi Biaya",
+      "title": "Jasa Renovasi Rumah dan Perbaikan Bangunan",
+      "subtitle": "Cat ulang, keramik, atap bocor, hingga kamar mandi dan dapur. Konsultasikan kebutuhan Anda lewat WhatsApp.",
+      "ctaLabel": "Konsultasi Renovasi",
+      "secondaryLabel": "Lihat Harga",
+      "secondaryHref": "#pricing",
+      "image": "",
+      "imageAlt": "",
+      "waMessage": "Halo, saya mau konsultasi renovasi."
+    },
+    {
+      "type": "services",
+      "enabled": true,
+      "navLabel": "Layanan",
+      "title": "Layanan Renovasi",
+      "subtitle": "Pekerjaan rumah tinggal dan ruang usaha",
+      "items": [
+        {
+          "icon": "🏠",
+          "title": "Renovasi Rumah",
+          "description": "Perbaikan dan penataan ulang ruangan."
+        },
+        {
+          "icon": "🎨",
+          "title": "Cat Ulang",
+          "description": "Pengecatan dalam dan luar ruangan."
+        },
+        {
+          "icon": "🚿",
+          "title": "Kamar Mandi & Dapur",
+          "description": "Renovasi area basah dan dapur."
+        },
+        {
+          "icon": "🔧",
+          "title": "Atap & Kebocoran",
+          "description": "Perbaikan atap bocor dan talang."
+        },
+        {
+          "icon": "🧱",
+          "title": "Keramik & Plafon",
+          "description": "Pasang keramik dan plafon."
+        },
+        {
+          "icon": "📐",
+          "title": "Survei & Estimasi",
+          "description": "Cek lokasi dan perkiraan biaya."
+        }
+      ]
+    },
+    {
+      "type": "pricing",
+      "enabled": true,
+      "navLabel": "Harga",
+      "title": "Contoh Biaya",
+      "subtitle": "Biaya akhir ditentukan setelah survei",
+      "note": "Harga contoh. Ganti dengan harga asli.",
+      "items": [
+        {
+          "name": "Survei & Konsultasi",
+          "price": "Rp 150.000",
+          "features": [
+            "Cek lokasi",
+            "Perkiraan biaya"
+          ],
+          "ctaLabel": "Konsultasi"
+        },
+        {
+          "name": "Cat Dinding",
+          "price": "Rp 35.000",
+          "features": [
+            "Tenaga dan cat sesuai kesepakatan"
+          ],
+          "ctaLabel": "Konsultasi",
+          "highlight": true,
+          "unit": "per m2"
+        },
+        {
+          "name": "Pasang Keramik",
+          "price": "Rp 90.000",
+          "features": [
+            "Tenaga dan perekat sesuai kesepakatan"
+          ],
+          "ctaLabel": "Konsultasi",
+          "unit": "per m2"
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "enabled": false,
+      "navLabel": "Galeri",
+      "title": "Hasil Pekerjaan",
+      "subtitle": "",
+      "images": []
+    },
+    {
+      "type": "testimonials",
+      "enabled": false,
+      "title": "Kata Pelanggan",
+      "items": [
+        {
+          "name": "Nama Pelanggan",
+          "role": "",
+          "text": "Isi dengan testimoni asli dari pelanggan.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "enabled": true,
+      "navLabel": "FAQ",
+      "title": "Pertanyaan Umum",
+      "items": [
+        {
+          "q": "Apakah ada survei sebelum pekerjaan?",
+          "a": "Ada. Kami melihat lokasi lebih dulu agar perkiraan biaya lebih tepat."
+        },
+        {
+          "q": "Berapa lama pengerjaannya?",
+          "a": "Tergantung luas dan jenis pekerjaan. Estimasi diberikan setelah survei."
+        },
+        {
+          "q": "Bagaimana sistem pembayarannya?",
+          "a": "Bisa bertahap sesuai kemajuan pekerjaan. Rinciannya disepakati bersama."
+        },
+        {
+          "q": "Apakah ada garansi?",
+          "a": "Ketentuan garansi pekerjaan dijelaskan sebelum Anda setuju."
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "enabled": true,
+      "navLabel": "Lokasi",
+      "title": "Lokasi Kami",
+      "embedUrl": ""
+    },
+    {
+      "type": "contact",
+      "enabled": true,
+      "navLabel": "Kontak",
+      "title": "Hubungi Kami"
+    },
+    {
+      "type": "cta",
+      "enabled": true,
+      "title": "Punya rencana renovasi?",
+      "text": "Ceritakan kebutuhan Anda, kami atur jadwal survei.",
+      "buttonLabel": "Konsultasi Renovasi"
+    }
+  ]
+}

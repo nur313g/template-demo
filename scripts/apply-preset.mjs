@@ -1,6 +1,7 @@
 // Pakai: npm run klien -- <preset> [warna=rose] [gaya=elegan->elegant] [hero=center] [layanan=list] [galeri=masonry] [menu=center] [demo=1]
 //   atau: npm run klien -- <preset> kode=forest-bold-center-list-masonry-center
 // Menyalin presets/<nama>.json menjadi src/data/site.json, lalu menerapkan pilihan tampilan.
+//   Susunan bagian: urutan=hero,faq,pricing,contact sembunyi=cta,map  (hero selalu paling atas)
 // (npm run preset -- <nama> tetap bisa dipakai, dengan argumen yang sama)
 import { copyFileSync, existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { OPTIONS, fromCode, resolve } from '../src/lib/designs.js';
@@ -34,6 +35,17 @@ for (const [a, v] of Object.entries(args)) {
 const d = { ...cur, ...pick };
 site.theme = d.theme; site.style = d.style;
 site.layout = { hero: d.hero, services: d.services, gallery: d.gallery, header: d.header };
+const word = (x) => /^[a-z]+$/.test(x);
+const urutan = (args.urutan || '').split(',').filter(word);
+const sembunyi = (args.sembunyi || '').split(',').filter((x) => word(x) && x !== 'hero');
+if (urutan.length) {
+  const pos = (x) => { const i = urutan.indexOf(x.type); return i < 0 ? 1000 : i; };
+  site.sections = site.sections
+    .map((s, i) => ({ s, i }))
+    .sort((a, b) => (a.s.type === 'hero' ? -1 : 0) + (b.s.type === 'hero' ? 1 : 0) || pos(a.s) - pos(b.s) || a.i - b.i)
+    .map((x) => x.s);
+}
+for (const s of site.sections) if (sembunyi.includes(s.type)) s.enabled = false;
 if (args.demo === '1') site.demo = true;
 writeFileSync('src/data/site.json', JSON.stringify(site, null, 2) + '\n');
-console.log(`OK: preset "${name}" | ${Object.values(d).join('-')}${site.demo ? ' | demo' : ''}`);
+console.log(`OK: preset "${name}" | ${Object.values(d).join('-')} | bagian: ${site.sections.filter((x) => x.enabled !== false).map((x) => x.type).join(',')}${site.demo ? ' | demo' : ''}`);

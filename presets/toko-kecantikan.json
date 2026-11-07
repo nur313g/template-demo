@@ -1,0 +1,226 @@
+{
+  "theme": "berry",
+  "meta": {
+    "lang": "id",
+    "title": "Toko Skincare dan Perawatan Tubuh Online",
+    "description": "Toko online skincare dan perawatan tubuh. Konsultasi produk dan pesan lewat WhatsApp.",
+    "url": "https://contoh-toko-kecantikan.pages.dev",
+    "ogImage": ""
+  },
+  "business": {
+    "name": "Contoh Beauty Shop",
+    "schemaType": "Store",
+    "tagline": "Perawatan harian untuk kulit dan rambut",
+    "logo": "",
+    "logoHasName": false,
+    "phone": "081234567890",
+    "whatsapp": "081234567890",
+    "email": "",
+    "address": "Jl. Contoh No. 1",
+    "city": "Surabaya",
+    "region": "Jawa Timur",
+    "priceRange": "Rp",
+    "geo": {
+      "lat": "",
+      "lng": ""
+    },
+    "waMessage": "Halo, saya mau tanya produk perawatan.",
+    "hours": [
+      {
+        "day": "Setiap hari",
+        "time": "08:00-20:00 (balasan chat)"
+      }
+    ]
+  },
+  "analytics": {
+    "ga4Id": "",
+    "searchConsoleVerification": ""
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "youtube": ""
+  },
+  "footerNote": "",
+  "sections": [
+    {
+      "type": "hero",
+      "enabled": true,
+      "badge": "Konsultasi Lewat WhatsApp",
+      "title": "Produk Skincare dan Perawatan Tubuh Pilihan",
+      "subtitle": "Pilih produk sesuai kebutuhan Anda. Tanya komposisi dan cara pakai sebelum memesan.",
+      "ctaLabel": "Pesan Sekarang",
+      "secondaryLabel": "Lihat Produk",
+      "secondaryHref": "#produk",
+      "image": "",
+      "imageAlt": "",
+      "waMessage": "Halo, saya mau tanya produk perawatan."
+    },
+    {
+      "type": "services",
+      "enabled": true,
+      "navLabel": "Kategori",
+      "title": "Kategori Produk",
+      "subtitle": "Pilih kategori yang Anda cari",
+      "items": [
+        {
+          "icon": "🧴",
+          "title": "Perawatan Wajah",
+          "description": "Serum, pelembap, dan perawatan harian."
+        },
+        {
+          "icon": "🧼",
+          "title": "Pembersih Wajah",
+          "description": "Sabun dan pembersih wajah."
+        },
+        {
+          "icon": "☀️",
+          "title": "Tabir Surya",
+          "description": "Perlindungan harian dari sinar matahari."
+        },
+        {
+          "icon": "💄",
+          "title": "Makeup",
+          "description": "Produk rias untuk harian dan acara."
+        },
+        {
+          "icon": "🧖",
+          "title": "Perawatan Tubuh",
+          "description": "Sabun, lotion, dan scrub."
+        },
+        {
+          "icon": "🎁",
+          "title": "Paket Hemat",
+          "description": "Beberapa produk dalam satu paket."
+        }
+      ]
+    },
+    {
+      "type": "products",
+      "enabled": true,
+      "id": "produk",
+      "navLabel": "Produk",
+      "title": "Produk Kami",
+      "subtitle": "Contoh produk. Tambahkan ke keranjang, lalu kirim pesanan lewat WhatsApp.",
+      "cart": true,
+      "note": "Produk dan harga contoh. Ganti dengan produk asli Anda.",
+      "items": [
+        {
+          "name": "Pembersih Wajah",
+          "price": "Rp 55.000",
+          "description": "Untuk pemakaian harian"
+        },
+        {
+          "name": "Serum",
+          "price": "Rp 120.000",
+          "description": "Cara pakai disertakan"
+        },
+        {
+          "name": "Paket Perawatan Dasar",
+          "price": "Rp 199.000",
+          "description": "3 produk pilihan"
+        },
+        {
+          "name": "Pelembap Wajah",
+          "price": "Rp 85.000",
+          "description": "Tersedia beberapa pilihan."
+        },
+        {
+          "name": "Tabir Surya",
+          "price": "Rp 75.000",
+          "description": "Tersedia beberapa pilihan."
+        },
+        {
+          "name": "Sabun Mandi Cair",
+          "price": "Rp 45.000",
+          "description": "Tersedia beberapa pilihan."
+        }
+      ]
+    },
+    {
+      "type": "about",
+      "enabled": true,
+      "id": "cara-belanja",
+      "navLabel": "Cara Belanja",
+      "title": "Cara Belanja",
+      "text": "Belanja mudah, cukup lewat WhatsApp.",
+      "points": [
+        "Pilih produk lalu tambahkan ke keranjang, atau tanya stok lewat WhatsApp.",
+        "Kirim pesanan lewat WhatsApp beserta nama dan alamat lengkap.",
+        "Lakukan pembayaran sesuai metode yang disepakati.",
+        "Pesanan dikemas dan dikirim, nomor resi dikabari lewat WhatsApp."
+      ]
+    },
+    {
+      "type": "gallery",
+      "enabled": false,
+      "navLabel": "Koleksi",
+      "title": "Koleksi Kami",
+      "subtitle": "",
+      "images": []
+    },
+    {
+      "type": "testimonials",
+      "enabled": false,
+      "title": "Kata Pelanggan",
+      "items": [
+        {
+          "name": "Nama Pelanggan",
+          "role": "",
+          "text": "Isi dengan testimoni asli dari pelanggan.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "enabled": true,
+      "navLabel": "FAQ",
+      "title": "Pertanyaan Umum",
+      "items": [
+        {
+          "q": "Apakah produk ini asli dan berizin?",
+          "a": "Kami menyampaikan asal produk dan nomor izin edar bila tersedia. Tanyakan sebelum membeli."
+        },
+        {
+          "q": "Apakah cocok untuk kulit sensitif?",
+          "a": "Setiap kulit berbeda. Baca komposisi dan lakukan uji tempel dulu. Untuk keluhan kulit, konsultasikan ke dokter kulit."
+        },
+        {
+          "q": "Bagaimana dengan tanggal kedaluwarsa?",
+          "a": "Periksa tanggal kedaluwarsa saat paket diterima dan hubungi kami bila ada masalah."
+        },
+        {
+          "q": "Berapa lama pengiriman?",
+          "a": "Tergantung kota tujuan dan ekspedisi. Nomor resi dikirim setelah paket berangkat."
+        },
+        {
+          "q": "Bagaimana kalau paket rusak?",
+          "a": "Rekam video saat membuka paket dan hubungi kami. Ketentuan lengkap dijelaskan sebelum Anda membayar."
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "enabled": false,
+      "navLabel": "Lokasi",
+      "title": "Lokasi Kami",
+      "embedUrl": ""
+    },
+    {
+      "type": "contact",
+      "enabled": true,
+      "navLabel": "Kontak",
+      "title": "Hubungi Kami"
+    },
+    {
+      "type": "cta",
+      "enabled": true,
+      "title": "Bingung memilih produk?",
+      "text": "Ceritakan kebutuhan Anda, kami bantu pilihkan.",
+      "buttonLabel": "Pesan Sekarang"
+    }
+  ],
+  "rowsTarget": "products"
+}

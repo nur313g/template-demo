@@ -5,7 +5,7 @@ import SitePage from '../components/SitePage.astro';
 import { buildSite } from './build-site.js';
 import owner from '../data/site.json';
 import { waLink } from '../lib/util.js';
-import { PRESET_NAMES, SECTION_NAMES } from '../lib/designs.js';
+import { PRESET_NAMES, SECTION_NAMES, ALT_LABELS, groupedPresets, baseOf, altsOf } from '../lib/designs.js';
 
 const presets = import.meta.glob('../../presets/*.json', { eager: true, import: 'default' });
 
@@ -25,7 +25,8 @@ const secs = (site.__sections || []).map((x) => ({ ...x, label: SECTION_NAMES[x.
 delete site.__sections;
 const panel = {
   current: key,
-  presets: Object.keys(presets).map((p) => p.split('/').pop().replace('.json', '')).filter((k) => k !== 'demo-etalase').map((k) => ({ key: k, label: PRESET_NAMES[k] || k })),
+  groups: groupedPresets(Object.keys(presets).map((p) => p.split('/').pop().replace('.json', '')).filter((k) => k !== 'demo-etalase')),
+  alts: altsOf(baseOf(key)).length ? [baseOf(key), ...altsOf(baseOf(key))].map((k) => ({ key: k, label: k === baseOf(key) ? 'Standar' : (ALT_LABELS[k] || k) })) : [],
   sections: secs,
   owner: {
     wa: owner.business?.whatsapp ? waLink(owner, '').split('?')[0] : '',

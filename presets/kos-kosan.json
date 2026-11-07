@@ -1,0 +1,210 @@
+{
+  "theme": "steel",
+  "meta": {
+    "lang": "id",
+    "title": "Kos Putra Putri Bersih dan Nyaman | Info Kamar dan Harga",
+    "description": "Info kamar kos, fasilitas, dan harga. Tanya ketersediaan kamar dan jadwal survei lewat WhatsApp.",
+    "url": "https://contoh-kos-kosan.pages.dev",
+    "ogImage": ""
+  },
+  "business": {
+    "name": "Contoh Kos",
+    "schemaType": "LodgingBusiness",
+    "tagline": "Kos nyaman, bersih, dan mudah dijangkau",
+    "logo": "",
+    "logoHasName": false,
+    "phone": "081234567890",
+    "whatsapp": "081234567890",
+    "email": "",
+    "address": "Jl. Contoh No. 1",
+    "city": "Surabaya",
+    "region": "Jawa Timur",
+    "priceRange": "Rp",
+    "geo": {
+      "lat": "",
+      "lng": ""
+    },
+    "waMessage": "Halo, saya mau tanya kamar kos yang tersedia.",
+    "hours": [
+      {
+        "day": "Setiap hari",
+        "time": "08:00-20:00"
+      }
+    ]
+  },
+  "analytics": {
+    "ga4Id": "",
+    "searchConsoleVerification": ""
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "youtube": ""
+  },
+  "footerNote": "",
+  "sections": [
+    {
+      "type": "hero",
+      "enabled": true,
+      "badge": "Survei Dipersilakan",
+      "title": "Kos Putra dan Putri yang Bersih, Aman, dan Nyaman",
+      "subtitle": "Lihat tipe kamar, fasilitas, dan harga dengan jelas. Tanya ketersediaan kamar lewat WhatsApp.",
+      "ctaLabel": "Tanya Kamar",
+      "secondaryLabel": "Lihat Harga",
+      "secondaryHref": "#pricing",
+      "image": "",
+      "imageAlt": "",
+      "waMessage": "Halo, saya mau tanya kamar kos yang tersedia."
+    },
+    {
+      "type": "services",
+      "enabled": true,
+      "navLabel": "Layanan",
+      "title": "Fasilitas",
+      "subtitle": "Fasilitas yang bisa Anda harapkan",
+      "items": [
+        {
+          "icon": "🛏️",
+          "title": "Kamar Bersih",
+          "description": "Kamar dengan kasur dan lemari."
+        },
+        {
+          "icon": "🚿",
+          "title": "Kamar Mandi",
+          "description": "Pilihan kamar mandi dalam atau luar."
+        },
+        {
+          "icon": "📶",
+          "title": "WiFi",
+          "description": "Internet untuk belajar dan bekerja."
+        },
+        {
+          "icon": "🅿️",
+          "title": "Parkir",
+          "description": "Area parkir untuk motor."
+        },
+        {
+          "icon": "🧺",
+          "title": "Area Jemur",
+          "description": "Tempat menjemur pakaian."
+        },
+        {
+          "icon": "🔒",
+          "title": "Lingkungan Aman",
+          "description": "Akses masuk yang diatur penghuni."
+        }
+      ]
+    },
+    {
+      "type": "pricing",
+      "enabled": true,
+      "navLabel": "Harga",
+      "title": "Contoh Harga",
+      "subtitle": "Pilih tipe kamar sesuai kebutuhan",
+      "note": "Fasilitas dan harga contoh. Sesuaikan dengan kondisi kos Anda.",
+      "items": [
+        {
+          "name": "Kamar Standar",
+          "price": "Rp 700.000",
+          "features": [
+            "Kamar mandi luar",
+            "Kasur dan lemari"
+          ],
+          "ctaLabel": "Tanya",
+          "unit": "per bulan"
+        },
+        {
+          "name": "Kamar Mandi Dalam",
+          "price": "Rp 1.000.000",
+          "features": [
+            "Kamar mandi dalam",
+            "Kasur dan lemari"
+          ],
+          "ctaLabel": "Tanya",
+          "highlight": true,
+          "unit": "per bulan"
+        },
+        {
+          "name": "Kamar AC",
+          "price": "Rp 1.300.000",
+          "features": [
+            "AC",
+            "Kamar mandi dalam"
+          ],
+          "ctaLabel": "Tanya",
+          "unit": "per bulan"
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "enabled": false,
+      "navLabel": "Galeri",
+      "title": "Foto Kamar dan Lingkungan",
+      "subtitle": "",
+      "images": []
+    },
+    {
+      "type": "testimonials",
+      "enabled": false,
+      "title": "Kata Pelanggan",
+      "items": [
+        {
+          "name": "Nama Pelanggan",
+          "role": "",
+          "text": "Isi dengan testimoni asli dari pelanggan.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "enabled": true,
+      "navLabel": "FAQ",
+      "title": "Pertanyaan Umum",
+      "items": [
+        {
+          "q": "Bisa survei dulu?",
+          "a": "Bisa. Hubungi kami lewat WhatsApp untuk mengatur jadwal."
+        },
+        {
+          "q": "Apakah ada uang jaminan?",
+          "a": "Ketentuan deposit dijelaskan saat Anda survei atau menghubungi kami."
+        },
+        {
+          "q": "Apakah listrik dan air sudah termasuk?",
+          "a": "Tergantung tipe kamar. Tanyakan rincian biayanya sebelum memutuskan."
+        },
+        {
+          "q": "Apakah boleh membawa kendaraan?",
+          "a": "Informasi parkir dijelaskan lewat WhatsApp."
+        },
+        {
+          "q": "Berapa minimal sewa?",
+          "a": "Ketentuan minimal sewa dijelaskan saat pemesanan."
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "enabled": true,
+      "navLabel": "Lokasi",
+      "title": "Lokasi Kami",
+      "embedUrl": ""
+    },
+    {
+      "type": "contact",
+      "enabled": true,
+      "navLabel": "Kontak",
+      "title": "Hubungi Kami"
+    },
+    {
+      "type": "cta",
+      "enabled": true,
+      "title": "Cari kos yang cocok?",
+      "text": "Tanya kamar yang masih kosong lewat WhatsApp.",
+      "buttonLabel": "Tanya Kamar"
+    }
+  ]
+}

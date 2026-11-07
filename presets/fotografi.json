@@ -1,0 +1,203 @@
+{
+  "theme": "charcoal",
+  "meta": {
+    "lang": "id",
+    "title": "Jasa Foto Wisuda, Produk, Keluarga dan Acara",
+    "description": "Jasa foto untuk wisuda, produk, keluarga, dan acara. Pilih paket dan booking mudah lewat WhatsApp.",
+    "url": "https://contoh-fotografi.pages.dev",
+    "ogImage": ""
+  },
+  "business": {
+    "name": "Contoh Studio Foto",
+    "schemaType": "ProfessionalService",
+    "tagline": "Momen penting diabadikan dengan baik",
+    "logo": "",
+    "logoHasName": false,
+    "phone": "081234567890",
+    "whatsapp": "081234567890",
+    "email": "",
+    "address": "Jl. Contoh No. 1",
+    "city": "Surabaya",
+    "region": "Jawa Timur",
+    "priceRange": "Rp",
+    "geo": {
+      "lat": "",
+      "lng": ""
+    },
+    "waMessage": "Halo, saya mau tanya jasa foto.",
+    "hours": [
+      {
+        "day": "Setiap hari",
+        "time": "09:00-18:00"
+      }
+    ]
+  },
+  "analytics": {
+    "ga4Id": "",
+    "searchConsoleVerification": ""
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "youtube": ""
+  },
+  "footerNote": "",
+  "sections": [
+    {
+      "type": "hero",
+      "enabled": true,
+      "badge": "Booking Lewat WhatsApp",
+      "title": "Jasa Foto untuk Wisuda, Produk, Keluarga, dan Acara",
+      "subtitle": "Hasil rapi dengan arahan yang nyaman. Pilih paket, tentukan jadwal, dan booking lewat WhatsApp.",
+      "ctaLabel": "Booking Sekarang",
+      "secondaryLabel": "Lihat Harga",
+      "secondaryHref": "#pricing",
+      "image": "",
+      "imageAlt": "",
+      "waMessage": "Halo, saya mau tanya jasa foto."
+    },
+    {
+      "type": "services",
+      "enabled": true,
+      "navLabel": "Layanan",
+      "title": "Jenis Layanan",
+      "subtitle": "Sesuaikan dengan kebutuhan Anda",
+      "items": [
+        {
+          "icon": "🎓",
+          "title": "Foto Wisuda",
+          "description": "Foto kelulusan sendiri atau bersama keluarga."
+        },
+        {
+          "icon": "👨‍👩‍👧",
+          "title": "Foto Keluarga",
+          "description": "Foto bersama di studio atau di luar ruangan."
+        },
+        {
+          "icon": "📦",
+          "title": "Foto Produk",
+          "description": "Foto produk untuk toko online dan katalog."
+        },
+        {
+          "icon": "🎉",
+          "title": "Dokumentasi Acara",
+          "description": "Foto acara ulang tahun, arisan, atau kantor."
+        },
+        {
+          "icon": "🪪",
+          "title": "Pas Foto",
+          "description": "Pas foto untuk berbagai keperluan."
+        },
+        {
+          "icon": "🎬",
+          "title": "Video Singkat",
+          "description": "Video pendek untuk promosi atau kenangan."
+        }
+      ]
+    },
+    {
+      "type": "pricing",
+      "enabled": true,
+      "navLabel": "Harga",
+      "title": "Contoh Paket",
+      "subtitle": "Pilih paket sesuai kebutuhan",
+      "note": "Harga contoh. Ganti dengan harga asli.",
+      "items": [
+        {
+          "name": "Paket Hemat",
+          "price": "Rp 350.000",
+          "features": [
+            "1 jam sesi",
+            "Foto pilihan diedit"
+          ],
+          "ctaLabel": "Booking"
+        },
+        {
+          "name": "Paket Standar",
+          "price": "Rp 700.000",
+          "features": [
+            "2 jam sesi",
+            "Lebih banyak foto diedit"
+          ],
+          "ctaLabel": "Booking",
+          "highlight": true
+        },
+        {
+          "name": "Paket Lengkap",
+          "price": "Rp 1.200.000",
+          "features": [
+            "Setengah hari",
+            "Foto dan video singkat"
+          ],
+          "ctaLabel": "Booking"
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "enabled": false,
+      "navLabel": "Galeri",
+      "title": "Hasil Foto Kami",
+      "subtitle": "",
+      "images": []
+    },
+    {
+      "type": "testimonials",
+      "enabled": false,
+      "title": "Kata Pelanggan",
+      "items": [
+        {
+          "name": "Nama Pelanggan",
+          "role": "",
+          "text": "Isi dengan testimoni asli dari pelanggan.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "enabled": true,
+      "navLabel": "FAQ",
+      "title": "Pertanyaan Umum",
+      "items": [
+        {
+          "q": "Bagaimana cara booking?",
+          "a": "Kirim tanggal, lokasi, dan jenis acara lewat WhatsApp. Kami konfirmasi ketersediaan jadwal."
+        },
+        {
+          "q": "Kapan foto diterima?",
+          "a": "Waktu pengerjaan tergantung paket. Dijelaskan saat booking."
+        },
+        {
+          "q": "Bisa foto di lokasi saya?",
+          "a": "Bisa. Biaya tambahan mungkin berlaku sesuai jarak."
+        },
+        {
+          "q": "Apakah bisa menjadwal ulang?",
+          "a": "Bisa, dengan kabar lebih awal agar jadwal tetap tersedia."
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "enabled": true,
+      "navLabel": "Lokasi",
+      "title": "Lokasi Kami",
+      "embedUrl": ""
+    },
+    {
+      "type": "contact",
+      "enabled": true,
+      "navLabel": "Kontak",
+      "title": "Hubungi Kami"
+    },
+    {
+      "type": "cta",
+      "enabled": true,
+      "title": "Punya momen yang ingin diabadikan?",
+      "text": "Kirim tanggal dan jenis acaranya, kami cek jadwal.",
+      "buttonLabel": "Booking Sekarang"
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "theme": "olive",
+  "meta": {
+    "lang": "id",
+    "title": "Katering Rumahan | Nasi Box, Snack Box, Prasmanan",
+    "description": "Katering rumahan untuk acara kantor, arisan, dan keluarga. Menu bisa disesuaikan, pesan mudah lewat WhatsApp.",
+    "url": "https://contoh-katering.pages.dev",
+    "ogImage": ""
+  },
+  "business": {
+    "name": "Contoh Katering",
+    "schemaType": "FoodEstablishment",
+    "tagline": "Hidangan rumahan untuk setiap acara",
+    "logo": "",
+    "logoHasName": false,
+    "phone": "081234567890",
+    "whatsapp": "081234567890",
+    "email": "",
+    "address": "Jl. Contoh No. 1",
+    "city": "Surabaya",
+    "region": "Jawa Timur",
+    "priceRange": "Rp",
+    "geo": {
+      "lat": "",
+      "lng": ""
+    },
+    "waMessage": "Halo, saya mau pesan katering.",
+    "hours": [
+      {
+        "day": "Senin-Sabtu",
+        "time": "07:00-17:00"
+      },
+      {
+        "day": "Minggu",
+        "time": "Pesan sebelumnya"
+      }
+    ]
+  },
+  "analytics": {
+    "ga4Id": "",
+    "searchConsoleVerification": ""
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "youtube": ""
+  },
+  "footerNote": "",
+  "sections": [
+    {
+      "type": "hero",
+      "enabled": true,
+      "badge": "Pesan lewat WhatsApp",
+      "title": "Katering Rumahan untuk Acara Kantor, Arisan, dan Keluarga",
+      "subtitle": "Nasi box, snack box, dan prasmanan dengan menu yang bisa disesuaikan. Pesan mudah lewat WhatsApp.",
+      "ctaLabel": "Pesan Katering",
+      "secondaryLabel": "Lihat Harga",
+      "secondaryHref": "#pricing",
+      "image": "",
+      "imageAlt": "",
+      "waMessage": "Halo, saya mau pesan katering."
+    },
+    {
+      "type": "services",
+      "enabled": true,
+      "navLabel": "Layanan",
+      "title": "Pilihan Katering",
+      "subtitle": "Menu dapat disesuaikan dengan acara dan anggaran",
+      "items": [
+        {
+          "icon": "🍱",
+          "title": "Nasi Box",
+          "description": "Paket nasi lengkap dengan lauk dan sayur."
+        },
+        {
+          "icon": "🥟",
+          "title": "Snack Box",
+          "description": "Aneka kue dan camilan untuk rapat atau pengajian."
+        },
+        {
+          "icon": "🍛",
+          "title": "Prasmanan",
+          "description": "Hidangan untuk acara dengan banyak tamu."
+        },
+        {
+          "icon": "🎂",
+          "title": "Tumpeng & Nasi Kuning",
+          "description": "Untuk syukuran dan perayaan keluarga."
+        },
+        {
+          "icon": "📋",
+          "title": "Menu Sesuai Permintaan",
+          "description": "Diskusikan menu dan jumlah porsi lewat WhatsApp."
+        },
+        {
+          "icon": "🚚",
+          "title": "Antar ke Lokasi",
+          "description": "Pengantaran ke lokasi acara sesuai jadwal."
+        }
+      ]
+    },
+    {
+      "type": "pricing",
+      "enabled": true,
+      "navLabel": "Harga",
+      "title": "Contoh Harga",
+      "subtitle": "Harga jelas sebelum Anda memesan",
+      "note": "Harga contoh. Ganti dengan harga asli.",
+      "items": [
+        {
+          "name": "Nasi Box",
+          "price": "Rp 25.000",
+          "features": [
+            "Nasi, lauk, sayur",
+            "Kemasan rapi"
+          ],
+          "ctaLabel": "Pesan",
+          "unit": "per box"
+        },
+        {
+          "name": "Snack Box",
+          "price": "Rp 15.000",
+          "features": [
+            "3 jenis kue",
+            "Kemasan rapi"
+          ],
+          "ctaLabel": "Pesan",
+          "unit": "per box"
+        },
+        {
+          "name": "Prasmanan",
+          "price": "Rp 40.000",
+          "features": [
+            "Menu pilihan",
+            "Perlengkapan saji"
+          ],
+          "ctaLabel": "Pesan",
+          "highlight": true,
+          "unit": "per porsi"
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "enabled": false,
+      "navLabel": "Galeri",
+      "title": "Hidangan Kami",
+      "subtitle": "",
+      "images": []
+    },
+    {
+      "type": "testimonials",
+      "enabled": false,
+      "title": "Kata Pelanggan",
+      "items": [
+        {
+          "name": "Nama Pelanggan",
+          "role": "",
+          "text": "Isi dengan testimoni asli dari pelanggan.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "enabled": true,
+      "navLabel": "FAQ",
+      "title": "Pertanyaan Umum",
+      "items": [
+        {
+          "q": "Berapa hari sebelumnya harus memesan?",
+          "a": "Disarankan memesan beberapa hari sebelum acara. Untuk jumlah besar, hubungi kami lebih awal."
+        },
+        {
+          "q": "Apakah ada minimal pemesanan?",
+          "a": "Ada, tergantung jenis menu. Tanyakan lewat WhatsApp."
+        },
+        {
+          "q": "Bisa request menu atau pantangan makanan?",
+          "a": "Bisa. Sebutkan kebutuhan Anda saat memesan, termasuk bahan yang perlu dihindari."
+        },
+        {
+          "q": "Apakah bisa diantar?",
+          "a": "Bisa ke area tertentu. Hubungi kami untuk alamat acara Anda."
+        },
+        {
+          "q": "Bagaimana pembayarannya?",
+          "a": "Pembayaran diatur saat pemesanan, bisa dengan uang muka. Rinciannya dijelaskan lewat WhatsApp."
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "enabled": true,
+      "navLabel": "Lokasi",
+      "title": "Lokasi Kami",
+      "embedUrl": ""
+    },
+    {
+      "type": "contact",
+      "enabled": true,
+      "navLabel": "Kontak",
+      "title": "Hubungi Kami"
+    },
+    {
+      "type": "cta",
+      "enabled": true,
+      "title": "Punya acara dalam waktu dekat?",
+      "text": "Kirim jumlah porsi dan tanggal acara, kami bantu susun menunya.",
+      "buttonLabel": "Pesan Katering"
+    }
+  ]
+}

@@ -92,3 +92,44 @@ html[data-gallery="masonry"] .gallery figure{break-inside:avoid;margin:0 0 10px!
 .dp-body hr{border:0;border-top:1px solid var(--c-border);margin:12px 0}
 .dp-body h3{font-size:.95rem;margin:10px 0 6px}
 .dp-body .btn-row{margin-top:8px}
+
+/* ===== Kartu produk dan keranjang ===== */
+.prod-grid{display:grid;gap:14px;grid-template-columns:repeat(2,1fr)}
+@media(min-width:760px){.prod-grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1000px){.prod-grid{grid-template-columns:repeat(4,1fr)}}
+.card.prod{padding:12px;display:flex;flex-direction:column;gap:8px}
+.prod-img{position:relative;aspect-ratio:1/1;border-radius:calc(var(--radius) - 4px);background:var(--c-soft);display:flex;align-items:center;justify-content:center;font-size:2.4rem;overflow:hidden}
+.prod-img img{width:100%;height:100%;object-fit:cover;display:block}
+.prod-img .tag{position:absolute;top:8px;left:8px}
+.prod h3{font-size:1rem;margin:0}
+.prod .price{margin:0;font-weight:700;color:var(--c-primary)}
+.prod .price s{margin-left:8px;color:var(--c-muted);font-weight:400;font-size:.85rem}
+.prod-d{margin:0;color:var(--c-muted);font-size:.9rem}
+.prod .btn{min-height:44px;padding:8px 12px;font-size:.9rem;width:100%}
+.cart-fab{position:fixed;right:14px;bottom:76px;z-index:60;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+.cart-fab[hidden]{display:none}
+dialog.cart{border:0;border-radius:var(--radius);padding:0;max-width:440px;width:calc(100% - 24px);max-height:88vh;color:var(--c-text);background:#fff}
+dialog.cart::backdrop{background:rgba(0,0,0,.45)}
+.cart-in{padding:16px;display:grid;gap:10px}
+.cart-in h3{margin:0}
+.cart-list{list-style:none;margin:0;padding:0;display:grid;gap:8px;max-height:34vh;overflow:auto}
+.cart-list li{display:grid;grid-template-columns:1fr auto;gap:4px 8px;align-items:center;font-size:.92rem}
+.cart-list .qty{display:flex;align-items:center;gap:6px}
+.cart-list button{width:34px;height:34px;border:1px solid var(--c-border);border-radius:8px;background:#fff;cursor:pointer}
+.cart-in label{display:grid;gap:4px;font-size:.9rem}
+.cart-in :is(input,textarea){min-height:44px;border:1px solid var(--c-border);border-radius:8px;padding:8px 10px;font:inherit;box-sizing:border-box;width:100%}
+.cart-total{margin:0;font-size:1.05rem}
+.cart-in .btn-row{display:flex;gap:8px;flex-wrap:wrap}
+.cart-in a.btn[aria-disabled="true"]{opacity:.5;pointer-events:none}
+
+/* ===== Penyusun layout (mode susun di preview) ===== */
+.blk{display:contents}
+html.builder .blk{display:block;position:relative;outline:2px dashed var(--c-primary);outline-offset:-2px}
+html.builder .blk[hidden]{display:block!important;min-height:56px;background:repeating-linear-gradient(45deg,var(--c-soft),var(--c-soft) 8px,#fff 8px,#fff 16px)}
+html.builder .blk[hidden]>:not(.blk-tools){display:none}
+.blk-tools{position:absolute;top:8px;right:8px;z-index:45;display:flex;gap:6px;align-items:center;background:var(--c-text);color:#fff;border-radius:999px;padding:4px 6px 4px 12px;font-size:.8rem;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+.blk-tools button{min-width:36px;height:36px;border:0;border-radius:999px;background:#fff;color:var(--c-text);cursor:pointer;font-size:.85rem;padding:0 10px}
+.nav a[hidden]{display:none!important}
+.dp-sec[draggable="true"]{cursor:grab}
+.dp-sec.dragging{opacity:.4}
+.dp-help{font-size:.82rem;color:var(--c-muted);margin:0 0 8px}

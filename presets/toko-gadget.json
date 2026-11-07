@@ -1,0 +1,226 @@
+{
+  "theme": "indigo",
+  "meta": {
+    "lang": "id",
+    "title": "Toko Aksesoris HP dan Gadget Online",
+    "description": "Toko online aksesoris HP, audio, power bank, dan perlengkapan elektronik. Cek stok lewat WhatsApp.",
+    "url": "https://contoh-toko-gadget.pages.dev",
+    "ogImage": ""
+  },
+  "business": {
+    "name": "Contoh Gadget Store",
+    "schemaType": "ElectronicsStore",
+    "tagline": "Aksesoris dan perlengkapan gadget",
+    "logo": "",
+    "logoHasName": false,
+    "phone": "081234567890",
+    "whatsapp": "081234567890",
+    "email": "",
+    "address": "Jl. Contoh No. 1",
+    "city": "Surabaya",
+    "region": "Jawa Timur",
+    "priceRange": "Rp",
+    "geo": {
+      "lat": "",
+      "lng": ""
+    },
+    "waMessage": "Halo, saya mau tanya aksesoris gadget.",
+    "hours": [
+      {
+        "day": "Setiap hari",
+        "time": "08:00-20:00 (balasan chat)"
+      }
+    ]
+  },
+  "analytics": {
+    "ga4Id": "",
+    "searchConsoleVerification": ""
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "youtube": ""
+  },
+  "footerNote": "",
+  "sections": [
+    {
+      "type": "hero",
+      "enabled": true,
+      "badge": "Cek Stok Lewat WhatsApp",
+      "title": "Aksesoris HP, Audio, dan Perlengkapan Elektronik",
+      "subtitle": "Charger, casing, earphone, dan lainnya. Tanya kecocokan dengan perangkat Anda sebelum memesan.",
+      "ctaLabel": "Pesan Sekarang",
+      "secondaryLabel": "Lihat Produk",
+      "secondaryHref": "#produk",
+      "image": "",
+      "imageAlt": "",
+      "waMessage": "Halo, saya mau tanya aksesoris gadget."
+    },
+    {
+      "type": "services",
+      "enabled": true,
+      "navLabel": "Kategori",
+      "title": "Kategori Produk",
+      "subtitle": "Pilih kategori yang Anda cari",
+      "items": [
+        {
+          "icon": "🔌",
+          "title": "Charger & Kabel",
+          "description": "Pilihan untuk berbagai jenis perangkat."
+        },
+        {
+          "icon": "📱",
+          "title": "Casing & Pelindung Layar",
+          "description": "Sesuai tipe HP Anda."
+        },
+        {
+          "icon": "🎧",
+          "title": "Audio",
+          "description": "Earphone dan speaker."
+        },
+        {
+          "icon": "🔋",
+          "title": "Power Bank",
+          "description": "Berbagai kapasitas."
+        },
+        {
+          "icon": "🖱️",
+          "title": "Aksesoris Komputer",
+          "description": "Mouse, keyboard, dan pelengkap."
+        },
+        {
+          "icon": "📦",
+          "title": "Paket Bundling",
+          "description": "Beberapa aksesoris dalam satu paket."
+        }
+      ]
+    },
+    {
+      "type": "products",
+      "enabled": true,
+      "id": "produk",
+      "navLabel": "Produk",
+      "title": "Produk Kami",
+      "subtitle": "Contoh produk. Tambahkan ke keranjang, lalu kirim pesanan lewat WhatsApp.",
+      "cart": true,
+      "note": "Produk dan harga contoh. Ganti dengan produk asli Anda.",
+      "items": [
+        {
+          "name": "Kabel Data",
+          "price": "Rp 35.000",
+          "description": "Tanya kecocokan perangkat"
+        },
+        {
+          "name": "Earphone",
+          "price": "Rp 99.000",
+          "description": "Dengan mikrofon"
+        },
+        {
+          "name": "Power Bank",
+          "price": "Rp 179.000",
+          "description": "Pilihan kapasitas"
+        },
+        {
+          "name": "Casing HP",
+          "price": "Rp 49.000",
+          "description": "Tersedia beberapa pilihan."
+        },
+        {
+          "name": "Pelindung Layar",
+          "price": "Rp 29.000",
+          "description": "Tersedia beberapa pilihan."
+        },
+        {
+          "name": "Speaker Mini",
+          "price": "Rp 149.000",
+          "description": "Tersedia beberapa pilihan."
+        }
+      ]
+    },
+    {
+      "type": "about",
+      "enabled": true,
+      "id": "cara-belanja",
+      "navLabel": "Cara Belanja",
+      "title": "Cara Belanja",
+      "text": "Belanja mudah, cukup lewat WhatsApp.",
+      "points": [
+        "Pilih produk lalu tambahkan ke keranjang, atau tanya stok lewat WhatsApp.",
+        "Kirim pesanan lewat WhatsApp beserta nama dan alamat lengkap.",
+        "Lakukan pembayaran sesuai metode yang disepakati.",
+        "Pesanan dikemas dan dikirim, nomor resi dikabari lewat WhatsApp."
+      ]
+    },
+    {
+      "type": "gallery",
+      "enabled": false,
+      "navLabel": "Koleksi",
+      "title": "Koleksi Kami",
+      "subtitle": "",
+      "images": []
+    },
+    {
+      "type": "testimonials",
+      "enabled": false,
+      "title": "Kata Pelanggan",
+      "items": [
+        {
+          "name": "Nama Pelanggan",
+          "role": "",
+          "text": "Isi dengan testimoni asli dari pelanggan.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "enabled": true,
+      "navLabel": "FAQ",
+      "title": "Pertanyaan Umum",
+      "items": [
+        {
+          "q": "Bagaimana memastikan cocok dengan perangkat saya?",
+          "a": "Sebutkan merek dan tipe perangkat Anda lewat WhatsApp sebelum memesan."
+        },
+        {
+          "q": "Apakah ada garansi?",
+          "a": "Ketentuan garansi berbeda tiap produk dan dijelaskan sebelum Anda membayar."
+        },
+        {
+          "q": "Bagaimana bila barang cacat saat diterima?",
+          "a": "Rekam video saat membuka paket dan hubungi kami. Ketentuan penggantian dijelaskan lebih dulu."
+        },
+        {
+          "q": "Berapa lama pengiriman?",
+          "a": "Tergantung kota tujuan dan ekspedisi. Nomor resi dikirim setelah paket berangkat."
+        },
+        {
+          "q": "Bisa beli dalam jumlah banyak?",
+          "a": "Bisa. Tanyakan harga jumlah banyak lewat WhatsApp."
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "enabled": false,
+      "navLabel": "Lokasi",
+      "title": "Lokasi Kami",
+      "embedUrl": ""
+    },
+    {
+      "type": "contact",
+      "enabled": true,
+      "navLabel": "Kontak",
+      "title": "Hubungi Kami"
+    },
+    {
+      "type": "cta",
+      "enabled": true,
+      "title": "Butuh aksesoris untuk perangkat Anda?",
+      "text": "Kirim tipe perangkatnya, kami carikan yang cocok.",
+      "buttonLabel": "Pesan Sekarang"
+    }
+  ],
+  "rowsTarget": "products"
+}

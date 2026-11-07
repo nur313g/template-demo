@@ -1,0 +1,126 @@
+---
+// Kartu produk + keranjang belanja ringan. Pesanan dikirim lewat WhatsApp (tanpa pembayaran online).
+import { waLink, img } from '../../lib/util.js';
+const { data, site, alt } = Astro.props;
+const items = (data.items || []).filter((x) => x && x.name);
+const cart = data.cart !== false;
+const num = (v) => { const n = parseInt(String(v ?? '').replace(/[^\d]/g, ''), 10); return Number.isFinite(n) && n > 0 ? n : 0; };
+const waBase = waLink(site, '').split('?')[0];
+---
+<section class={`s${alt ? ' alt' : ''}`} id={data.id || 'produk'}>
+  <div class="wrap">
+    <div class="s-head">
+      <h2>{data.title}</h2>
+      {data.subtitle && <p>{data.subtitle}</p>}
+    </div>
+    <div class="prod-grid">
+      {items.map((it) => {
+        const price = num(it.price);
+        const canCart = cart && price > 0;
+        return (
+          <article class="card prod">
+            <div class="prod-img">
+              {it.image ? <img src={img(it.image)} alt={it.name} width="400" height="400" loading="lazy" decoding="async" /> : <span aria-hidden="true">🛍️</span>}
+              {it.badge && <span class="tag">{it.badge}</span>}
+            </div>
+            <h3>{it.name}</h3>
+            <p class="price">{it.price}{it.oldPrice && <s>{it.oldPrice}</s>}</p>
+            {it.description && <p class="prod-d">{it.description}</p>}
+            {canCart && <button type="button" class="btn js-add" data-name={it.name} data-price={price}>+ Keranjang</button>}
+            <a class={`btn${canCart ? ' ghost' : ' wa'}`} href={waLink(site, `Halo, saya tertarik dengan: ${it.name}${it.price ? ' (' + it.price + ')' : ''}`)} rel="noopener">{canCart ? 'Tanya Produk' : 'Pesan via WhatsApp'}</a>
+          </article>
+        );
+      })}
+    </div>
+    {data.note && <p class="center" style="margin-top:18px;color:var(--c-muted)">{data.note}</p>}
+  </div>
+
+  {cart && items.some((it) => num(it.price) > 0) && (
+    <div id="cart-root" data-wa={waBase} data-store={site.business.name}>
+      <button type="button" class="btn cart-fab" id="cart-open" hidden aria-label="Buka keranjang belanja">🛒 <span id="cart-count">0</span></button>
+      <dialog id="cart-dlg" class="cart" aria-label="Keranjang belanja">
+        <div class="cart-in">
+          <h3>Keranjang Belanja</h3>
+          <ul id="cart-list" class="cart-list"></ul>
+          <p class="cart-total">Total: <strong id="cart-total">Rp 0</strong></p>
+          <label>Nama<input id="cart-name" type="text" maxlength="60" autocomplete="name" /></label>
+          <label>Alamat pengiriman<textarea id="cart-addr" maxlength="200" rows="2"></textarea></label>
+          <label>Catatan (ukuran, warna, dan lainnya)<input id="cart-note" type="text" maxlength="120" /></label>
+          <p class="hint">Ongkos kirim dan total akhir dikonfirmasi lewat WhatsApp.</p>
+          <div class="btn-row">
+            <a class="btn wa" id="cart-send" href="#" rel="noopener" aria-disabled="true">Kirim Pesanan via WhatsApp</a>
+            <button type="button" class="btn ghost" id="cart-close">Tutup</button>
+          </div>
+        </div>
+      </dialog>
+    </div>
+  )}
+</section>
+
+<script is:inline>
+  (function () {
+    var root = document.getElementById('cart-root'); if (!root) return;
+    var WA = root.dataset.wa, STORE = root.dataset.store, KEY = 'cart.' + location.host + location.pathname;
+    var dlg = document.getElementById('cart-dlg'), list = document.getElementById('cart-list');
+    var fab = document.getElementById('cart-open'), countEl = document.getElementById('cart-count');
+    var totalEl = document.getElementById('cart-total'), send = document.getElementById('cart-send');
+    var cart = {}, prices = {};
+    document.querySelectorAll('.js-add').forEach(function (b) { prices[b.dataset.name] = Number(b.dataset.price); });
+    try { cart = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { cart = {}; }
+    // Buang produk yang sudah tidak ada dan samakan harga dengan halaman
+    Object.keys(cart).forEach(function (k) {
+      if (!(k in prices) || !(cart[k].q > 0)) delete cart[k]; else cart[k].p = prices[k];
+    });
+    function rp(n) { return 'Rp ' + n.toLocaleString('id-ID'); }
+    function save() { try { localStorage.setItem(KEY, JSON.stringify(cart)); } catch (e) {} }
+    function mk(tag, text, cls) { var e = document.createElement(tag); if (text != null) e.textContent = text; if (cls) e.className = cls; return e; }
+    function message() {
+      var lines = ['Halo ' + STORE + ', saya mau pesan:'], sum = 0, i = 0;
+      Object.keys(cart).forEach(function (k) {
+        var it = cart[k]; i++; sum += it.p * it.q;
+        lines.push(i + '. ' + k + ' x' + it.q + ' = ' + rp(it.p * it.q));
+      });
+      lines.push('Total: ' + rp(sum));
+      var n = document.getElementById('cart-name').value.trim(), a = document.getElementById('cart-addr').value.trim(), c = document.getElementById('cart-note').value.trim();
+      if (n) lines.push('Nama: ' + n);
+      if (a) lines.push('Alamat: ' + a);
+      if (c) lines.push('Catatan: ' + c);
+      return lines.join('\n');
+    }
+    function render() {
+      list.textContent = '';
+      var keys = Object.keys(cart), count = 0, sum = 0;
+      keys.forEach(function (k) {
+        var it = cart[k]; count += it.q; sum += it.p * it.q;
+        var li = mk('li'), nm = mk('span', k + ' (' + rp(it.p) + ')'), q = mk('span', null, 'qty');
+        var minus = mk('button', '−'), plus = mk('button', '+'), del = mk('button', '×');
+        minus.type = plus.type = del.type = 'button';
+        minus.setAttribute('aria-label', 'Kurangi'); plus.setAttribute('aria-label', 'Tambah'); del.setAttribute('aria-label', 'Hapus');
+        minus.onclick = function () { it.q -= 1; if (it.q <= 0) delete cart[k]; save(); render(); };
+        plus.onclick = function () { it.q += 1; save(); render(); };
+        del.onclick = function () { delete cart[k]; save(); render(); };
+        q.appendChild(minus); q.appendChild(mk('span', String(it.q))); q.appendChild(plus); q.appendChild(del);
+        li.appendChild(nm); li.appendChild(q); list.appendChild(li);
+      });
+      if (!keys.length) list.appendChild(mk('li', 'Keranjang masih kosong.'));
+      fab.hidden = count === 0; countEl.textContent = String(count); totalEl.textContent = rp(sum);
+      if (keys.length) { send.href = WA + '?text=' + encodeURIComponent(message()); send.setAttribute('aria-disabled', 'false'); }
+      else { send.href = '#'; send.setAttribute('aria-disabled', 'true'); }
+    }
+    document.querySelectorAll('.js-add').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var k = b.dataset.name; cart[k] = { p: Number(b.dataset.price), q: (cart[k] ? cart[k].q : 0) + 1 };
+        save(); render();
+        var old = b.textContent; b.textContent = 'Ditambahkan ✓';
+        setTimeout(function () { b.textContent = old; }, 1000);
+      });
+    });
+    function open() { render(); if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', ''); }
+    function close() { if (dlg.close) dlg.close(); else dlg.removeAttribute('open'); }
+    fab.addEventListener('click', open);
+    document.getElementById('cart-close').addEventListener('click', close);
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) close(); });
+    ['cart-name', 'cart-addr', 'cart-note'].forEach(function (id) { document.getElementById(id).addEventListener('input', render); });
+    render();
+  })();
+</script>

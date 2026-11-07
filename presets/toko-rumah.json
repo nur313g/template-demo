@@ -1,0 +1,226 @@
+{
+  "theme": "mocha",
+  "meta": {
+    "lang": "id",
+    "title": "Toko Perlengkapan Rumah dan Dekorasi Online",
+    "description": "Toko online perlengkapan rumah, dapur, organizer, dan dekorasi. Tanya ukuran dan pesan lewat WhatsApp.",
+    "url": "https://contoh-toko-rumah.pages.dev",
+    "ogImage": ""
+  },
+  "business": {
+    "name": "Contoh Toko Rumah Tangga",
+    "schemaType": "HomeGoodsStore",
+    "tagline": "Perlengkapan rumah yang rapi dan fungsional",
+    "logo": "",
+    "logoHasName": false,
+    "phone": "081234567890",
+    "whatsapp": "081234567890",
+    "email": "",
+    "address": "Jl. Contoh No. 1",
+    "city": "Surabaya",
+    "region": "Jawa Timur",
+    "priceRange": "Rp",
+    "geo": {
+      "lat": "",
+      "lng": ""
+    },
+    "waMessage": "Halo, saya mau tanya perlengkapan rumah.",
+    "hours": [
+      {
+        "day": "Setiap hari",
+        "time": "08:00-20:00 (balasan chat)"
+      }
+    ]
+  },
+  "analytics": {
+    "ga4Id": "",
+    "searchConsoleVerification": ""
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "youtube": ""
+  },
+  "footerNote": "",
+  "sections": [
+    {
+      "type": "hero",
+      "enabled": true,
+      "badge": "Pesan Lewat WhatsApp",
+      "title": "Perlengkapan Rumah, Dapur, dan Dekorasi",
+      "subtitle": "Dari alat dapur sampai dekorasi ruangan. Lihat pilihan, tanya ukuran, dan pesan lewat WhatsApp.",
+      "ctaLabel": "Pesan Sekarang",
+      "secondaryLabel": "Lihat Produk",
+      "secondaryHref": "#produk",
+      "image": "",
+      "imageAlt": "",
+      "waMessage": "Halo, saya mau tanya perlengkapan rumah."
+    },
+    {
+      "type": "services",
+      "enabled": true,
+      "navLabel": "Kategori",
+      "title": "Kategori Produk",
+      "subtitle": "Pilih kategori yang Anda cari",
+      "items": [
+        {
+          "icon": "🍳",
+          "title": "Peralatan Dapur",
+          "description": "Alat masak dan penyimpanan makanan."
+        },
+        {
+          "icon": "🛋️",
+          "title": "Dekorasi",
+          "description": "Hiasan dan pernak-pernik ruangan."
+        },
+        {
+          "icon": "🧺",
+          "title": "Organizer",
+          "description": "Wadah dan rak penyimpanan."
+        },
+        {
+          "icon": "🛏️",
+          "title": "Perlengkapan Kamar",
+          "description": "Seprai, bantal, dan pelengkap."
+        },
+        {
+          "icon": "🧹",
+          "title": "Kebersihan",
+          "description": "Perlengkapan bersih-bersih rumah."
+        },
+        {
+          "icon": "🎁",
+          "title": "Hadiah Rumah Baru",
+          "description": "Paket hadiah untuk hunian baru."
+        }
+      ]
+    },
+    {
+      "type": "products",
+      "enabled": true,
+      "id": "produk",
+      "navLabel": "Produk",
+      "title": "Produk Kami",
+      "subtitle": "Contoh produk. Tambahkan ke keranjang, lalu kirim pesanan lewat WhatsApp.",
+      "cart": true,
+      "note": "Produk dan harga contoh. Ganti dengan produk asli Anda.",
+      "items": [
+        {
+          "name": "Set Wadah Makanan",
+          "price": "Rp 85.000",
+          "description": "Beberapa ukuran"
+        },
+        {
+          "name": "Rak Organizer",
+          "price": "Rp 150.000",
+          "description": "Tanya ukuran sebelum memesan"
+        },
+        {
+          "name": "Hiasan Dinding",
+          "price": "Rp 120.000",
+          "description": "Beberapa motif"
+        },
+        {
+          "name": "Lap dan Sikat Set",
+          "price": "Rp 40.000",
+          "description": "Tersedia beberapa pilihan."
+        },
+        {
+          "name": "Bantal Sofa",
+          "price": "Rp 75.000",
+          "description": "Tersedia beberapa pilihan."
+        },
+        {
+          "name": "Lampu Meja",
+          "price": "Rp 110.000",
+          "description": "Tersedia beberapa pilihan."
+        }
+      ]
+    },
+    {
+      "type": "about",
+      "enabled": true,
+      "id": "cara-belanja",
+      "navLabel": "Cara Belanja",
+      "title": "Cara Belanja",
+      "text": "Belanja mudah, cukup lewat WhatsApp.",
+      "points": [
+        "Pilih produk lalu tambahkan ke keranjang, atau tanya stok lewat WhatsApp.",
+        "Kirim pesanan lewat WhatsApp beserta nama dan alamat lengkap.",
+        "Lakukan pembayaran sesuai metode yang disepakati.",
+        "Pesanan dikemas dan dikirim, nomor resi dikabari lewat WhatsApp."
+      ]
+    },
+    {
+      "type": "gallery",
+      "enabled": false,
+      "navLabel": "Koleksi",
+      "title": "Koleksi Kami",
+      "subtitle": "",
+      "images": []
+    },
+    {
+      "type": "testimonials",
+      "enabled": false,
+      "title": "Kata Pelanggan",
+      "items": [
+        {
+          "name": "Nama Pelanggan",
+          "role": "",
+          "text": "Isi dengan testimoni asli dari pelanggan.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "enabled": true,
+      "navLabel": "FAQ",
+      "title": "Pertanyaan Umum",
+      "items": [
+        {
+          "q": "Bagaimana mengetahui ukuran barang?",
+          "a": "Ukuran tercantum pada deskripsi produk. Tanyakan lewat WhatsApp bila perlu ukuran yang lebih rinci."
+        },
+        {
+          "q": "Apakah barang rawan pecah dikemas aman?",
+          "a": "Kami menyarankan tambahan pengemasan untuk barang rawan pecah. Tanyakan saat memesan."
+        },
+        {
+          "q": "Bagaimana kalau barang rusak saat sampai?",
+          "a": "Rekam video saat membuka paket dan hubungi kami. Ketentuan lengkap dijelaskan sebelum Anda membayar."
+        },
+        {
+          "q": "Berapa ongkos kirim barang besar?",
+          "a": "Tergantung ukuran, berat, dan kota tujuan. Kami hitungkan sebelum Anda membayar."
+        },
+        {
+          "q": "Apakah stok selalu tersedia?",
+          "a": "Stok bisa berubah. Pastikan lewat WhatsApp sebelum membayar."
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "enabled": false,
+      "navLabel": "Lokasi",
+      "title": "Lokasi Kami",
+      "embedUrl": ""
+    },
+    {
+      "type": "contact",
+      "enabled": true,
+      "navLabel": "Kontak",
+      "title": "Hubungi Kami"
+    },
+    {
+      "type": "cta",
+      "enabled": true,
+      "title": "Sedang menata rumah?",
+      "text": "Ceritakan kebutuhan dan ukuran ruangan Anda, kami bantu pilihkan.",
+      "buttonLabel": "Pesan Sekarang"
+    }
+  ],
+  "rowsTarget": "products"
+}

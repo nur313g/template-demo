@@ -1,0 +1,207 @@
+{
+  "theme": "berry",
+  "meta": {
+    "lang": "id",
+    "title": "Toko Kue Pesanan | Kue Ulang Tahun dan Hampers",
+    "description": "Toko kue untuk kue ulang tahun, cupcake, kue kering, dan hampers sesuai pesanan. Pesan lewat WhatsApp.",
+    "url": "https://contoh-toko-kue.pages.dev",
+    "ogImage": ""
+  },
+  "business": {
+    "name": "Contoh Toko Kue",
+    "schemaType": "Bakery",
+    "tagline": "Kue segar untuk setiap momen",
+    "logo": "",
+    "logoHasName": false,
+    "phone": "081234567890",
+    "whatsapp": "081234567890",
+    "email": "",
+    "address": "Jl. Contoh No. 1",
+    "city": "Surabaya",
+    "region": "Jawa Timur",
+    "priceRange": "Rp",
+    "geo": {
+      "lat": "",
+      "lng": ""
+    },
+    "waMessage": "Halo, saya mau pesan kue.",
+    "hours": [
+      {
+        "day": "Senin-Sabtu",
+        "time": "08:00-18:00"
+      },
+      {
+        "day": "Minggu",
+        "time": "09:00-15:00"
+      }
+    ]
+  },
+  "analytics": {
+    "ga4Id": "",
+    "searchConsoleVerification": ""
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "youtube": ""
+  },
+  "footerNote": "",
+  "sections": [
+    {
+      "type": "hero",
+      "enabled": true,
+      "badge": "Pesan Sebelumnya",
+      "title": "Kue Ulang Tahun dan Kue Kering Dibuat Sesuai Pesanan",
+      "subtitle": "Kue tart, cupcake, dan hampers dengan desain dan tulisan sesuai keinginan Anda. Pesan lewat WhatsApp.",
+      "ctaLabel": "Pesan Kue",
+      "secondaryLabel": "Lihat Harga",
+      "secondaryHref": "#pricing",
+      "image": "",
+      "imageAlt": "",
+      "waMessage": "Halo, saya mau pesan kue."
+    },
+    {
+      "type": "services",
+      "enabled": true,
+      "navLabel": "Layanan",
+      "title": "Kue Kami",
+      "subtitle": "Dibuat segar, bisa disesuaikan dengan acara Anda",
+      "items": [
+        {
+          "icon": "🎂",
+          "title": "Kue Ulang Tahun",
+          "description": "Tart dengan ukuran, rasa, dan tulisan sesuai pesanan."
+        },
+        {
+          "icon": "🧁",
+          "title": "Cupcake & Brownies",
+          "description": "Cocok untuk suguhan acara dan oleh-oleh."
+        },
+        {
+          "icon": "🍪",
+          "title": "Kue Kering",
+          "description": "Aneka kue kering dalam toples atau kemasan hampers."
+        },
+        {
+          "icon": "🍞",
+          "title": "Roti Manis",
+          "description": "Roti lembut untuk sarapan dan camilan."
+        },
+        {
+          "icon": "🎁",
+          "title": "Hampers",
+          "description": "Paket kue untuk hadiah dan bingkisan."
+        },
+        {
+          "icon": "✍️",
+          "title": "Desain Custom",
+          "description": "Kirim referensi desain lewat WhatsApp."
+        }
+      ]
+    },
+    {
+      "type": "pricing",
+      "enabled": true,
+      "navLabel": "Harga",
+      "title": "Contoh Harga",
+      "subtitle": "Pilih ukuran sesuai jumlah tamu",
+      "note": "Harga contoh. Ganti dengan harga asli.",
+      "items": [
+        {
+          "name": "Tart 16 cm",
+          "price": "Rp 180.000",
+          "features": [
+            "Untuk sekitar 8 porsi",
+            "Tulisan ucapan"
+          ],
+          "ctaLabel": "Pesan"
+        },
+        {
+          "name": "Tart 20 cm",
+          "price": "Rp 260.000",
+          "features": [
+            "Untuk sekitar 12 porsi",
+            "Tulisan ucapan"
+          ],
+          "ctaLabel": "Pesan",
+          "highlight": true
+        },
+        {
+          "name": "Hampers Kue Kering",
+          "price": "Rp 150.000",
+          "features": [
+            "3 toples",
+            "Kemasan hadiah"
+          ],
+          "ctaLabel": "Pesan"
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "enabled": false,
+      "navLabel": "Galeri",
+      "title": "Hasil Karya Kami",
+      "subtitle": "",
+      "images": []
+    },
+    {
+      "type": "testimonials",
+      "enabled": false,
+      "title": "Kata Pelanggan",
+      "items": [
+        {
+          "name": "Nama Pelanggan",
+          "role": "",
+          "text": "Isi dengan testimoni asli dari pelanggan.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "enabled": true,
+      "navLabel": "FAQ",
+      "title": "Pertanyaan Umum",
+      "items": [
+        {
+          "q": "Berapa hari sebelumnya harus memesan?",
+          "a": "Disarankan beberapa hari sebelum acara. Untuk desain rumit, pesan lebih awal."
+        },
+        {
+          "q": "Bisa membuat desain sendiri?",
+          "a": "Bisa. Kirim foto referensi lewat WhatsApp dan kami sampaikan kemungkinannya."
+        },
+        {
+          "q": "Bagaimana pengambilan atau pengiriman?",
+          "a": "Bisa diambil di toko atau diantar ke area tertentu."
+        },
+        {
+          "q": "Bagaimana bila ada alergi?",
+          "a": "Tanyakan bahan yang kami pakai sebelum memesan, dan sebutkan alergi Anda."
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "enabled": true,
+      "navLabel": "Lokasi",
+      "title": "Lokasi Kami",
+      "embedUrl": ""
+    },
+    {
+      "type": "contact",
+      "enabled": true,
+      "navLabel": "Kontak",
+      "title": "Hubungi Kami"
+    },
+    {
+      "type": "cta",
+      "enabled": true,
+      "title": "Ada momen spesial?",
+      "text": "Kirim tanggal dan ukuran kue, kami bantu pilihkan.",
+      "buttonLabel": "Pesan Kue"
+    }
+  ]
+}

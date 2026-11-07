@@ -2,14 +2,11 @@
 // Halaman uji coba: calon klien mengisi data, memilih preset dan tampilan, lalu melihat preview.
 import '../styles/themes.css';
 import '../styles/global.css';
-import { OPTIONS, LABELS, ORDER, DEFAULTS, PRESET_NAMES } from '../lib/designs.js';
+import { OPTIONS, LABELS, ORDER, DEFAULTS, groupedPresets } from '../lib/designs.js';
 
 const files = import.meta.glob('../../presets/*.json', { eager: true, import: 'default' });
-const names = PRESET_NAMES;
-const presets = Object.keys(files)
-  .map((p) => p.split('/').pop().replace('.json', ''))
-  .filter((k) => k !== 'demo-etalase')
-  .map((k) => ({ key: k, label: names[k] || k }));
+const keys = Object.keys(files).map((p) => p.split('/').pop().replace('.json', '')).filter((k) => k !== 'demo-etalase');
+const groups = groupedPresets(keys);
 const rows = [1, 2, 3, 4, 5];
 ---
 <!doctype html>
@@ -63,7 +60,7 @@ const rows = [1, 2, 3, 4, 5];
           <legend>1. Jenis usaha</legend>
           <label>Pilih contoh yang paling mirip
             <select name="preset" required>
-              {presets.map((p) => <option value={p.key}>{p.label}</option>)}
+              {groups.map((g) => (<optgroup label={g.group}>{g.items.map((p) => <option value={p.key}>{p.label}</option>)}</optgroup>))}
             </select>
           </label>
         </fieldset>
@@ -101,7 +98,7 @@ const rows = [1, 2, 3, 4, 5];
           <legend>4. Foto</legend>
           <label>Logo (opsional)<input type="file" accept="image/*" data-k="logo" /></label>
           <label>Foto utama (lebih bagus yang melebar)<input type="file" accept="image/*" data-k="hero" /></label>
-          <label>Galeri (maksimal 6 foto)<input type="file" accept="image/*" multiple data-k="gallery" /></label>
+          <label>Galeri (maksimal 6 foto; untuk toko, dipakai sebagai foto produk sesuai urutan)<input type="file" accept="image/*" multiple data-k="gallery" /></label>
           <div class="thumbs" id="thumbs"></div>
         </fieldset>
 

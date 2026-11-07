@@ -1,0 +1,226 @@
+{
+  "theme": "sunset",
+  "meta": {
+    "lang": "id",
+    "title": "Toko Camilan, Frozen Food dan Hampers Online",
+    "description": "Toko online camilan, frozen food, kue kering, dan hampers. Cek stok dan pesan lewat WhatsApp.",
+    "url": "https://contoh-toko-makanan.pages.dev",
+    "ogImage": ""
+  },
+  "business": {
+    "name": "Contoh Toko Camilan",
+    "schemaType": "Store",
+    "tagline": "Camilan dan makanan praktis untuk keluarga",
+    "logo": "",
+    "logoHasName": false,
+    "phone": "081234567890",
+    "whatsapp": "081234567890",
+    "email": "",
+    "address": "Jl. Contoh No. 1",
+    "city": "Surabaya",
+    "region": "Jawa Timur",
+    "priceRange": "Rp",
+    "geo": {
+      "lat": "",
+      "lng": ""
+    },
+    "waMessage": "Halo, saya mau tanya produk makanan.",
+    "hours": [
+      {
+        "day": "Setiap hari",
+        "time": "08:00-20:00 (balasan chat)"
+      }
+    ]
+  },
+  "analytics": {
+    "ga4Id": "",
+    "searchConsoleVerification": ""
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "youtube": ""
+  },
+  "footerNote": "",
+  "sections": [
+    {
+      "type": "hero",
+      "enabled": true,
+      "badge": "Kirim ke Kota Anda",
+      "title": "Camilan, Frozen Food, dan Oleh-Oleh yang Praktis",
+      "subtitle": "Pilih produk, tanya stok, dan pesan lewat WhatsApp. Cocok untuk stok di rumah maupun hadiah.",
+      "ctaLabel": "Pesan Sekarang",
+      "secondaryLabel": "Lihat Produk",
+      "secondaryHref": "#produk",
+      "image": "",
+      "imageAlt": "",
+      "waMessage": "Halo, saya mau tanya produk makanan."
+    },
+    {
+      "type": "services",
+      "enabled": true,
+      "navLabel": "Kategori",
+      "title": "Kategori Produk",
+      "subtitle": "Pilih kategori yang Anda cari",
+      "items": [
+        {
+          "icon": "🍿",
+          "title": "Camilan",
+          "description": "Aneka camilan asin dan manis."
+        },
+        {
+          "icon": "🥟",
+          "title": "Frozen Food",
+          "description": "Makanan beku siap olah."
+        },
+        {
+          "icon": "🍪",
+          "title": "Kue Kering",
+          "description": "Dalam toples atau kemasan hampers."
+        },
+        {
+          "icon": "🌶️",
+          "title": "Sambal & Bumbu",
+          "description": "Pelengkap masakan rumah."
+        },
+        {
+          "icon": "🥤",
+          "title": "Minuman",
+          "description": "Minuman kemasan pilihan."
+        },
+        {
+          "icon": "🎁",
+          "title": "Hampers",
+          "description": "Paket hadiah untuk keluarga dan kolega."
+        }
+      ]
+    },
+    {
+      "type": "products",
+      "enabled": true,
+      "id": "produk",
+      "navLabel": "Produk",
+      "title": "Produk Kami",
+      "subtitle": "Contoh produk. Tambahkan ke keranjang, lalu kirim pesanan lewat WhatsApp.",
+      "cart": true,
+      "note": "Produk dan harga contoh. Ganti dengan produk asli Anda.",
+      "items": [
+        {
+          "name": "Paket Camilan",
+          "price": "Rp 25.000",
+          "description": "Isi beberapa varian"
+        },
+        {
+          "name": "Frozen Food",
+          "price": "Rp 45.000",
+          "description": "Siap olah"
+        },
+        {
+          "name": "Hampers",
+          "price": "Rp 150.000",
+          "description": "Isi pilihan"
+        },
+        {
+          "name": "Kue Kering Toples",
+          "price": "Rp 65.000",
+          "description": "Tersedia beberapa pilihan."
+        },
+        {
+          "name": "Sambal Botol",
+          "price": "Rp 30.000",
+          "description": "Tersedia beberapa pilihan."
+        },
+        {
+          "name": "Minuman Kemasan",
+          "price": "Rp 20.000",
+          "description": "Tersedia beberapa pilihan."
+        }
+      ]
+    },
+    {
+      "type": "about",
+      "enabled": true,
+      "id": "cara-belanja",
+      "navLabel": "Cara Belanja",
+      "title": "Cara Belanja",
+      "text": "Belanja mudah, cukup lewat WhatsApp.",
+      "points": [
+        "Pilih produk lalu tambahkan ke keranjang, atau tanya stok lewat WhatsApp.",
+        "Kirim pesanan lewat WhatsApp beserta nama dan alamat lengkap.",
+        "Lakukan pembayaran sesuai metode yang disepakati.",
+        "Pesanan dikemas dan dikirim, nomor resi dikabari lewat WhatsApp."
+      ]
+    },
+    {
+      "type": "gallery",
+      "enabled": false,
+      "navLabel": "Koleksi",
+      "title": "Koleksi Kami",
+      "subtitle": "",
+      "images": []
+    },
+    {
+      "type": "testimonials",
+      "enabled": false,
+      "title": "Kata Pelanggan",
+      "items": [
+        {
+          "name": "Nama Pelanggan",
+          "role": "",
+          "text": "Isi dengan testimoni asli dari pelanggan.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "enabled": true,
+      "navLabel": "FAQ",
+      "title": "Pertanyaan Umum",
+      "items": [
+        {
+          "q": "Bagaimana pengiriman makanan beku?",
+          "a": "Pengiriman produk beku diatur khusus. Tanyakan ekspedisi dan kemasan yang cocok untuk kota Anda."
+        },
+        {
+          "q": "Bagaimana dengan tanggal kedaluwarsa?",
+          "a": "Tanggal kedaluwarsa tercantum pada kemasan. Tanyakan sebelum memesan bila perlu."
+        },
+        {
+          "q": "Bisa tanya bahan dan izin produk?",
+          "a": "Bisa. Tanyakan komposisi dan informasi izin lewat WhatsApp sebelum memesan."
+        },
+        {
+          "q": "Apakah stok selalu tersedia?",
+          "a": "Stok bisa berubah. Pastikan lewat WhatsApp sebelum membayar."
+        },
+        {
+          "q": "Bisa pesan dalam jumlah besar?",
+          "a": "Bisa. Kirim jumlah dan tanggal butuh, kami hitung harganya."
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "enabled": false,
+      "navLabel": "Lokasi",
+      "title": "Lokasi Kami",
+      "embedUrl": ""
+    },
+    {
+      "type": "contact",
+      "enabled": true,
+      "navLabel": "Kontak",
+      "title": "Hubungi Kami"
+    },
+    {
+      "type": "cta",
+      "enabled": true,
+      "title": "Mau stok camilan atau hampers?",
+      "text": "Kirim produk dan jumlahnya, kami hitung total dan ongkirnya.",
+      "buttonLabel": "Pesan Sekarang"
+    }
+  ],
+  "rowsTarget": "products"
+}

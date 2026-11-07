@@ -1,16 +1,27 @@
 ---
-// Panel di halaman /preview: ganti jenis usaha, tampilan, bagian halaman, lalu pesan lewat WhatsApp.
+// Panel di halaman /preview: ganti jenis usaha, tampilan, susun bagian halaman seperti lego, lalu pesan lewat WhatsApp.
 import { OPTIONS, LABELS, ORDER } from '../lib/designs.js';
-const { presets = [], current = '', sections = [], owner = { wa: '', packages: [] } } = Astro.props;
+const { groups = [], alts = [], current = '', sections = [], owner = { wa: '', packages: [] } } = Astro.props;
 ---
 <details class="dp" id="pv">
   <summary>🎨 Ubah tampilan</summary>
   <div class="dp-body">
     <label>Jenis usaha
       <select id="pv-preset">
-        {presets.map((p) => <option value={p.key} selected={p.key === current}>{p.label}</option>)}
+        {groups.map((g) => (
+          <optgroup label={g.group}>
+            {g.items.map((p) => <option value={p.key} selected={p.key === current}>{p.label}</option>)}
+          </optgroup>
+        ))}
       </select>
     </label>
+    {alts.length > 1 && (
+      <label>Gaya alternatif
+        <select id="pv-alt">
+          {alts.map((a) => <option value={a.key} selected={a.key === current}>{a.label}</option>)}
+        </select>
+      </label>
+    )}
     {ORDER.map((k) => (
       <label>{LABELS[k]}
         <select data-k={k}>
@@ -19,10 +30,11 @@ const { presets = [], current = '', sections = [], owner = { wa: '', packages: [
       </label>
     ))}
 
-    <h3>Bagian halaman</h3>
+    <h3>Susun bagian halaman</h3>
+    <p class="dp-help">Geser dengan tombol ↑ ↓ (di komputer boleh ditarik). Hapus centang untuk menyembunyikan. Hasilnya langsung terlihat.</p>
     <div id="pv-secs">
       {sections.map((s) => (
-        <div class="dp-sec" data-t={s.type}>
+        <div class="dp-sec" data-t={s.type} draggable={s.type !== 'hero' ? 'true' : undefined}>
           <input type="checkbox" checked={s.on} disabled={s.type === 'hero'} aria-label={`Tampilkan ${s.label}`} />
           <span>{s.label}</span>
           {s.type !== 'hero' && <button type="button" data-up aria-label="Naikkan">↑</button>}
@@ -30,7 +42,7 @@ const { presets = [], current = '', sections = [], owner = { wa: '', packages: [
         </div>
       ))}
     </div>
-    <div class="btn-row"><button type="button" class="btn ghost" id="pv-apply">Terapkan susunan</button></div>
+    <label class="dp-sec"><input type="checkbox" id="pv-mode" /> <span>Mode susun: tombol di setiap bagian</span></label>
 
     <hr />
     {owner.wa && owner.packages.length > 0 && (
@@ -48,23 +60,30 @@ const { presets = [], current = '', sections = [], owner = { wa: '', packages: [
 <script is:inline define:vars={{ ORDER, owner }}>
   (function () {
     var attr = { theme: 'data-theme', style: 'data-style', hero: 'data-hero', services: 'data-services', gallery: 'data-gallery', header: 'data-header' };
-    var root = document.documentElement, K = 'coba.form', st = {};
+    var root = document.documentElement, K = 'coba.form', st = {}, drag = null;
     try { st = JSON.parse(sessionStorage.getItem(K) || '{}'); } catch (e) {}
     function save() { try { sessionStorage.setItem(K, JSON.stringify(st)); } catch (e) {} }
     function code() { return ORDER.map(function (k) { return root.getAttribute(attr[k]); }).join('-'); }
     function rows() { return Array.prototype.slice.call(document.querySelectorAll('#pv-secs .dp-sec')); }
+    function rowOf(t) { return rows().filter(function (r) { return r.dataset.t === t; })[0]; }
+    function blocks() { return Array.prototype.slice.call(document.querySelectorAll('.blk')); }
+    function orderNow() { return rows().map(function (r) { return r.dataset.t; }); }
+    function hiddenNow() { return rows().filter(function (r) { return !r.querySelector('input').checked; }).map(function (r) { return r.dataset.t; }); }
+    function label(t) { var r = rowOf(t); return r ? r.querySelector('span').textContent : t; }
 
     function wa() {
       var a = document.getElementById('pv-wa'); if (!a || !owner.wa) return;
       var ps = document.getElementById('pv-paket'), pr = document.getElementById('pv-preset');
-      var active = rows().filter(function (r) { return r.querySelector('input').checked; })
+      var off = hiddenNow(), active = rows().filter(function (r) { return r.querySelector('input').checked; })
         .map(function (r) { return r.querySelector('span').textContent; }).join(', ');
+      var cmd = 'npm run klien -- ' + pr.value + ' kode=' + code() + ' urutan=' + orderNow().join(',') + (off.length ? ' sembunyi=' + off.join(',') : '');
       var text = 'Halo, saya sudah mencoba demo dan ingin memesan website.\n' +
         'Usaha: ' + (st.name || '-') + '\n' +
-        'Jenis: ' + pr.options[pr.selectedIndex].text + '\n' +
+        'Jenis: ' + pr.options[pr.selectedIndex].text.replace(/^↳\s*/, '') + '\n' +
         (ps ? 'Paket: ' + ps.value + '\n' : '') +
         'Kode desain: ' + code() + '\n' +
-        'Bagian: ' + active;
+        'Bagian (berurutan): ' + active + '\n' +
+        'Perintah: ' + cmd;
       a.href = owner.wa + '?text=' + encodeURIComponent(text);
     }
     function sync() {
@@ -74,7 +93,61 @@ const { presets = [], current = '', sections = [], owner = { wa: '', packages: [
       document.getElementById('pv-code').textContent = code();
       wa();
     }
-    // Kirim ulang data yang sama ke /preview dengan perubahan tertentu (render server, hasilnya sama persis dengan hasil akhir)
+
+    // ---- Susun layout: pindahkan bagian langsung di halaman (tanpa muat ulang) ----
+    function syncNav() {
+      var nav = document.querySelector('.nav'); if (!nav) return;
+      var map = {}; Array.prototype.forEach.call(nav.querySelectorAll('a'), function (a) { map[a.getAttribute('href')] = a; });
+      var vis = [];
+      blocks().forEach(function (b) {
+        var s = b.querySelector('section'); if (!s || !s.id) return;
+        var a = map['#' + s.id]; if (!a) return;
+        a.hidden = b.hidden; if (!b.hidden) vis.push(a);
+      });
+      vis.forEach(function (a) { nav.appendChild(a); });
+    }
+    function clearTools() { Array.prototype.forEach.call(document.querySelectorAll('.blk-tools'), function (x) { x.remove(); }); }
+    function buildTools() {
+      clearTools();
+      blocks().forEach(function (b) {
+        var t = b.dataset.t, bar = document.createElement('div'); bar.className = 'blk-tools'; bar.dataset.t = t;
+        var nm = document.createElement('span'); nm.textContent = label(t); bar.appendChild(nm);
+        if (t !== 'hero') {
+          [['up', '↑', 'Naikkan'], ['down', '↓', 'Turunkan'], ['eye', b.hidden ? 'Tampilkan' : 'Sembunyikan', '']].forEach(function (d) {
+            var bt = document.createElement('button'); bt.type = 'button'; bt.dataset.a = d[0]; bt.textContent = d[1]; if (d[2]) bt.setAttribute('aria-label', d[2]); bar.appendChild(bt);
+          });
+        }
+        b.insertBefore(bar, b.firstChild);
+      });
+    }
+    function applyLayout() {
+      var bl = blocks(); if (!bl.length) return;
+      var parent = bl[0].parentNode, ref = bl[bl.length - 1].nextSibling, by = {}, off = hiddenNow();
+      bl.forEach(function (b) { by[b.dataset.t] = b; });
+      orderNow().forEach(function (t) { var b = by[t]; if (!b) return; parent.insertBefore(b, ref); b.hidden = off.indexOf(t) > -1; });
+      var vi = 0;
+      blocks().forEach(function (b) {
+        var sec = b.querySelector('section');
+        if (!b.hidden) { if (sec) sec.classList.toggle('alt', vi % 2 === 1); vi++; }
+      });
+      syncNav();
+      st.order = orderNow().join(','); st.hide = off.join(','); save(); wa();
+      if (root.classList.contains('builder')) buildTools();
+    }
+    function moveRow(t, d) {
+      var r = rowOf(t); if (!r || t === 'hero') return;
+      if (d < 0) { var p = r.previousElementSibling; if (p && p.dataset.t !== 'hero') r.parentNode.insertBefore(r, p); }
+      else { var n = r.nextElementSibling; if (n) r.parentNode.insertBefore(n, r); }
+      applyLayout();
+      var b = blocks().filter(function (x) { return x.dataset.t === t; })[0];
+      if (b && b.scrollIntoView) b.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    function toggleRow(t) {
+      var r = rowOf(t); if (!r || t === 'hero') return;
+      var c = r.querySelector('input'); c.checked = !c.checked; applyLayout();
+    }
+
+    // Kirim ulang data yang sama ke /preview (render server, hasilnya sama persis dengan hasil akhir)
     function post(over) {
       Object.keys(over).forEach(function (k) { st[k] = over[k]; }); save();
       var fotos = {}; try { fotos = JSON.parse(sessionStorage.getItem('coba.fotos') || '{}'); } catch (e) {}
@@ -88,24 +161,42 @@ const { presets = [], current = '', sections = [], owner = { wa: '', packages: [
 
     document.querySelectorAll('#pv select[data-k]').forEach(function (s) {
       s.addEventListener('change', function () {
-        root.setAttribute(attr[s.dataset.k], s.value); st[s.dataset.k] = s.value; save(); sync(); // seketika, tanpa muat ulang
+        root.setAttribute(attr[s.dataset.k], s.value); st[s.dataset.k] = s.value; save(); sync(); // seketika
       });
     });
     document.getElementById('pv-preset').addEventListener('change', function (e) { post({ preset: e.target.value, order: '', hide: '' }); });
-    document.getElementById('pv-apply').addEventListener('click', function () {
-      var r = rows();
-      post({
-        order: r.map(function (x) { return x.dataset.t; }).join(','),
-        hide: r.filter(function (x) { return !x.querySelector('input').checked; }).map(function (x) { return x.dataset.t; }).join(','),
-      });
-    });
-    document.getElementById('pv-secs').addEventListener('click', function (e) {
+    var alt = document.getElementById('pv-alt');
+    if (alt) alt.addEventListener('change', function (e) { post({ preset: e.target.value, order: '', hide: '' }); });
+    var secs = document.getElementById('pv-secs');
+    secs.addEventListener('click', function (e) {
       var row = e.target.closest('.dp-sec'); if (!row) return;
-      if (e.target.hasAttribute('data-up') && row.previousElementSibling && row.previousElementSibling.dataset.t !== 'hero') row.parentNode.insertBefore(row, row.previousElementSibling);
-      if (e.target.hasAttribute('data-down') && row.nextElementSibling) row.parentNode.insertBefore(row.nextElementSibling, row);
-      wa();
+      if (e.target.hasAttribute('data-up')) moveRow(row.dataset.t, -1);
+      if (e.target.hasAttribute('data-down')) moveRow(row.dataset.t, 1);
     });
-    document.getElementById('pv-secs').addEventListener('change', wa);
+    secs.addEventListener('change', function () { applyLayout(); });
+    // Tarik dan lepas (komputer)
+    secs.addEventListener('dragstart', function (e) {
+      var r = e.target.closest('.dp-sec'); if (!r || r.dataset.t === 'hero') { e.preventDefault(); return; }
+      drag = r; r.classList.add('dragging'); if (e.dataTransfer) { e.dataTransfer.effectAllowed = 'move'; try { e.dataTransfer.setData('text/plain', r.dataset.t); } catch (x) {} }
+    });
+    secs.addEventListener('dragover', function (e) {
+      if (!drag) return;
+      var r = e.target.closest('.dp-sec'); if (!r || r === drag) return;
+      e.preventDefault();
+      var box = r.getBoundingClientRect(), after = r.dataset.t === 'hero' || (e.clientY - box.top) > box.height / 2;
+      secs.insertBefore(drag, after ? r.nextSibling : r);
+    });
+    secs.addEventListener('dragend', function () { if (drag) { drag.classList.remove('dragging'); drag = null; applyLayout(); } });
+    // Tombol di setiap bagian (mode susun)
+    document.addEventListener('click', function (e) {
+      var bt = e.target.closest ? e.target.closest('.blk-tools button') : null; if (!bt) return;
+      var t = bt.parentNode.dataset.t, a = bt.dataset.a;
+      if (a === 'up') moveRow(t, -1); else if (a === 'down') moveRow(t, 1); else if (a === 'eye') toggleRow(t);
+    });
+    document.getElementById('pv-mode').addEventListener('change', function (e) {
+      root.classList.toggle('builder', e.target.checked);
+      if (e.target.checked) buildTools(); else clearTools();
+    });
     var ps = document.getElementById('pv-paket'); if (ps) ps.addEventListener('change', wa);
     sync();
   })();

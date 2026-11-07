@@ -1,0 +1,226 @@
+{
+  "theme": "charcoal",
+  "meta": {
+    "lang": "id",
+    "title": "Toko Fashion Online | Atasan, Dress, Hijab dan Aksesoris",
+    "description": "Toko fashion online untuk atasan, bawahan, hijab, dan aksesoris. Tanya ukuran dan pesan lewat WhatsApp.",
+    "url": "https://contoh-toko-fashion.pages.dev",
+    "ogImage": ""
+  },
+  "business": {
+    "name": "Contoh Fashion Store",
+    "schemaType": "ClothingStore",
+    "tagline": "Gaya sehari-hari yang nyaman dipakai",
+    "logo": "",
+    "logoHasName": false,
+    "phone": "081234567890",
+    "whatsapp": "081234567890",
+    "email": "",
+    "address": "Jl. Contoh No. 1",
+    "city": "Surabaya",
+    "region": "Jawa Timur",
+    "priceRange": "Rp",
+    "geo": {
+      "lat": "",
+      "lng": ""
+    },
+    "waMessage": "Halo, saya mau tanya produk fashion.",
+    "hours": [
+      {
+        "day": "Setiap hari",
+        "time": "08:00-20:00 (balasan chat)"
+      }
+    ]
+  },
+  "analytics": {
+    "ga4Id": "",
+    "searchConsoleVerification": ""
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "youtube": ""
+  },
+  "footerNote": "",
+  "sections": [
+    {
+      "type": "hero",
+      "enabled": true,
+      "badge": "Kirim ke Seluruh Indonesia",
+      "title": "Fashion Wanita dan Pria dengan Model Terbaru",
+      "subtitle": "Atasan, bawahan, hijab, dan aksesoris pilihan. Lihat koleksi, tanya ukuran, dan pesan lewat WhatsApp.",
+      "ctaLabel": "Pesan Sekarang",
+      "secondaryLabel": "Lihat Produk",
+      "secondaryHref": "#produk",
+      "image": "",
+      "imageAlt": "",
+      "waMessage": "Halo, saya mau tanya produk fashion."
+    },
+    {
+      "type": "services",
+      "enabled": true,
+      "navLabel": "Kategori",
+      "title": "Kategori Produk",
+      "subtitle": "Pilih kategori yang Anda cari",
+      "items": [
+        {
+          "icon": "👚",
+          "title": "Atasan",
+          "description": "Kaos, kemeja, dan blouse untuk harian."
+        },
+        {
+          "icon": "👖",
+          "title": "Bawahan",
+          "description": "Celana dan rok dengan potongan nyaman."
+        },
+        {
+          "icon": "🧕",
+          "title": "Hijab & Scarf",
+          "description": "Pilihan bahan dan warna."
+        },
+        {
+          "icon": "👗",
+          "title": "Dress & Gamis",
+          "description": "Untuk acara santai maupun resmi."
+        },
+        {
+          "icon": "👜",
+          "title": "Tas & Aksesoris",
+          "description": "Pelengkap penampilan Anda."
+        },
+        {
+          "icon": "🎁",
+          "title": "Paket Hemat",
+          "description": "Beberapa item dalam satu paket."
+        }
+      ]
+    },
+    {
+      "type": "products",
+      "enabled": true,
+      "id": "produk",
+      "navLabel": "Produk",
+      "title": "Produk Kami",
+      "subtitle": "Contoh produk. Tambahkan ke keranjang, lalu kirim pesanan lewat WhatsApp.",
+      "cart": true,
+      "note": "Produk dan harga contoh. Ganti dengan produk asli Anda.",
+      "items": [
+        {
+          "name": "Kaos Basic",
+          "price": "Rp 79.000",
+          "description": "Bahan nyaman"
+        },
+        {
+          "name": "Dress / Gamis",
+          "price": "Rp 189.000",
+          "description": "Model terbaru"
+        },
+        {
+          "name": "Hijab Premium",
+          "price": "Rp 59.000",
+          "description": "Bahan jatuh"
+        },
+        {
+          "name": "Kemeja Katun",
+          "price": "Rp 129.000",
+          "description": "Tersedia beberapa pilihan."
+        },
+        {
+          "name": "Celana Kulot",
+          "price": "Rp 119.000",
+          "description": "Tersedia beberapa pilihan."
+        },
+        {
+          "name": "Tas Selempang",
+          "price": "Rp 99.000",
+          "description": "Tersedia beberapa pilihan."
+        }
+      ]
+    },
+    {
+      "type": "about",
+      "enabled": true,
+      "id": "cara-belanja",
+      "navLabel": "Cara Belanja",
+      "title": "Cara Belanja",
+      "text": "Belanja mudah, cukup lewat WhatsApp.",
+      "points": [
+        "Pilih produk lalu tambahkan ke keranjang, atau tanya stok lewat WhatsApp.",
+        "Kirim pesanan lewat WhatsApp beserta nama dan alamat lengkap.",
+        "Lakukan pembayaran sesuai metode yang disepakati.",
+        "Pesanan dikemas dan dikirim, nomor resi dikabari lewat WhatsApp."
+      ]
+    },
+    {
+      "type": "gallery",
+      "enabled": false,
+      "navLabel": "Koleksi",
+      "title": "Koleksi Kami",
+      "subtitle": "",
+      "images": []
+    },
+    {
+      "type": "testimonials",
+      "enabled": false,
+      "title": "Kata Pelanggan",
+      "items": [
+        {
+          "name": "Nama Pelanggan",
+          "role": "",
+          "text": "Isi dengan testimoni asli dari pelanggan.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "enabled": true,
+      "navLabel": "FAQ",
+      "title": "Pertanyaan Umum",
+      "items": [
+        {
+          "q": "Bagaimana memilih ukuran?",
+          "a": "Kirim tinggi dan berat badan Anda lewat WhatsApp, kami bantu sarankan ukuran. Panduan ukuran juga bisa dikirim."
+        },
+        {
+          "q": "Berapa lama pesanan sampai?",
+          "a": "Tergantung kota tujuan dan ekspedisi. Nomor resi dikirim setelah paket dikirim."
+        },
+        {
+          "q": "Bagaimana kalau ukuran tidak cocok?",
+          "a": "Ketentuan tukar ukuran dijelaskan sebelum Anda membayar."
+        },
+        {
+          "q": "Apa saja metode pembayarannya?",
+          "a": "Metode pembayaran yang tersedia disampaikan saat Anda memesan."
+        },
+        {
+          "q": "Apakah ada harga reseller?",
+          "a": "Tanyakan lewat WhatsApp untuk informasi harga dan ketentuannya."
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "enabled": false,
+      "navLabel": "Lokasi",
+      "title": "Lokasi Kami",
+      "embedUrl": ""
+    },
+    {
+      "type": "contact",
+      "enabled": true,
+      "navLabel": "Kontak",
+      "title": "Hubungi Kami"
+    },
+    {
+      "type": "cta",
+      "enabled": true,
+      "title": "Cari model yang cocok?",
+      "text": "Kirim foto referensi atau ukuran Anda, kami bantu pilihkan.",
+      "buttonLabel": "Pesan Sekarang"
+    }
+  ],
+  "rowsTarget": "products"
+}

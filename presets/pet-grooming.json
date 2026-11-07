@@ -1,0 +1,203 @@
+{
+  "theme": "terracotta",
+  "meta": {
+    "lang": "id",
+    "title": "Grooming Kucing dan Anjing | Mandi dan Potong Bulu",
+    "description": "Grooming kucing dan anjing: mandi, potong bulu, dan perawatan dasar. Reservasi mudah lewat WhatsApp.",
+    "url": "https://contoh-pet-grooming.pages.dev",
+    "ogImage": ""
+  },
+  "business": {
+    "name": "Contoh Pet Grooming",
+    "schemaType": "LocalBusiness",
+    "tagline": "Hewan kesayangan bersih, wangi, dan nyaman",
+    "logo": "",
+    "logoHasName": false,
+    "phone": "081234567890",
+    "whatsapp": "081234567890",
+    "email": "",
+    "address": "Jl. Contoh No. 1",
+    "city": "Surabaya",
+    "region": "Jawa Timur",
+    "priceRange": "Rp",
+    "geo": {
+      "lat": "",
+      "lng": ""
+    },
+    "waMessage": "Halo, saya mau reservasi grooming.",
+    "hours": [
+      {
+        "day": "Setiap hari",
+        "time": "09:00-17:00"
+      }
+    ]
+  },
+  "analytics": {
+    "ga4Id": "",
+    "searchConsoleVerification": ""
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "youtube": ""
+  },
+  "footerNote": "",
+  "sections": [
+    {
+      "type": "hero",
+      "enabled": true,
+      "badge": "Reservasi Lewat WhatsApp",
+      "title": "Grooming Kucing dan Anjing yang Aman dan Nyaman",
+      "subtitle": "Mandi, potong bulu, dan perawatan dasar dengan penanganan yang sabar. Reservasi dulu agar tidak antre.",
+      "ctaLabel": "Reservasi Grooming",
+      "secondaryLabel": "Lihat Harga",
+      "secondaryHref": "#pricing",
+      "image": "",
+      "imageAlt": "",
+      "waMessage": "Halo, saya mau reservasi grooming."
+    },
+    {
+      "type": "services",
+      "enabled": true,
+      "navLabel": "Layanan",
+      "title": "Layanan Grooming",
+      "subtitle": "Perawatan dasar untuk kucing dan anjing",
+      "items": [
+        {
+          "icon": "🛁",
+          "title": "Mandi & Keringkan",
+          "description": "Mandi dengan produk yang sesuai jenis bulu."
+        },
+        {
+          "icon": "✂️",
+          "title": "Potong Bulu",
+          "description": "Potong bulu rapi sesuai ras dan permintaan."
+        },
+        {
+          "icon": "🪮",
+          "title": "Sisir & Anti Kusut",
+          "description": "Merapikan bulu yang kusut."
+        },
+        {
+          "icon": "👂",
+          "title": "Telinga & Kuku",
+          "description": "Bersih telinga dan potong kuku."
+        },
+        {
+          "icon": "🧴",
+          "title": "Mandi Anti Kutu",
+          "description": "Mandi khusus sesuai kebutuhan hewan."
+        },
+        {
+          "icon": "🚗",
+          "title": "Jemput-Antar",
+          "description": "Layanan jemput di area tertentu."
+        }
+      ]
+    },
+    {
+      "type": "pricing",
+      "enabled": true,
+      "navLabel": "Harga",
+      "title": "Contoh Harga",
+      "subtitle": "Harga mengikuti ukuran dan kondisi bulu",
+      "note": "Harga contoh. Ganti dengan harga asli.",
+      "items": [
+        {
+          "name": "Kucing",
+          "price": "Rp 60.000",
+          "features": [
+            "Mandi dan keringkan",
+            "Bersih telinga"
+          ],
+          "ctaLabel": "Reservasi"
+        },
+        {
+          "name": "Anjing Kecil",
+          "price": "Rp 80.000",
+          "features": [
+            "Mandi dan keringkan",
+            "Potong kuku"
+          ],
+          "ctaLabel": "Reservasi",
+          "highlight": true
+        },
+        {
+          "name": "Anjing Besar",
+          "price": "Rp 120.000",
+          "features": [
+            "Mandi dan keringkan",
+            "Potong kuku"
+          ],
+          "ctaLabel": "Reservasi"
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "enabled": false,
+      "navLabel": "Galeri",
+      "title": "Hasil Grooming",
+      "subtitle": "",
+      "images": []
+    },
+    {
+      "type": "testimonials",
+      "enabled": false,
+      "title": "Kata Pelanggan",
+      "items": [
+        {
+          "name": "Nama Pelanggan",
+          "role": "",
+          "text": "Isi dengan testimoni asli dari pelanggan.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "enabled": true,
+      "navLabel": "FAQ",
+      "title": "Pertanyaan Umum",
+      "items": [
+        {
+          "q": "Apakah hewan harus sudah vaksin?",
+          "a": "Kami menyarankan hewan dalam kondisi sehat dan vaksinasi lengkap. Tanyakan ketentuan lengkapnya."
+        },
+        {
+          "q": "Berapa lama proses grooming?",
+          "a": "Tergantung ukuran dan kondisi bulu. Kami sampaikan estimasi saat reservasi."
+        },
+        {
+          "q": "Bagaimana bila hewan tidak mau diam?",
+          "a": "Beri tahu kami sebelumnya agar bisa ditangani dengan sabar."
+        },
+        {
+          "q": "Apakah bisa dijemput?",
+          "a": "Bisa di area tertentu. Tanyakan lewat WhatsApp."
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "enabled": true,
+      "navLabel": "Lokasi",
+      "title": "Lokasi Kami",
+      "embedUrl": ""
+    },
+    {
+      "type": "contact",
+      "enabled": true,
+      "navLabel": "Kontak",
+      "title": "Hubungi Kami"
+    },
+    {
+      "type": "cta",
+      "enabled": true,
+      "title": "Waktunya hewan kesayangan dirapikan?",
+      "text": "Reservasi jadwal grooming lewat WhatsApp.",
+      "buttonLabel": "Reservasi Grooming"
+    }
+  ]
+}

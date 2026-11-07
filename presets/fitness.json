@@ -1,0 +1,209 @@
+{
+  "theme": "pine",
+  "meta": {
+    "lang": "id",
+    "title": "Gym dan Personal Trainer | Keanggotaan dan Kelas Grup",
+    "description": "Gym dengan personal trainer dan kelas grup untuk pemula sampai lanjutan. Tanya keanggotaan lewat WhatsApp.",
+    "url": "https://contoh-fitness.pages.dev",
+    "ogImage": ""
+  },
+  "business": {
+    "name": "Contoh Gym",
+    "schemaType": "HealthClub",
+    "tagline": "Mulai hidup sehat dengan latihan terarah",
+    "logo": "",
+    "logoHasName": false,
+    "phone": "081234567890",
+    "whatsapp": "081234567890",
+    "email": "",
+    "address": "Jl. Contoh No. 1",
+    "city": "Surabaya",
+    "region": "Jawa Timur",
+    "priceRange": "Rp",
+    "geo": {
+      "lat": "",
+      "lng": ""
+    },
+    "waMessage": "Halo, saya mau tanya keanggotaan gym.",
+    "hours": [
+      {
+        "day": "Senin-Sabtu",
+        "time": "06:00-21:00"
+      },
+      {
+        "day": "Minggu",
+        "time": "08:00-15:00"
+      }
+    ]
+  },
+  "analytics": {
+    "ga4Id": "",
+    "searchConsoleVerification": ""
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "youtube": ""
+  },
+  "footerNote": "",
+  "sections": [
+    {
+      "type": "hero",
+      "enabled": true,
+      "badge": "Boleh Coba Dulu",
+      "title": "Gym dan Personal Trainer untuk Pemula sampai Lanjutan",
+      "subtitle": "Alat latihan, kelas grup, dan pendampingan pelatih. Tanya jadwal dan keanggotaan lewat WhatsApp.",
+      "ctaLabel": "Tanya Keanggotaan",
+      "secondaryLabel": "Lihat Harga",
+      "secondaryHref": "#pricing",
+      "image": "",
+      "imageAlt": "",
+      "waMessage": "Halo, saya mau tanya keanggotaan gym."
+    },
+    {
+      "type": "services",
+      "enabled": true,
+      "navLabel": "Layanan",
+      "title": "Fasilitas dan Layanan",
+      "subtitle": "Latihan sesuai tujuan dan kemampuan Anda",
+      "items": [
+        {
+          "icon": "🏋️",
+          "title": "Alat Latihan",
+          "description": "Area beban dan kardio."
+        },
+        {
+          "icon": "🧑‍🏫",
+          "title": "Personal Trainer",
+          "description": "Latihan terarah dengan pelatih."
+        },
+        {
+          "icon": "👥",
+          "title": "Kelas Grup",
+          "description": "Jadwal kelas bersama."
+        },
+        {
+          "icon": "🚿",
+          "title": "Loker & Kamar Mandi",
+          "description": "Fasilitas untuk berganti pakaian."
+        },
+        {
+          "icon": "📅",
+          "title": "Jadwal Fleksibel",
+          "description": "Jam buka yang cocok untuk pekerja."
+        },
+        {
+          "icon": "📝",
+          "title": "Panduan Awal",
+          "description": "Pengenalan alat untuk anggota baru."
+        }
+      ]
+    },
+    {
+      "type": "pricing",
+      "enabled": true,
+      "navLabel": "Harga",
+      "title": "Contoh Biaya",
+      "subtitle": "Pilih keanggotaan yang cocok",
+      "note": "Harga contoh. Ganti dengan harga asli.",
+      "items": [
+        {
+          "name": "Harian",
+          "price": "Rp 25.000",
+          "features": [
+            "Satu kali kunjungan",
+            "Akses alat latihan"
+          ],
+          "ctaLabel": "Tanya"
+        },
+        {
+          "name": "Bulanan",
+          "price": "Rp 250.000",
+          "features": [
+            "Akses sebulan",
+            "Boleh ikut kelas grup"
+          ],
+          "ctaLabel": "Tanya",
+          "highlight": true,
+          "unit": "per bulan"
+        },
+        {
+          "name": "Personal Trainer",
+          "price": "Rp 150.000",
+          "features": [
+            "Satu sesi latihan",
+            "Program disesuaikan"
+          ],
+          "ctaLabel": "Tanya",
+          "unit": "per sesi"
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "enabled": false,
+      "navLabel": "Galeri",
+      "title": "Suasana Gym",
+      "subtitle": "",
+      "images": []
+    },
+    {
+      "type": "testimonials",
+      "enabled": false,
+      "title": "Kata Pelanggan",
+      "items": [
+        {
+          "name": "Nama Pelanggan",
+          "role": "",
+          "text": "Isi dengan testimoni asli dari pelanggan.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "enabled": true,
+      "navLabel": "FAQ",
+      "title": "Pertanyaan Umum",
+      "items": [
+        {
+          "q": "Apakah boleh mencoba dulu?",
+          "a": "Tanyakan lewat WhatsApp mengenai kunjungan percobaan."
+        },
+        {
+          "q": "Saya pemula, apakah cocok?",
+          "a": "Cocok. Anggota baru bisa meminta pengenalan alat. Jika punya kondisi kesehatan tertentu, konsultasikan ke dokter sebelum mulai."
+        },
+        {
+          "q": "Bagaimana jadwal kelas grup?",
+          "a": "Jadwal kelas dibagikan lewat WhatsApp dan bisa berubah."
+        },
+        {
+          "q": "Apakah keanggotaan bisa dihentikan sementara?",
+          "a": "Ketentuannya dijelaskan saat mendaftar."
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "enabled": true,
+      "navLabel": "Lokasi",
+      "title": "Lokasi Kami",
+      "embedUrl": ""
+    },
+    {
+      "type": "contact",
+      "enabled": true,
+      "navLabel": "Kontak",
+      "title": "Hubungi Kami"
+    },
+    {
+      "type": "cta",
+      "enabled": true,
+      "title": "Siap mulai latihan?",
+      "text": "Tanya jadwal dan paket keanggotaan lewat WhatsApp.",
+      "buttonLabel": "Tanya Keanggotaan"
+    }
+  ]
+}
